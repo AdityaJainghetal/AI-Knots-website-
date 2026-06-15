@@ -110,9 +110,9 @@ const navigate = useNavigate();
     return () => observer.disconnect();
   }, []);
 
-  const accentClass = "text-red-500";
-  const headingClass = isDark ? "text-white" : "text-gray-900";
-  const bodyClass = isDark ? "text-gray-300" : "text-gray-700";
+  const accentClass = "text-[#9F714E] font-extrabold";
+  const headingClass = isDark ? "text-white" : "text-[#462206]";
+  const bodyClass = isDark ? "text-gray-300" : "text-[#462206]";
 
   const cardClass = isDark
     ? "bg-gray-900/70 backdrop-blur-sm border border-gray-800 hover:border-red-500/60 hover:shadow-red-900/30"
@@ -162,10 +162,10 @@ const navigate = useNavigate();
               hidden: { opacity: 0, y: 40 },
               visible: { opacity: 1, y: 0 },
             }}
-            className="text-5xl md:text-7xl font-black tracking-tighter leading-none mb-8 text-white"
+            className="text-5xl md:text-7xl font-black tracking-tighter leading-none mb-8 text-[#6e4c32]"
           >
             Professional Graphic Design Services in{" "}
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-red-400 to-white">
+            <span className="bg-clip-text text-transparent bg-[#9F714E]">
               Bhopal
             </span>
           </motion.h1>
@@ -188,7 +188,7 @@ const navigate = useNavigate();
             className={`text-lg md:text-xl max-w-4xl mx-auto leading-relaxed mb-12 ${isDark ? "text-gray-300" : "text-white/90"}`}
           >
             At{" "}
-            <span className="font-semibold text-red-400">
+            <span className="font-bold text-[#795438]">
               AI KNOTS IT SOLUTION
             </span>
             , we create stunning logos, social media graphics, and videos that
@@ -202,7 +202,7 @@ const navigate = useNavigate();
             }}
             className="flex flex-col sm:flex-row gap-6 justify-center"
           >
-            <button className="px-12 py-6 bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white text-xl font-bold rounded-full shadow-xl flex items-center gap-3 group transition-all" onClick={()=>navigate("/recentwork")}>
+            <button className="px-12 py-6 bg-[#3d220e] text-white  hover:bg-[#5a3a1c] text-white text-xl font-bold rounded-full shadow-xl flex items-center gap-3 group transition-all" onClick={()=>navigate("/recentwork")}>
                View our work
               <ArrowRight className="w-7 h-7 group-hover:translate-x-2 transition-transform" />
             </button>
@@ -340,7 +340,7 @@ const navigate = useNavigate();
             designs that help your business grow in Bhopal and beyond.
           </motion.p>
 
-          <button className="px-16 py-7 bg-red-600 hover:bg-red-700 text-white text-2xl font-bold rounded-full shadow-xl transition-all" onClick={()=>navigate("/contact")}>
+          <button className="px-16 py-7 bg-[#3d220e]  text-white text-2xl font-bold rounded-full shadow-xl transition-all" onClick={()=>navigate("/contact")}>
             Get Your Custom Design Quote →
           </button>
 

@@ -248,7 +248,7 @@ export default function UiUxDesign() {
 
   const headingClass = isDark ? "text-white" : "text-gray-900";
   const bodyClass = isDark ? "text-gray-300" : "text-gray-700";
-  const accentClass = "text-red-500";
+  const accentClass = "text-[#462206] dark:text-[#826047]";
 
   return (
      <>
@@ -301,14 +301,14 @@ export default function UiUxDesign() {
       className="text-5xl md:text-7xl font-black mb-6 tracking-tight leading-tight text-white"
     >
       Best UI/UX Design Company{" "}
-      <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-red-600">
+      <span className="text-transparent bg-clip-text bg-[#8d6140] dark:bg-[#826047]">
         AI Knots IT Solution
       </span>
     </motion.h1>
 
     <motion.p
       variants={fadeInUp}
-      className="text-3xl md:text-5xl font-bold mb-8 text-red-500 dark:text-red-400"
+      className="text-3xl md:text-5xl font-bold mb-8 bg-[#8d6140] dark:bg-[#826047] text-transparent bg-clip-text tracking-wide leading-snug"
     >
       Design Experiences That Convert Visitors Into Customers
     </motion.p>
@@ -338,10 +338,9 @@ export default function UiUxDesign() {
       {/* Primary Button */}
       <button
         onClick={() => navigate("/contact")}
-        className="px-12 py-6 bg-gradient-to-r from-red-600 to-red-700 
-                   hover:from-red-700 hover:to-red-800 text-white 
-                   rounded-full text-xl md:text-2xl font-bold 
-                   shadow-xl shadow-red-900/60 hover:shadow-red-700 
+        className="px-12 py-6 bg-[#3d220e] text-white 
+                   hover:bg-[#5a351a] rounded-full text-xl md:text-2xl font-bold 
+                   shadow-xl shadow-red-900/60 hover:shadow-black/70
                    hover:scale-105 transition-all duration-300 
                    flex items-center gap-3 group"
       >
@@ -352,9 +351,8 @@ export default function UiUxDesign() {
       {/* Secondary Button */}
       <button
         onClick={() => navigate("/contact")}   // Change route if needed
-        className="px-12 py-6 border-2 border-red-500 text-white 
-                   hover:bg-red-600 hover:border-red-600 
-                   dark:hover:bg-red-700 rounded-full 
+        className="px-12 py-6 border-2 border-[#3d220e] text-[#3d220e] 
+                   hover:bg-[#3d220e] hover:text-white rounded-full 
                    text-xl md:text-2xl font-bold transition-all duration-300"
       >
         Free UX Audit
@@ -630,7 +628,7 @@ export default function UiUxDesign() {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.98 }}
-            className="px-14 py-7 bg-gradient-to-r from-red-600 to-red-800 rounded-full text-2xl md:text-3xl font-black shadow-2xl shadow-red-900/60 hover:shadow-red-700/80 transition-all flex items-center gap-4 mx-auto"
+            className="px-14 py-7 bg-[#3d220e] text-white rounded-full text-2xl md:text-3xl font-black shadow-2xl shadow-red-900/60 hover:shadow-red-700/80 transition-all flex items-center gap-4 mx-auto"
           >
             <button onClick={() => navigate("/contact")} className="flex items-center gap-4">
             Contact Us Today <ArrowRight className="w-8 h-8" />
