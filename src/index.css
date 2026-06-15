@@ -51,8 +51,16 @@
   background-color: var(--hero-bg);
 }
 
+.bg-accent {
+  background-color: var(--accent);
+}
+
 .border-primary {
   border-color: var(--primary);
+}
+
+.border-accent {
+  border-color: var(--accent);
 }
 
 .hover\:text-accent:hover {
@@ -63,6 +71,9 @@
 }
 .hover\:text-primary-600:hover {
   color: var(--primary-600);
+}
+.hover\:bg-accent:hover {
+  background-color: var(--accent);
 }
 
 /* Small helpers for consistent buttons/links */

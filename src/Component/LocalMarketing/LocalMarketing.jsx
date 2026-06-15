@@ -739,8 +739,8 @@ export default function LocalMarketing() {
   const bodyClass = isDark ? "text-gray-300" : "text-gray-700";
 
   const cardClass = isDark
-    ? "bg-gray-900/80 backdrop-blur-xl border border-gray-700/80 hover:border-red-500/60 hover:shadow-2xl hover:shadow-red-500/20 transition-all duration-500"
-    : "bg-white border border-gray-100 hover:border-red-200 hover:shadow-2xl hover:shadow-red-100/80 transition-all duration-500";
+    ? "bg-gray-900/80 backdrop-blur-xl border border-gray-700/80 hover:border-accent/70 hover:shadow-2xl transition-all duration-500"
+    : "bg-white border border-gray-100 hover:border-accent/30 hover:shadow-2xl transition-all duration-500";
 
   const premiumButton = `px-12 py-7 rounded-2xl text-xl font-bold transition-all flex items-center gap-3 group shadow-xl w-full btn-accent`;
 
@@ -788,13 +788,13 @@ export default function LocalMarketing() {
                 >
                   <motion.h1
                     variants={fadeInUp}
-                    className="text-5xl md:text-7xl font-black mb-6 bg-gradient-to-r from-red-400 via-red-500 to-white bg-clip-text text-transparent"
+                    className="text-5xl md:text-7xl font-black mb-6 bg-gradient-to-r from-[#e3e3e3] via-[#f9e8c8] to-[#e3e3e3] bg-clip-text text-transparent"
                   >
                     Best Local Marketing Company in Bhopal
                   </motion.h1>
                   <motion.p
                     variants={fadeInUp}
-                    className="text-3xl md:text-4xl font-bold text-red-400 mb-8"
+                    className="text-3xl md:text-4xl font-bold text-accent mb-8"
                   >
                     Top Local Marketing Agency in Bhopal for Real Business
                     Growth
@@ -819,8 +819,8 @@ export default function LocalMarketing() {
                       download
                     >
                       <button
-                        className={`px-10 py-6 border-2 border-red-500/70 rounded-2xl text-xl md:text-2xl font-bold transition-all
-                      ${isDark ? "text-red-400 hover:bg-red-950/60 hover:border-red-500" : "text-[#EFE5C8] hover:bg-red-50"}`}
+                        className={`px-10 py-6 border-2 border-primary/70 rounded-2xl text-xl md:text-2xl font-bold transition-all
+                      ${isDark ? "text-accent hover:bg-[#3d220e]/40 hover:border-accent" : "text-accent hover:bg-muted"}`}
                       >
                         Download Offer Brochure Now
                       </button>
@@ -1184,9 +1184,7 @@ export default function LocalMarketing() {
                     />
 
                     {error && (
-                      <p className="text-red-500 text-sm text-center">
-                        {error}
-                      </p>
+                      <p className="text-accent text-sm text-center">{error}</p>
                     )}
 
                     <button
