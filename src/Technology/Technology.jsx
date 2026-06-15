@@ -249,12 +249,12 @@ const Technology = () => {
 
   // ====================== THEME CLASSES ======================
   const cardClass = isDark
-    ? "bg-gradient-to-b from-gray-900 to-black border border-gray-800 hover:border-primary"
+    ? "bg-gradient-to-b from-gray-950 to-[#120b05] border border-gray-800 hover:border-primary"
     : "bg-white border border-gray-200 shadow-lg hover:shadow-2xl";
 
-  const headingClass = isDark ? "text-white" : "text-gray-900";
-  const bodyClass = isDark ? "text-gray-300" : "text-gray-700";
-  const accentClass = "text-muted";
+  const headingClass = isDark ? "text-white" : "text-primary";
+  const bodyClass = isDark ? "text-gray-300" : "text-[#3d220e]";
+  const accentClass = "text-accent";
 
   return (
     <>
@@ -275,8 +275,12 @@ const Technology = () => {
       >
         {/* Hero Section */}
         <section
-          className={`relative bg-gradient-to-br py-32 md:py-40 overflow-hidden
-        ${isDark ? "from-black via-red-950 to-black" : "from-red-50 via-white to-white"} text-white`}
+          className="relative py-32 md:py-40 overflow-hidden"
+          style={{
+            backgroundImage: isDark
+              ? "linear-gradient(135deg, #000000 0%, rgba(87,48,16,0.25) 45%, #000000 100%)"
+              : "linear-gradient(135deg, #f7efe2 0%, #f3e4cf 45%, #ffffff 100%)",
+          }}
         >
           <div className="absolute inset-0 opacity-30">
             <div
@@ -292,7 +296,7 @@ const Technology = () => {
                 className="w-full h-full object-cover"
               />
               <div
-                className={`absolute inset-0 ${isDark ? "bg-gradient-to-br from-red-600/40 to-black/60" : "bg-gradient-to-br from-red-400/30 to-white/60"} mix-blend-multiply`}
+                className={`absolute inset-0 ${isDark ? "bg-gradient-to-br from-[#9d6231]/40 to-black/60" : "bg-gradient-to-br from-[#9d6231]/30 to-white/60"} mix-blend-multiply`}
               ></div>
             </div>
             <div
@@ -308,7 +312,7 @@ const Technology = () => {
                 className="w-full h-full object-cover"
               />
               <div
-                className={`absolute inset-0 ${isDark ? "bg-gradient-to-br from-red-700/40 to-black/60" : "bg-gradient-to-br from-red-400/30 to-white/60"} mix-blend-multiply`}
+                className={`absolute inset-0 ${isDark ? "bg-gradient-to-br from-[#8B6B4A]/40 to-black/60" : "bg-gradient-to-br from-[#9d6231]/30 to-white/60"} mix-blend-multiply`}
               ></div>
             </div>
             <div
@@ -324,31 +328,31 @@ const Technology = () => {
                 className="w-full h-full object-cover"
               />
               <div
-                className={`absolute inset-0 ${isDark ? "bg-gradient-to-br from-red-800/40 to-black/60" : "bg-gradient-to-br from-red-400/30 to-white/60"} mix-blend-multiply`}
+                className={`absolute inset-0 ${isDark ? "bg-gradient-to-br from-[#573010]/40 to-black/60" : "bg-gradient-to-br from-[#9d6231]/30 to-white/60"} mix-blend-multiply`}
               ></div>
             </div>
           </div>
 
           <div className="absolute inset-0">
-            <div className="absolute top-20 left-20 w-2 h-2 bg-red-500 rounded-full animate-ping"></div>
+            <div className="absolute top-20 left-20 w-2 h-2 bg-primary rounded-full animate-ping"></div>
             <div
-              className="absolute top-40 right-40 w-3 h-3 bg-red-400 rounded-full animate-pulse"
+              className="absolute top-40 right-40 w-3 h-3 bg-accent rounded-full animate-pulse"
               style={{ animationDelay: "0.5s" }}
             ></div>
             <div
-              className="absolute bottom-40 left-1/4 w-2 h-2 bg-red-600 rounded-full animate-ping"
+              className="absolute bottom-40 left-1/4 w-2 h-2 bg-primary rounded-full animate-ping"
               style={{ animationDelay: "1s" }}
             ></div>
             <div
-              className="absolute top-60 right-1/3 w-3 h-3 bg-red-300 rounded-full animate-pulse"
+              className="absolute top-60 right-1/3 w-3 h-3 bg-accent rounded-full animate-pulse"
               style={{ animationDelay: "1.5s" }}
             ></div>
           </div>
 
           <div className="absolute inset-0 opacity-20">
-            <div className="absolute top-20 left-20 w-72 h-72 bg-red-600 rounded-full blur-3xl animate-pulse"></div>
+            <div className="absolute top-20 left-20 w-72 h-72 bg-accent rounded-full blur-3xl animate-pulse"></div>
             <div
-              className="absolute bottom-20 right-20 w-96 h-96 bg-red-800 rounded-full blur-3xl animate-pulse"
+              className="absolute bottom-20 right-20 w-96 h-96 bg-primary rounded-full blur-3xl animate-pulse"
               style={{ animationDelay: "1s" }}
             ></div>
           </div>
@@ -379,7 +383,7 @@ const Technology = () => {
               Cutting-Edge Technology Solutions
             </h1>
             <p
-              className={`text-lg md:text-xl max-w-3xl mx-auto mb-12 text-gray-300 leading-relaxed animate-slide-up ${bodyClass}`}
+              className={`text-lg md:text-xl max-w-3xl mx-auto mb-12 text-gray-600 leading-relaxed animate-slide-up ${bodyClass}`}
               style={{ animationDelay: "0.2s" }}
             >
               We craft high-performance, scalable, and secure digital products
@@ -390,7 +394,7 @@ const Technology = () => {
               style={{ animationDelay: "0.4s" }}
             >
               <button
-                className="group relative bg-gradient-to-r from-red-600 to-red-700 text-white font-bold px-10 py-5 rounded-lg shadow-2xl shadow-red-600/30 hover:shadow-red-600/50 transform hover:scale-105 transition-all duration-300 overflow-hidden"
+                className="group relative bg-gradient-to-r from-[#573010] to-[#8B6B4A] text-white font-bold px-10 py-5 rounded-lg shadow-2xl shadow-[#573010]/30 hover:shadow-[#573010]/50 transform hover:scale-105 transition-all duration-300 overflow-hidden"
                 onClick={() => navigate("/service")}
               >
                 <span className="relative z-10 flex items-center gap-2">
@@ -400,7 +404,7 @@ const Technology = () => {
               </button>
               <button
                 className={`group relative border-2 font-bold px-10 py-5 rounded-lg hover:scale-105 transition-all duration-300
-              ${isDark ? "border-red-500 text-white hover:bg-red-600" : "border-red-600 text-[#EFE5C8] hover:bg-red-600 hover:text-white"}`}
+              ${isDark ? "border-primary text-white hover:bg-primary/90" : "border-primary text-primary hover:bg-primary hover:text-white"}`}
                 onClick={() => navigate("/contact")}
               >
                 <span className="flex items-center gap-2">
@@ -420,10 +424,10 @@ const Technology = () => {
             <div className="text-center mb-12">
               <div
                 className={`inline-flex items-center gap-2 mb-4 px-6 py-2 rounded-full backdrop-blur-sm animate-fade-in
-              ${isDark ? "bg-red-600/20 border border-red-500/30" : "bg-red-100 border border-red-200"}`}
+              ${isDark ? "bg-accent/20 border border-accent/30" : "bg-accent/10 border border-[#fdeada]"}`}
               >
-                <Newspaper className="w-4 h-4 text-red-400 animate-pulse" />
-                <span className="text-red-400 font-semibold text-sm tracking-wider">
+                <Newspaper className="w-4 h-4 text-accent animate-pulse" />
+                <span className="text-accent font-semibold text-sm tracking-wider">
                   LATEST UPDATES
                 </span>
               </div>
@@ -447,10 +451,10 @@ const Technology = () => {
                 }
                 className={`group relative px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 ${
                   !selectedCategory?._id || selectedCategory?.name === "All"
-                    ? "bg-gradient-to-r from-red-600 to-red-700 text-white shadow-lg shadow-red-600/30"
+                    ? "bg-gradient-to-r from-[#573010] to-[#8B6B4A] text-white shadow-lg shadow-[#573010]/30"
                     : isDark
-                      ? "bg-gray-900 text-gray-400 hover:text-white border border-gray-800 hover:border-red-600/50"
-                      : "bg-white text-gray-600 hover:text-gray-900 border border-gray-300 hover:border-red-600"
+                      ? "bg-gray-900 text-gray-400 hover:text-white border border-gray-800 hover:border-[#573010]/50"
+                      : "bg-white text-gray-600 hover:text-gray-900 border border-gray-300 hover:border-[#573010]"
                 }`}
               >
                 <span className="relative z-10 flex items-center gap-2">
@@ -481,14 +485,14 @@ const Technology = () => {
 
             {loading && (
               <div className="text-center py-20">
-                <div className="inline-block w-12 h-12 border-4 border-red-600 border-t-transparent rounded-full animate-spin"></div>
+                <div className="inline-block w-12 h-12 border-4 border-[#573010] border-t-transparent rounded-full animate-spin"></div>
                 <p className={`mt-4 ${bodyClass}`}>Loading products...</p>
               </div>
             )}
 
             {error && !loading && (
               <div className="text-center py-20">
-                <p className="text-red-500 text-lg">{error}</p>
+                <p className="text-accent text-lg">{error}</p>
               </div>
             )}
 
@@ -561,7 +565,7 @@ const Technology = () => {
                           </div>
                         </div>
                         <h3
-                          className={`text-xl font-bold mb-3 line-clamp-2 ${headingClass} group-hover:text-red-400 transition-colors`}
+                          className={`text-xl font-bold mb-3 line-clamp-2 ${headingClass} group-hover:text-accent transition-colors`}
                         >
                           {news.title}
                         </h3>
@@ -593,7 +597,7 @@ const Technology = () => {
                           </div>
                           <button
                             onClick={() => handleAction("read", news)}
-                            className="flex items-center gap-2 px-5 py-2 text-red-500 hover:text-[#EFE5C8] font-medium rounded-lg border border-red-500/30 hover:border-red-500 transition-all"
+                            className="flex items-center gap-2 px-5 py-2 text-accent hover:text-[#3d220e] font-medium rounded-lg border border-[#9d6231]/30 hover:border-[#9d6231] transition-all"
                           >
                             Read More <ArrowRight className="w-4 h-4" />
                           </button>
@@ -641,10 +645,10 @@ const Technology = () => {
                   >
                     <div className="relative z-10 flex flex-col items-center gap-3">
                       <TechIcon
-                        className={`w-8 h-8 ${accentClass} group-hover:text-red-400 transition-colors`}
+                        className={`w-8 h-8 ${accentClass} transition-colors`}
                       />
                       <div
-                        className={`group-hover:text-black transition-colors text-sm ${bodyClass}`}
+                        className={`group-hover:text-primary transition-colors text-sm ${bodyClass}`}
                       >
                         {tech.name}
                       </div>
@@ -673,7 +677,7 @@ const Technology = () => {
                 onChange={(e) => setCommentText(e.target.value)}
                 placeholder="What are your thoughts?"
                 rows={5}
-                className={`w-full p-4 rounded-xl border resize-y min-h-[120px] focus:outline-none focus:ring-2 focus:ring-red-500 ${isDark ? "bg-gray-800 border-gray-700 text-white" : "bg-gray-50 border-gray-300"}`}
+                className={`w-full p-4 rounded-xl border resize-y min-h-[120px] focus:outline-none focus:ring-2 focus:ring-[#9d6231] ${isDark ? "bg-gray-800 border-gray-700 text-white" : "bg-gray-50 border-gray-300"}`}
               />
               <div className="flex gap-3 mt-5">
                 <button
@@ -685,7 +689,7 @@ const Technology = () => {
                 <button
                   onClick={submitComment}
                   disabled={loadingAction || !commentText.trim()}
-                  className={`flex-1 py-3 rounded-xl font-medium text-white flex items-center justify-center ${commentText.trim() ? "bg-red-600 hover:bg-red-700" : "bg-gray-400 cursor-not-allowed"}`}
+                  className={`flex-1 py-3 rounded-xl font-medium text-white flex items-center justify-center ${commentText.trim() ? "bg-primary hover:bg-primary-600" : "bg-gray-400 cursor-not-allowed"}`}
                 >
                   {loadingAction ? (
                     <Loader2 className="w-5 h-5 animate-spin" />
@@ -767,7 +771,7 @@ const Technology = () => {
               )}
               <button
                 onClick={() => setShowVerifyModal(false)}
-                className="mt-6 text-sm text-gray-500 underline block mx-auto"
+                className="mt-6 text-sm text-primary underline block mx-auto"
               >
                 Cancel
               </button>

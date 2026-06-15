@@ -77,12 +77,12 @@ const TechNews = () => {
 
   // ====================== THEME CLASSES ======================
   const cardClass = isDark
-    ? "bg-gray-900 border border-gray-800 hover:border-red-600/50 hover:shadow-xl hover:shadow-red-900/20"
+    ? "bg-gray-900 border border-gray-800 hover:border-primary/50 hover:shadow-xl hover:shadow-primary/20"
     : "bg-white border border-gray-200 shadow-lg hover:shadow-2xl";
 
-  const headingClass = isDark ? "text-white" : "text-gray-900";
-  const bodyClass = isDark ? "text-gray-300" : "text-gray-700";
-  const accentClass = "text-muted";
+  const headingClass = isDark ? "text-white" : "text-primary";
+  const bodyClass = isDark ? "text-gray-300" : "text-primary-600";
+  const accentClass = "text-accent";
 
   // Sanitize function
   const sanitize = (html) => {
@@ -107,7 +107,7 @@ const TechNews = () => {
     return (
       <div
         className={`min-h-screen flex flex-col items-center justify-center p-6 transition-colors duration-700
-        ${isDark ? "bg-black text-gray-100" : "bg-gray-50 text-gray-900"}`}
+        ${isDark ? "bg-gray-950 text-white" : "bg-gray-50 text-primary"}`}
       >
         {/* ... loading UI unchanged ... */}
         <div className="relative w-24 h-24">
@@ -136,7 +136,7 @@ const TechNews = () => {
     return (
       <div
         className={`min-h-screen flex items-center justify-center p-6 transition-colors duration-700
-        ${isDark ? "bg-black text-gray-100" : "bg-gray-50 text-gray-900"}`}
+        ${isDark ? "bg-gray-950 text-white" : "bg-gray-50 text-primary"}`}
       >
         <div className="text-xl text-red-500">
           {error || "Something went wrong"}
@@ -160,7 +160,7 @@ const TechNews = () => {
       </Helmet>
       <div
         className={`min-h-screen p-6 md:p-10 relative transition-colors duration-700
-      ${isDark ? "bg-black text-gray-100" : "bg-gray-50 text-gray-900"}`}
+      ${isDark ? "bg-gray-950 text-white" : "bg-gray-50 text-primary"}`}
       >
         <div className="max-w-5xl mx-auto">
           {/* Header */}
@@ -188,8 +188,8 @@ const TechNews = () => {
                   selectedCategory === category
                     ? "btn-accent"
                     : isDark
-                      ? "bg-gray-800 text-gray-300 hover:bg-gray-700 hover:text-white border border-gray-700"
-                      : "bg-white text-gray-700 hover:bg-gray-100 border border-gray-300 hover:border-primary"
+                      ? "bg-gray-900 text-gray-300 hover:bg-gray-800 hover:text-white border border-gray-700"
+                      : "bg-white text-primary hover:bg-gray-100 border border-gray-300 hover:border-primary"
                 }`}
               >
                 {category}
