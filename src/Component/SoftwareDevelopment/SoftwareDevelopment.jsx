@@ -238,6 +238,7 @@ export default function SoftwareDevelopment() {
               className={`rounded-2xl shadow-2xl mx-auto max-w-4xl w-full object-cover mb-12 ${isDark ? "border border-red-900/30" : "border border-gray-200"}`}
             />
 
+
             <motion.p
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
