@@ -191,10 +191,8 @@ export default function SoftwareDevelopment() {
               {/* Primary Button */}
               <button
                 onClick={() => navigate("/contact")}
-                className="px-12 py-6 bg-gradient-to-r from-red-600 to-red-700 
-                   text-white rounded-full text-xl md:text-2xl font-bold 
-                   shadow-xl shadow-red-900/50 hover:shadow-red-700/70 
-                   hover:scale-105 active:scale-95 transition-all duration-300 
+                className="px-12 py-6 bg-[#3d220e] text-white rounded-full text-xl md:text-2xl font-bold 
+                  active:scale-95 transition-all duration-300 
                    flex items-center gap-3 group"
               >
                 Get in Touch{" "}
@@ -204,9 +202,9 @@ export default function SoftwareDevelopment() {
               {/* Secondary Button */}
               <button
                 onClick={() => navigate("/portfolio")}
-                className="px-12 py-6 border-2 border-red-500 text-white 
-                   hover:bg-red-600 hover:border-red-600 
-                   dark:hover:bg-red-700 rounded-full 
+                className="px-12 py-6 border-2 border-[#3d220e] text-white 
+                   hover:bg-[#3d220e] hover:border-[#3d220e] 
+                   dark:hover:bg-[#5a3a1c] rounded-full 
                    text-xl md:text-2xl font-bold transition-all duration-300"
               >
                 View Portfolio →
@@ -387,7 +385,7 @@ export default function SoftwareDevelopment() {
 
         {/* Industries + Tech Stack with Cloud Photo */}
         <section
-          className={`py-24 px-4 sm:px-6 lg:px-8 ${isDark ? "" : "bg-gray-50"}`}
+          className={`py-24 px-4 sm:px-6 lg:px-8 ${isDark ? "bg-black/50 text-[#9F714E]" : "bg-gray-50 text-[#462206]"}`}
         >
           <div className="max-w-7xl mx-auto">
             <motion.h2
@@ -401,7 +399,7 @@ export default function SoftwareDevelopment() {
 
             <div className="mb-20">
               <h2
-                className={`text-3xl md:text-4xl font-bold text-center mb-12 ${isDark ? "text-white" : "text-gray-900"}`}
+                className={`text-3xl md:text-4xl font-bold text-center mb-12 ${isDark ? "bg-black/50 text-[#9F714E]" : "bg-gray-50 text-[#462206]"}`}
               >
                 Industries We Serve
               </h2>
@@ -606,7 +604,7 @@ export default function SoftwareDevelopment() {
               viewport={{ once: true }}
               className="text-4xl md:text-5xl font-black text-center mb-12"
             >
-              Our Development <span className="text-red-500">Process</span>
+              Our Development <span className="text-[#9F714E]">Process</span>
             </motion.h2>
 
             <div className="grid md:grid-cols-3 gap-8 mb-20">
@@ -630,7 +628,7 @@ export default function SoftwareDevelopment() {
                     {step}
                   </h3>
                   <p
-                    className={`text-gray-300 ${isDark ? "text-[#EFE5C8]" : "text-[#462206]"}`}
+                    className={`text-[#704c32] ${isDark ? "text-[#826047]" : "text-[#826047]"}`}
                   >
                     {step === "Requirement Analysis" &&
                       "We understand your business needs and define the project roadmap."}
@@ -661,14 +659,14 @@ export default function SoftwareDevelopment() {
 
               <motion.h2
                 variants={fadeInUp}
-                className="text-4xl md:text-6xl font-black mb-10"
+                className="text-4xl md:text-6xl font-black mb-10 text-[#462206]"
               >
                 Hire a Dedicated Software Development Team
               </motion.h2>
 
               <motion.p
                 variants={fadeInUp}
-                className={`text-xl md:text-2xl mb-12 max-w-4xl mx-auto leading-relaxed ${isDark ? "text-gray-300" : "text-gray-700"}`}
+                className={`text-xl md:text-2xl mb-12 max-w-4xl mx-auto leading-relaxed ${isDark ? "text-[#826047]" : "text-[#826047]"}`}
               >
                 Get access to experienced developers who can build powerful web
                 and mobile applications tailored to your business needs.
@@ -684,7 +682,7 @@ export default function SoftwareDevelopment() {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.98 }}
-              className="px-14 py-7 bg-gradient-to-r from-red-600 to-red-800 rounded-full text-2xl md:text-3xl font-black shadow-2xl shadow-red-900/60 hover:shadow-red-700/80 transition-all flex items-center gap-4 mx-auto"
+              className="px-14 py-7 bg-[#3d220e] text-white rounded-full text-2xl md:text-3xl font-black shadow-2xl shadow-red-900/60 hover:shadow-red-700/80 transition-all flex items-center gap-4 mx-auto"
             >
               <button onClick={() => navigate("/contact")}>Contact Us</button>
               <ArrowRight className="w-auto h-8" />
@@ -738,12 +736,12 @@ export default function SoftwareDevelopment() {
                   className={`border rounded-2xl p-8 ${isDark ? "bg-gray-900/70 border-red-900/40" : "bg-white border-gray-200 shadow-md"}`}
                 >
                   <h3
-                    className={`text-2xl font-bold mb-4 ${isDark ? "text-red-400" : "text-[#EFE5C8]"}`}
+                    className={`text-2xl font-bold mb-4 ${isDark ? "text-[#a1814d]" : "text-[#a1814d]"}`}
                   >
                     {faq.q}
                   </h3>
                   <p
-                    className={`text-lg leading-relaxed ${isDark ? "text-gray-300" : "text-gray-700"}`}
+                    className={`text-lg leading-relaxed ${isDark ? "text-[#745625]" : "text-[#8d7146]"}`}
                   >
                     {faq.a}
                   </p>
