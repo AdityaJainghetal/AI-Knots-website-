@@ -1,0 +1,41 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://www.atlaknots.com/sitemap.xml
+Host: https://www.atlaknots.com
+
+Disallow: /admin/
+Disallow: /dashboard/
+Disallow: /api/
+Disallow: /private/
+Disallow: /temp/
+Disallow: /test/
+Disallow: /node_modules/
+Disallow: /src/
+Disallow: /assets/
+Disallow: /components/
+
+Disallow: /*?*
+Disallow: /blog/*?*
+Disallow: /technology/*?*
+
+Allow: /portfolio/
+Allow: /service/
+Allow: /digital-marketing/
+Allow: /software/
+Allow: /mobiledevelopment/
+Allow: /ecommercedevelopment/
+Allow: /blog/
+Allow: /technology/
+Allow: /about/
+Allow: /contact/
+Allow: /recentwork/
+Allow: /gallery/
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+Crawl-delay: 1

@@ -1,0 +1,31 @@
+# AI Knots - IT Solutions
+
+> AI Knots is a modern IT services and software development company based in Bhopal, India. We deliver custom software, website development, mobile apps, digital marketing, and 24/7 BPO support to help businesses build, grow, and scale digitally.
+
+We specialize in making technology simple, reliable, and impactful for businesses of all sizes.
+
+## Content Creation Transparency
+This website uses AI assistance for content generation with full human oversight:
+
+- **GPT-4** (OpenAI) — Drafting and ideation
+- **Claude** (Anthropic) — Editing, reasoning, and long-form content
+- **Gemini** (Google) — Research synthesis and analysis
+
+**All published content undergoes human review, fact-checking, and final editing.** AI tools are used strictly as collaborative assistants.
+
+## Core Pages
+- [Home](https://www.atlaknots.com/)
+- [About Us](https://www.atlaknots.com/about)
+- [Our Services](https://www.atlaknots.com/service)
+- [Contact](https://www.atlaknots.com/contact)
+
+## Important Resources
+- [Services & Solutions](https://www.atlaknots.com/service)
+- [Portfolio / Projects](https://www.atlaknots.com/portfolio) *(if available)*
+- [Blog](https://www.atlaknots.com/blog) *(if available)*
+
+For inquiries: admin@atlaknots.com | +91 78696 36070
+
+---
+
+*Last updated: May 2026*
