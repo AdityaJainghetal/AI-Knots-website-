@@ -172,20 +172,17 @@ export default function SocialMediaMarketing() {
     return () => observer.disconnect();
   }, []);
 
-  const accentClass = "text-red-500";
-  const headingClass = isDark ? "text-white" : "text-gray-900";
-  const bodyClass = isDark ? "text-gray-300" : "text-gray-700";
+  const accentClass = "text-accent";
+  const headingClass = isDark ? "text-white" : "text-primary";
+  const bodyClass = isDark ? "text-gray-300" : "text-primary";
 
   const cardClass = isDark
-    ? "bg-gray-900/70 backdrop-blur-sm border border-gray-800 hover:border-red-500/60 hover:shadow-red-900/30"
-    : "bg-white border border-gray-200 hover:border-red-300 hover:shadow-2xl";
+    ? "bg-gray-900/70 backdrop-blur-sm border border-gray-800 hover:border-primary/60 hover:shadow-red-900/30"
+    : "bg-white border border-gray-200 hover:border-primary hover:shadow-2xl";
 
-  const buttonClass = `px-12 py-6 rounded-full text-xl font-bold transition-all flex items-center gap-3 group shadow-xl
-    ${
-      isDark
-        ? "bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 shadow-red-900/60"
-        : "bg-red-600 hover:bg-red-700 text-white shadow-red-600/50"
-    }`;
+  const buttonClass = `px-12 py-6 rounded-full text-xl font-bold transition-all flex items-center gap-3 group shadow-xl ${
+    isDark ? "btn-accent" : "btn-accent"
+  }`;
 
   return (
     <>
@@ -202,7 +199,7 @@ export default function SocialMediaMarketing() {
       </Helmet>
       <div
         className={`min-h-screen overflow-hidden transition-colors duration-700
-      ${isDark ? "bg-black text-white" : "bg-white text-gray-900"}`}
+      ${isDark ? "bg-black text-white" : "bg-white text-primary"}`}
       >
         {/* ====================== HERO SECTION with Background Image ====================== */}
         <section className="relative min-h-[90vh] flex items-center justify-center px-4 sm:px-6 lg:px-8 overflow-hidden">
@@ -228,7 +225,7 @@ export default function SocialMediaMarketing() {
               className="text-5xl md:text-7xl font-black tracking-tighter leading-none mb-8 text-white"
             >
               Social Media Marketing Company in{" "}
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-red-400 via-red-500 to-white">
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-accent via-accent to-white">
                 Bhopal
               </span>
             </motion.h1>
@@ -266,11 +263,10 @@ export default function SocialMediaMarketing() {
               </button>
 
               <button
-                className={`px-12 py-6 border-2 border-red-500/70 rounded-full text-xl font-bold transition-all
-                ${
+                className={`px-12 py-6 border-2 border-primary rounded-full text-xl font-bold transition-all ${
                   isDark
-                    ? "text-red-400 hover:bg-red-950/60 hover:border-red-500"
-                    : "text-[#EFE5C8] hover:bg-red-50 border-red-600"
+                    ? "text-accent hover:bg-black/60 hover:border-primary"
+                    : "text-muted hover:bg-muted border-primary"
                 }`}
               >
                 Free Social Media Audit
@@ -343,7 +339,7 @@ export default function SocialMediaMarketing() {
                   viewport={{ once: true }}
                   transition={{ delay: idx * 0.1 }}
                   className={`px-10 py-5 text-xl font-semibold rounded-2xl border transition-all
-                  ${isDark ? "bg-gray-900 border-red-900/30" : "bg-gray-100 border-gray-300"}`}
+                  ${isDark ? "bg-gray-900 border-primary/30" : "bg-gray-100 border-gray-300"}`}
                 >
                   {tool}
                 </motion.div>

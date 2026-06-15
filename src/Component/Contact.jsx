@@ -135,7 +135,7 @@ const Contact = () => {
       </Helmet>
       <div
         className={`relative min-h-screen overflow-hidden transition-colors duration-700
-      ${isDark ? "bg-black text-gray-100" : "bg-white text-gray-900"}`}
+      ${isDark ? "bg-black text-white" : "bg-white text-primary"}`}
       >
         <ToastContainer
           position="top-right"
@@ -219,11 +219,9 @@ const Contact = () => {
                   <div className="space-y-7">
                     <div className="flex items-start gap-4">
                       <div
-                        className={`p-3.5 rounded-xl ${isDark ? "bg-red-900/25 border border-red-800/40" : "bg-red-100 border border-red-200"}`}
+                        className={`p-3.5 rounded-xl ${isDark ? "bg-black/20 border border-primary/30" : "bg-muted border border-primary/30"}`}
                       >
-                        <Building2
-                          className={`h-6 w-6 ${isDark ? "text-red-500" : "text-[#EFE5C8]"}`}
-                        />
+                        <Building2 className={`h-6 w-6 text-accent`} />
                       </div>
                       <div>
                         <h3
@@ -247,11 +245,9 @@ const Contact = () => {
 
                     <div className="flex items-start gap-4">
                       <div
-                        className={`p-3.5 rounded-xl ${isDark ? "bg-red-900/25 border border-red-800/40" : "bg-red-100 border border-red-200"}`}
+                        className={`p-3.5 rounded-xl ${isDark ? "bg-black/20 border border-primary/30" : "bg-muted border border-primary/30"}`}
                       >
-                        <Phone
-                          className={`h-6 w-6 ${isDark ? "text-red-500" : "text-[#EFE5C8]"}`}
-                        />
+                        <Phone className={`h-6 w-6 text-accent`} />
                       </div>
                       <div>
                         <h3
@@ -264,7 +260,7 @@ const Contact = () => {
                         >
                           <a
                             href="tel:+917869636070"
-                            className="hover:text-red-400 transition"
+                            className="hover:text-accent transition"
                           >
                             +91 78696 36070
                           </a>
@@ -274,11 +270,9 @@ const Contact = () => {
 
                     <div className="flex items-start gap-4">
                       <div
-                        className={`p-3.5 rounded-xl ${isDark ? "bg-red-900/25 border border-red-800/40" : "bg-red-100 border border-red-200"}`}
+                        className={`p-3.5 rounded-xl ${isDark ? "bg-black/20 border border-primary/30" : "bg-muted border border-primary/30"}`}
                       >
-                        <Mail
-                          className={`h-6 w-6 ${isDark ? "text-red-500" : "text-[#EFE5C8]"}`}
-                        />
+                        <Mail className={`h-6 w-6 text-accent`} />
                       </div>
                       <div>
                         <h3
@@ -291,7 +285,7 @@ const Contact = () => {
                         >
                           <a
                             href="mailto:support@atlaknots.com"
-                            className="hover:text-red-400 transition"
+                            className="hover:text-accent transition"
                           >
                             support@atlaknots.com
                           </a>
@@ -301,11 +295,9 @@ const Contact = () => {
 
                     <div className="flex items-start gap-4">
                       <div
-                        className={`p-3.5 rounded-xl ${isDark ? "bg-red-900/25 border border-red-800/40" : "bg-red-100 border border-red-200"}`}
+                        className={`p-3.5 rounded-xl ${isDark ? "bg-black/20 border border-primary/30" : "bg-muted border border-primary/30"}`}
                       >
-                        <Clock
-                          className={`h-6 w-6 ${isDark ? "text-red-500" : "text-[#EFE5C8]"}`}
-                        />
+                        <Clock className={`h-6 w-6 text-accent`} />
                       </div>
                       <div>
                         <h3
@@ -351,12 +343,8 @@ const Contact = () => {
                           placeholder="Your Name"
                           required
                           disabled={loading}
-                          className={`w-full px-4 py-3.5 rounded-lg focus:border-red-500 focus:outline-none transition
-                          ${
-                            isDark
-                              ? "bg-gray-900/60 border-gray-700 text-white placeholder-gray-500"
-                              : "bg-gray-50 border-gray-300 text-gray-900 placeholder-gray-400"
-                          }`}
+                          className={`w-full px-4 py-3.5 rounded-lg focus:border-primary focus:outline-none transition
+                          ${isDark ? "bg-gray-900/60 border-gray-700 text-white placeholder-gray-500" : "bg-gray-50 border-gray-300 text-primary placeholder-gray-400"}`}
                         />
                         <input
                           type="email"
@@ -366,12 +354,8 @@ const Contact = () => {
                           placeholder="Your Email"
                           required
                           disabled={loading}
-                          className={`w-full px-4 py-3.5 rounded-lg focus:border-red-500 focus:outline-none transition
-                          ${
-                            isDark
-                              ? "bg-gray-900/60 border-gray-700 text-white placeholder-gray-500"
-                              : "bg-gray-50 border-gray-300 text-gray-900 placeholder-gray-400"
-                          }`}
+                          className={`w-full px-4 py-3.5 rounded-lg focus:border-primary focus:outline-none transition
+                          ${isDark ? "bg-gray-900/60 border-gray-700 text-white placeholder-gray-500" : "bg-gray-50 border-gray-300 text-primary placeholder-gray-400"}`}
                         />
                       </div>
 
@@ -384,12 +368,8 @@ const Contact = () => {
                           placeholder="Phone Number"
                           required
                           disabled={loading}
-                          className={`w-full px-4 py-3.5 rounded-lg focus:border-red-500 focus:outline-none transition
-                          ${
-                            isDark
-                              ? "bg-gray-900/60 border-gray-700 text-white placeholder-gray-500"
-                              : "bg-gray-50 border-gray-300 text-gray-900 placeholder-gray-400"
-                          }`}
+                          className={`w-full px-4 py-3.5 rounded-lg focus:border-primary focus:outline-none transition
+                          ${isDark ? "bg-gray-900/60 border-gray-700 text-white placeholder-gray-500" : "bg-gray-50 border-gray-300 text-primary placeholder-gray-400"}`}
                         />
                         <input
                           type="text"
@@ -416,12 +396,8 @@ const Contact = () => {
                         placeholder="Your Message..."
                         required
                         disabled={loading}
-                        className={`w-full px-4 py-3.5 rounded-lg focus:border-red-500 focus:outline-none resize-none transition
-                        ${
-                          isDark
-                            ? "bg-gray-900/60 border-gray-700 text-white placeholder-gray-500"
-                            : "bg-gray-50 border-gray-300 text-gray-900 placeholder-gray-400"
-                        }`}
+                        className={`w-full px-4 py-3.5 rounded-lg focus:border-primary focus:outline-none resize-none transition
+                        ${isDark ? "bg-gray-900/60 border-gray-700 text-white placeholder-gray-500" : "bg-gray-50 border-gray-300 text-primary placeholder-gray-400"}`}
                       />
 
                       <ReCAPTCHA
@@ -433,8 +409,7 @@ const Contact = () => {
                       <button
                         type="submit"
                         disabled={loading || !captchaValue}
-                        className={`w-full py-4 bg-gradient-to-r from-red-600 to-rose-600 text-white font-semibold rounded-xl shadow-lg transition-all flex items-center justify-center gap-2.5
-                        ${loading || !captchaValue ? "opacity-70 cursor-not-allowed" : "hover:from-red-700 hover:to-rose-700 hover:shadow-red-600/40 hover:-translate-y-0.5"}`}
+                        className={`w-full py-4 btn-primary text-white font-semibold rounded-xl shadow-lg transition-all flex items-center justify-center gap-2.5 ${loading || !captchaValue ? "opacity-70 cursor-not-allowed" : "hover:opacity-95 hover:-translate-y-0.5"}`}
                       >
                         {loading ? (
                           "Sending..."

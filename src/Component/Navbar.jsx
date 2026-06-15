@@ -1,5 +1,3 @@
-
-
 // import React, { useState, useEffect } from "react";
 // import { NavLink } from "react-router-dom";
 // import { Menu, X, ChevronDown, Sun, Moon } from "lucide-react";
@@ -13,12 +11,12 @@
 //   {
 //     name: "About",
 //     path: "/about",q
-   
+
 //   },
 //   { name: "Recent Work", path: "/recentwork" },
 //   {
 //     name: "Service",path: "/software",
-    
+
 //     hasDropdown: true,
 //     dropdownItems: [
 //       {
@@ -62,7 +60,7 @@
 //     ],
 //   },
 //   { name: "Blog", path: "/blog",
-    
+
 //    },
 //   // { name: "Careers", path: "/careers" },
 //   { name: "AI Technology", path: "/technology" },
@@ -144,7 +142,7 @@
 //                   {item.hasDropdown && (
 //                     <ChevronDown
 //                       size={16}
-//                       className={`transition-transform duration-200 
+//                       className={`transition-transform duration-200
 //                         ${isDark ? "group-hover:rotate-180" : "group-hover:rotate-180 text-blue-600"}`}
 //                     />
 //                   )}
@@ -154,7 +152,7 @@
 //                 {item.hasDropdown && (
 //                   <div
 //                     className={`
-//                       absolute left-0 top-full pt-2 w-56 
+//                       absolute left-0 top-full pt-2 w-56
 //                       border rounded-lg shadow-xl transition-all duration-200 ease-out
 //                       opacity-0 scale-95 pointer-events-none
 //                       group-hover:opacity-100 group-hover:scale-100 group-hover:pointer-events-auto
@@ -170,7 +168,7 @@
 //                         <NavLink
 //                           to={sub.path}
 //                           className={`
-//                             flex justify-between items-center px-4 py-2.5 
+//                             flex justify-between items-center px-4 py-2.5
 //                             transition-colors duration-150
 //                             ${
 //                               isDark
@@ -293,7 +291,7 @@
 //                   >
 //                     <ChevronDown
 //                       size={20}
-//                       className={`${isDark ? "text-gray-400" : "text-gray-500"} 
+//                       className={`${isDark ? "text-gray-400" : "text-gray-500"}
 //                         ${openDropdown === item.name ? "rotate-180" : ""}`}
 //                     />
 //                   </button>
@@ -327,7 +325,7 @@
 //                           >
 //                             <ChevronDown
 //                               size={18}
-//                               className={`${isDark ? "text-gray-400" : "text-gray-500"} 
+//                               className={`${isDark ? "text-gray-400" : "text-gray-500"}
 //                                 ${openSubDropdown === sub.name ? "rotate-180" : ""}`}
 //                             />
 //                           </button>
@@ -479,7 +477,7 @@
 //                   {item.hasDropdown && (
 //                     <ChevronDown
 //                       size={16}
-//                       className={`transition-transform duration-200 
+//                       className={`transition-transform duration-200
 //                         ${isDark ? "group-hover:rotate-180" : "group-hover:rotate-180 text-blue-600"}`}
 //                     />
 //                   )}
@@ -489,8 +487,8 @@
 //                 {item.hasDropdown && (
 //                   <div
 //                     className={`
-//                       absolute left-0 top-full pt-2 w-56 border rounded-lg shadow-xl 
-//                       opacity-0 scale-95 pointer-events-none group-hover:opacity-100 
+//                       absolute left-0 top-full pt-2 w-56 border rounded-lg shadow-xl
+//                       opacity-0 scale-95 pointer-events-none group-hover:opacity-100
 //                       group-hover:scale-100 group-hover:pointer-events-auto transition-all
 //                       ${isDark ? "bg-black/95 border-gray-700" : "bg-white border-gray-200 shadow-lg"}
 //                     `}
@@ -519,8 +517,8 @@
 //                           <div
 //                             className={`
 //                               absolute left-full top-0 ml-1 w-52 border rounded-lg shadow-xl
-//                               opacity-0 scale-95 pointer-events-none 
-//                               group-hover/sub:opacity-100 group-hover/sub:scale-100 
+//                               opacity-0 scale-95 pointer-events-none
+//                               group-hover/sub:opacity-100 group-hover/sub:scale-100
 //                               group-hover/sub:pointer-events-auto transition-all
 //                               ${isDark ? "bg-black/95 border-gray-700" : "bg-white border-gray-200"}
 //                             `}
@@ -603,7 +601,7 @@
 //                   >
 //                     <ChevronDown
 //                       size={20}
-//                       className={`transition-transform ${isDark ? "text-gray-400" : "text-gray-500"} 
+//                       className={`transition-transform ${isDark ? "text-gray-400" : "text-gray-500"}
 //                         ${openDropdown === item.name ? "rotate-180" : ""}`}
 //                     />
 //                   </button>
@@ -640,7 +638,7 @@
 //                           >
 //                             <ChevronDown
 //                               size={18}
-//                               className={`transition-transform ${isDark ? "text-gray-400" : "text-gray-500"} 
+//                               className={`transition-transform ${isDark ? "text-gray-400" : "text-gray-500"}
 //                                 ${openSubDropdown === sub.name ? "rotate-180" : ""}`}
 //                             />
 //                           </button>
@@ -711,7 +709,10 @@ const navItems = [
         hasDropdown: true,
         dropdownItems: [
           { name: "UI/UX Design", path: "/uidesign" },
-          { name: "Web Design & Development", path: "/websitedesigndevelopment" },
+          {
+            name: "Web Design & Development",
+            path: "/websitedesigndevelopment",
+          },
           { name: "Branding", path: "/contentwritingbranding" },
         ],
       },
@@ -728,8 +729,8 @@ const navItems = [
           { name: "AI & Machine Learning", path: "/ai-mlservice" },
         ],
       },
-      
-       {
+
+      {
         name: "Digital Marketing",
         path: "/digital-marketing",
         hasDropdown: true,
@@ -781,13 +782,13 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-5">
         <div className="flex justify-between items-center h-20">
           {/* LOGO */}
-        <NavLink to="/" onClick={closeAll}>
-  <img
-    src={isDark ? ATLAknots : ATLAknots2}
-    alt="ATLAKnots Logo"
-    className="h-10 md:h-14 lg:h-18 w-auto object-contain"
-  />
-</NavLink>
+          <NavLink to="/" onClick={closeAll}>
+            <img
+              src={isDark ? ATLAknots : ATLAknots2}
+              alt="ATLAKnots Logo"
+              className="h-10 md:h-14 lg:h-18 w-auto object-contain"
+            />
+          </NavLink>
           {/* DESKTOP MENU */}
           <div className="hidden md:flex items-center gap-1">
             {navItems.map((item) => (
@@ -795,16 +796,15 @@ export default function Navbar() {
                 <NavLink
                   to={item.path}
                   className={`
-                    px-4 py-5 flex items-center gap-1.5 transition-colors duration-150
-                    ${isDark ? "text-gray-200 hover:text-red-400" : "text-gray-700 hover:text-blue-600 font-medium"}
-                  `}
+                      px-4 py-5 flex items-center gap-1.5 transition-colors duration-150
+                      ${isDark ? "text-white hover:text-accent" : "text-primary hover:text-accent font-medium"}
+                    `}
                 >
                   {item.name}
                   {item.hasDropdown && (
                     <ChevronDown
                       size={16}
-                      className={`transition-transform duration-200 
-                        ${isDark ? "group-hover:rotate-180" : "group-hover:rotate-180 text-blue-600"}`}
+                      className={`transition-transform duration-200 group-hover:rotate-180 ${isDark ? "" : "text-primary"}`}
                     />
                   )}
                 </NavLink>
@@ -825,15 +825,14 @@ export default function Navbar() {
                           to={sub.path}
                           className={`
                             flex justify-between items-center px-4 py-2.5 transition-colors
-                            ${isDark ? "text-gray-200 hover:bg-red-900/40" : "text-gray-700 hover:bg-blue-50 hover:text-blue-600"}
+                            ${isDark ? "text-gray-200 hover:bg-red-900/40" : "text-gray-700 hover:bg-muted hover:text-accent"}
                           `}
                         >
                           {sub.name}
                           {sub.hasDropdown && (
                             <ChevronDown
                               size={14}
-                              className={`transition-transform duration-200
-                                ${isDark ? "rotate-[-90deg] group-hover/sub:rotate-[-270deg]" : "rotate-[-90deg] group-hover/sub:rotate-[-270deg] text-blue-600"}`}
+                              className={`transition-transform duration-200 rotate-[-90deg] group-hover/sub:rotate-[-270deg] ${isDark ? "" : "text-primary"}`}
                             />
                           )}
                         </NavLink>
@@ -855,7 +854,7 @@ export default function Navbar() {
                                 to={child.path}
                                 className={`
                                   block px-4 py-2.5 transition-colors
-                                  ${isDark ? "text-gray-200 hover:bg-red-900/40" : "text-gray-700 hover:bg-blue-50 hover:text-blue-600"}
+                                  ${isDark ? "text-gray-200 hover:bg-red-900/40" : "text-gray-700 hover:bg-muted hover:text-accent"}
                                 `}
                               >
                                 {child.name}
@@ -878,7 +877,7 @@ export default function Navbar() {
               onClick={toggleTheme}
               className={`
                 p-2 rounded-full transition-all duration-150
-                ${isDark ? "text-gray-200 hover:text-red-400 hover:bg-gray-800" : "text-gray-700 hover:text-blue-600 hover:bg-gray-100"}
+                ${isDark ? "text-white hover:text-accent hover:bg-gray-800" : "text-primary hover:text-accent hover:bg-gray-100"}
               `}
               title={isDark ? "Switch to Light Mode" : "Switch to Dark Mode"}
             >
@@ -887,7 +886,10 @@ export default function Navbar() {
 
             {/* Mobile Menu Button */}
             <div className="md:hidden">
-              <button onClick={toggleMenu} className={isDark ? "text-gray-200" : "text-gray-700"}>
+              <button
+                onClick={toggleMenu}
+                className={isDark ? "text-gray-200" : "text-gray-700"}
+              >
                 {isOpen ? <X size={28} /> : <Menu size={28} />}
               </button>
             </div>
@@ -903,7 +905,10 @@ export default function Navbar() {
           }`}
         >
           {navItems.map((item) => (
-            <div key={item.name} className="border-b border-gray-700/30 last:border-none pb-3 last:pb-0">
+            <div
+              key={item.name}
+              className="border-b border-gray-700/30 last:border-none pb-3 last:pb-0"
+            >
               <div className="flex justify-between items-center">
                 <NavLink
                   to={item.path}
@@ -914,21 +919,22 @@ export default function Navbar() {
                       closeAll();
                     }
                   }}
-                  className={`py-3 flex-1 transition-colors ${
-                    isDark ? "text-gray-200" : "text-gray-800 font-medium"
-                  }`}
+                  className={`py-3 flex-1 transition-colors ${isDark ? "text-gray-200" : "text-primary font-medium"}`}
                 >
                   {item.name}
                 </NavLink>
 
                 {item.hasDropdown && (
                   <button
-                    onClick={() => setOpenDropdown(openDropdown === item.name ? null : item.name)}
+                    onClick={() =>
+                      setOpenDropdown(
+                        openDropdown === item.name ? null : item.name,
+                      )
+                    }
                   >
                     <ChevronDown
                       size={20}
-                      className={`transition-transform ${isDark ? "text-gray-400" : "text-gray-500"} 
-                        ${openDropdown === item.name ? "rotate-180" : ""}`}
+                      className={`transition-transform ${isDark ? "text-gray-400" : "text-primary"} ${openDropdown === item.name ? "rotate-180" : ""}`}
                     />
                   </button>
                 )}
@@ -949,9 +955,7 @@ export default function Navbar() {
                               closeAll();
                             }
                           }}
-                          className={`py-2.5 flex-1 transition-colors ${
-                            isDark ? "text-gray-300" : "text-gray-700"
-                          }`}
+                          className={`py-2.5 flex-1 transition-colors ${isDark ? "text-gray-300" : "text-primary"}`}
                         >
                           {sub.name}
                         </NavLink>
@@ -959,13 +963,14 @@ export default function Navbar() {
                         {sub.hasDropdown && (
                           <button
                             onClick={() =>
-                              setOpenSubDropdown(openSubDropdown === sub.name ? null : sub.name)
+                              setOpenSubDropdown(
+                                openSubDropdown === sub.name ? null : sub.name,
+                              )
                             }
                           >
                             <ChevronDown
                               size={18}
-                              className={`transition-transform ${isDark ? "text-gray-400" : "text-gray-500"} 
-                                ${openSubDropdown === sub.name ? "rotate-180" : ""}`}
+                              className={`transition-transform ${isDark ? "text-gray-400" : "text-primary"} ${openSubDropdown === sub.name ? "rotate-180" : ""}`}
                             />
                           </button>
                         )}
@@ -979,9 +984,7 @@ export default function Navbar() {
                               key={child.path}
                               to={child.path}
                               onClick={closeAll}
-                              className={`block py-2 text-sm transition-colors ${
-                                isDark ? "text-gray-400" : "text-gray-600"
-                              }`}
+                              className={`block py-2 text-sm transition-colors ${isDark ? "text-gray-400" : "text-primary"}`}
                             >
                               {child.name}
                             </NavLink>

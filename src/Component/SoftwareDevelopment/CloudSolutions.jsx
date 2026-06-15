@@ -207,24 +207,24 @@ export default function CloudSolutions() {
               className="text-5xl md:text-7xl font-black mb-6 tracking-tight leading-tight text-white"
             >
               Empowering Indian Businesses with{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-600">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-primary">
                 Smart Cloud Solutions
               </span>
             </motion.h1>
 
             <motion.p
               variants={fadeInUp}
-              className="text-2xl md:text-4xl font-bold text-red-500 dark:text-red-400 mb-8"
+              className="text-2xl md:text-4xl font-bold text-accent mb-8"
             >
               Scale Securely, Save Costs, Grow Limitlessly
             </motion.p>
 
             <motion.p
               variants={fadeInUp}
-              className="text-lg md:text-xl text-gray-200 dark:text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed"
+              className="text-lg md:text-xl text-muted mb-12 max-w-4xl mx-auto leading-relaxed"
             >
               At{" "}
-              <span className="text-red-500 dark:text-red-400 font-semibold">
+              <span className="text-accent font-semibold">
                 AI Knots IT Solution
               </span>
               , we deliver fast, secure, and scalable cloud infrastructure
@@ -571,7 +571,6 @@ export default function CloudSolutions() {
   );
 }
 
-
 // import React, { useState, useEffect } from "react";
 // import { motion } from "framer-motion";
 // import { Helmet } from "react-helmet-async";
@@ -726,7 +725,7 @@ export default function CloudSolutions() {
 //               className="w-full h-full object-cover brightness-75 contrast-110 dark:brightness-50 dark:contrast-125 transition-all duration-700"
 //               loading="lazy"
 //             />
-//             <div className={`absolute inset-0 bg-gradient-to-b 
+//             <div className={`absolute inset-0 bg-gradient-to-b
 //               ${isDark ? "from-black/85 via-black/75 to-black/90" : "from-black/85 via-black/75 to-black/90"}`} />
 //           </div>
 

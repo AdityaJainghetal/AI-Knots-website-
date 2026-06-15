@@ -82,7 +82,7 @@ const TechNews = () => {
 
   const headingClass = isDark ? "text-white" : "text-gray-900";
   const bodyClass = isDark ? "text-gray-300" : "text-gray-700";
-  const accentClass = "text-[#EFE5C8]";
+  const accentClass = "text-muted";
 
   // Sanitize function
   const sanitize = (html) => {
@@ -111,16 +111,16 @@ const TechNews = () => {
       >
         {/* ... loading UI unchanged ... */}
         <div className="relative w-24 h-24">
-          <div className="absolute inset-0 border-4 border-gray-300 border-t-red-600 rounded-full animate-spin"></div>
+          <div className="absolute inset-0 border-4 border-gray-300 border-primary rounded-full animate-spin"></div>
           <div
-            className="absolute inset-3 border-4 border-gray-300 border-r-red-500 rounded-full animate-spin"
+            className="absolute inset-3 border-4 border-gray-300 border-primary rounded-full animate-spin"
             style={{ animationDuration: "1.5s", animationDirection: "reverse" }}
           ></div>
           <div
-            className="absolute inset-6 border-4 border-gray-300 border-b-red-400 rounded-full animate-spin"
+            className="absolute inset-6 border-4 border-gray-300 border-primary rounded-full animate-spin"
             style={{ animationDuration: "2s" }}
           ></div>
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-6 h-6 bg-red-600 rounded-full animate-pulse shadow-lg shadow-red-600/50"></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-6 h-6 bg-primary rounded-full animate-pulse shadow-lg"></div>
         </div>
         <div className="mt-8 flex items-center gap-2">
           <Newspaper className="w-5 h-5 text-[#EFE5C8] animate-pulse" />
@@ -186,10 +186,10 @@ const TechNews = () => {
                 onClick={() => dispatch(setSelectedCategory(category))}
                 className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
                   selectedCategory === category
-                    ? "bg-red-600 text-white shadow-lg shadow-red-900/40"
+                    ? "btn-accent"
                     : isDark
                       ? "bg-gray-800 text-gray-300 hover:bg-gray-700 hover:text-white border border-gray-700"
-                      : "bg-white text-gray-700 hover:bg-gray-100 border border-gray-300 hover:border-red-600"
+                      : "bg-white text-gray-700 hover:bg-gray-100 border border-gray-300 hover:border-primary"
                 }`}
               >
                 {category}
@@ -209,9 +209,7 @@ const TechNews = () => {
                 >
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-3">
-                      <div
-                        className={`p-2 rounded-lg ${isDark ? "bg-red-900/30" : "bg-red-100"} text-red-500`}
-                      >
+                      <div className={`p-2 rounded-lg bg-muted text-accent`}>
                         {getIconForCategory(item.category)}
                       </div>
                       <span
@@ -242,7 +240,7 @@ const TechNews = () => {
 
                 <div className="p-6">
                   <h2
-                    className={`text-xl font-bold mb-3 group-hover:text-red-500 transition-colors ${headingClass}`}
+                    className={`text-xl font-bold mb-3 group-hover:text-accent transition-colors ${headingClass}`}
                   >
                     {item.title}
                   </h2>
@@ -259,7 +257,7 @@ const TechNews = () => {
                     href={item.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`inline-flex items-center gap-2 font-medium text-sm transition-colors ${accentClass} hover:text-red-400`}
+                    className={`inline-flex items-center gap-2 font-medium text-sm transition-colors ${accentClass} hover:text-accent`}
                   >
                     Read more
                     <ExternalLink className="w-4 h-4" />
@@ -279,7 +277,7 @@ const TechNews = () => {
         {/* Scroll to Top Button */}
         <button
           onClick={scrollToTop}
-          className={`fixed bottom-6 right-6 z-50 p-4 rounded-full bg-red-600 hover:bg-red-700 text-white shadow-lg shadow-red-900/50 transition-all duration-300 hover:scale-110 active:scale-95 ${
+          className={`fixed bottom-6 right-6 z-50 p-4 rounded-full transition-all duration-300 hover:scale-110 active:scale-95 btn-primary ${
             showScrollTop
               ? "opacity-100 translate-y-0"
               : "opacity-0 translate-y-16 pointer-events-none"

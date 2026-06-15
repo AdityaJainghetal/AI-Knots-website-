@@ -123,7 +123,7 @@ function PaidAdvertising() {
   ];
 
   // Dynamic Theme Classes (Same as your other pages)
-  const accentClass = "text-red-500";
+  const accentClass = "text-accent";
   const headingClass = isDark ? "text-white" : "text-gray-900";
   const bodyClass = isDark ? "text-gray-300" : "text-gray-700";
 
@@ -131,12 +131,7 @@ function PaidAdvertising() {
     ? "bg-gray-900/80 backdrop-blur-xl border border-gray-700/80 hover:border-red-500/70 hover:shadow-2xl hover:shadow-red-500/20 transition-all duration-500"
     : "bg-white border border-gray-100 hover:border-red-200 hover:shadow-2xl hover:shadow-red-100/80 transition-all duration-500";
 
-  const premiumButton = `px-12 py-7 rounded-2xl text-xl font-bold transition-all flex items-center gap-3 group shadow-xl
-    ${
-      isDark
-        ? "bg-gradient-to-r from-red-600 to-red-800 hover:from-red-700 hover:to-red-900 shadow-red-900/60"
-        : "bg-gradient-to-r from-red-600 to-red-700 text-white shadow-red-600/50 hover:shadow-red-500/50"
-    }`;
+  const premiumButton = `px-12 py-7 rounded-2xl text-xl font-bold transition-all flex items-center gap-3 group shadow-xl btn-accent`;
 
   return (
     <>

@@ -138,7 +138,7 @@ const Footer = () => {
           {/* Quick Links */}
           <div>
             <h4
-              className={`font-semibold mb-4 text-sm uppercase tracking-widest ${isDark ? "text-white" : "text-gray-900"}`}
+              className={`font-semibold mb-4 text-sm uppercase tracking-widest ${isDark ? "text-white" : "text-primary"}`}
             >
               Quick Links
             </h4>
@@ -148,11 +148,7 @@ const Footer = () => {
                   <Link
                     to={item.path}
                     onClick={(e) => handleFooterLink(e, item.path)}
-                    className={`transition-all hover:translate-x-1 inline-block duration-200 ${
-                      isDark
-                        ? "text-gray-400 hover:text-red-400"
-                        : "text-gray-600 hover:text-red-500"
-                    }`}
+                    className={`transition-all hover:translate-x-1 inline-block duration-200 ${isDark ? "text-gray-400 hover:text-accent" : "text-primary hover:text-accent"}`}
                   >
                     {item.name}
                   </Link>
@@ -164,7 +160,7 @@ const Footer = () => {
           {/* Services */}
           <div className="lg:col-span-2">
             <h4
-              className={`font-semibold center mb-4 text-sm uppercase tracking-widest ${isDark ? "text-white" : "text-gray-900"}`}
+              className={`font-semibold center mb-4 text-sm uppercase tracking-widest ${isDark ? "text-white" : "text-primary"}`}
             >
               Our Services
             </h4>
@@ -172,7 +168,7 @@ const Footer = () => {
               {services.map((group) => (
                 <div key={group.category}>
                   <h5
-                    className={`font-medium text-xs uppercase tracking-widest mb-3 ${isDark ? "text-red-400" : "text-[#EFE5C8]"}`}
+                    className={`font-medium text-xs uppercase tracking-widest mb-3 ${isDark ? "text-accent" : "text-muted"}`}
                   >
                     {group.category}
                   </h5>
@@ -182,11 +178,7 @@ const Footer = () => {
                         <Link
                           to={service.path}
                           onClick={(e) => handleFooterLink(e, service.path)}
-                          className={`transition-all hover:translate-x-1 inline-block duration-200 ${
-                            isDark
-                              ? "text-gray-300 hover:text-white"
-                              : "text-gray-700 hover:text-[#EFE5C8]"
-                          }`}
+                          className={`transition-all hover:translate-x-1 inline-block duration-200 ${isDark ? "text-gray-300 hover:text-white" : "text-primary hover:text-muted"}`}
                         >
                           {service.name}
                         </Link>
@@ -201,21 +193,19 @@ const Footer = () => {
           {/* Contact */}
           <div>
             <h4
-              className={`font-semibold mb-4 text-sm uppercase tracking-widest ${isDark ? "text-white" : "text-gray-900"}`}
+              className={`font-semibold mb-4 text-sm uppercase tracking-widest ${isDark ? "text-white" : "text-primary"}`}
             >
               Contact Us
             </h4>
             <ul className="space-y-4 text-sm">
               <li className="flex items-start gap-3">
-                <MapPin size={18} className="text-red-500 mt-0.5 shrink-0" />
+                <MapPin size={18} className="text-accent mt-0.5 shrink-0" />
 
                 <a
                   href="https://maps.google.com/?q=AI+Knots+IT+Solution,+103+Goyal+Vihar,+Plot+No+31-C,+Zone+2,+MP+Nagar,+Bhopal,+Madhya+Pradesh+462011"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`hover:text-red-500 transition-colors ${
-                    isDark ? "text-gray-300" : "text-gray-700"
-                  }`}
+                  className={`hover:text-accent transition-colors ${isDark ? "text-gray-300" : "text-primary"}`}
                 >
                   103, Goyal Vihar, Plot No 31-C, Zone 2, M.P. Nagar, Bhopal -
                   462011, Madhya Pradesh, India
@@ -223,7 +213,7 @@ const Footer = () => {
               </li>
 
               <li className="flex items-center gap-3">
-                <Phone size={18} className="text-red-500 shrink-0" />
+                <Phone size={18} className="text-accent shrink-0" />
                 <a
                   href="tel:+917869636070"
                   className={`transition-colors ${isDark ? "hover:text-red-400" : "hover:text-red-500"}`}
@@ -233,7 +223,7 @@ const Footer = () => {
               </li>
 
               <li className="flex items-center gap-3">
-                <Mail size={18} className="text-red-500 shrink-0" />
+                <Mail size={18} className="text-accent shrink-0" />
                 <a
                   href="mailto:support@atlaknots.com"
                   className={`transition-colors break-all ${isDark ? "hover:text-red-400" : "hover:text-red-500"}`}
@@ -259,21 +249,21 @@ const Footer = () => {
             <Link
               to="/privacypolicy"
               onClick={(e) => handleFooterLink(e, "/privacypolicy")}
-              className={`transition-colors ${isDark ? "hover:text-red-400" : "hover:text-red-500"}`}
+              className={`transition-colors ${isDark ? "hover:text-accent" : "hover:text-accent"}`}
             >
               Privacy Policy
             </Link>
             <Link
               to="/termsofservice"
               onClick={(e) => handleFooterLink(e, "/termsofservice")}
-              className={`transition-colors ${isDark ? "hover:text-red-400" : "hover:text-red-500"}`}
+              className={`transition-colors ${isDark ? "hover:text-accent" : "hover:text-accent"}`}
             >
               Terms of Service
             </Link>
             <Link
               to="/cookiepolicy"
               onClick={(e) => handleFooterLink(e, "/cookiepolicy")}
-              className={`transition-colors ${isDark ? "hover:text-red-400" : "hover:text-red-500"}`}
+              className={`transition-colors ${isDark ? "hover:text-accent" : "hover:text-accent"}`}
             >
               Cookie Policy
             </Link>

@@ -249,12 +249,12 @@ const Technology = () => {
 
   // ====================== THEME CLASSES ======================
   const cardClass = isDark
-    ? "bg-gradient-to-b from-gray-900 to-black border border-gray-800 hover:border-red-600/50"
+    ? "bg-gradient-to-b from-gray-900 to-black border border-gray-800 hover:border-primary"
     : "bg-white border border-gray-200 shadow-lg hover:shadow-2xl";
 
   const headingClass = isDark ? "text-white" : "text-gray-900";
   const bodyClass = isDark ? "text-gray-300" : "text-gray-700";
-  const accentClass = "text-[#EFE5C8]";
+  const accentClass = "text-muted";
 
   return (
     <>
