@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
 import { useNavigate } from "react-router-dom";
+import { useTheme } from "../../context/ThemeContext";
 import {
   ShieldCheck,
   Cloud,
@@ -123,32 +124,9 @@ const capabilities = [
 ];
 
 export default function CloudSolutions() {
-  const [isDark, setIsDark] = useState(true);
+  const { isDark } = useTheme();
   const [openFAQ, setOpenFAQ] = useState(null);
   const navigate = useNavigate();
-  useEffect(() => {
-    const savedTheme = localStorage.getItem("theme");
-    if (savedTheme === "light") {
-      setIsDark(false);
-      document.documentElement.classList.remove("dark");
-    } else {
-      setIsDark(true);
-      document.documentElement.classList.add("dark");
-    }
-  }, []);
-
-  const toggleTheme = () => {
-    const newMode = !isDark;
-    setIsDark(newMode);
-
-    if (newMode) {
-      document.documentElement.classList.add("dark");
-      localStorage.setItem("theme", "dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-      localStorage.setItem("theme", "light");
-    }
-  };
 
   return (
     <>
@@ -163,7 +141,9 @@ export default function CloudSolutions() {
           content="Cloud Solutions Company India	Cloud Migration, Cloud Services"
         />
       </Helmet>
-      <div className="min-h-screen bg-white dark:bg-gradient-to-b dark:from-gray-950 dark:via-black dark:to-gray-950 text-gray-900 dark:text-white transition-colors duration-500 overflow-hidden">
+      <div
+        className={`min-h-screen transition-colors duration-500 overflow-hidden ${isDark ? "bg-gradient-to-b from-gray-950 via-black to-gray-950 text-white" : "bg-gradient-to-b from-gray-50 via-white to-gray-50 text-gray-900"}`}
+      >
         {/* Theme Toggle */}
 
         {/* Hero Section */}
@@ -173,26 +153,19 @@ export default function CloudSolutions() {
             <img
               src={images.hero}
               alt="Modern cloud dashboard"
-              className="w-full h-full object-cover 
-                 brightness-75 contrast-110 
-                 dark:brightness-50 dark:contrast-125
-                 transition-all duration-700"
+              className={`w-full h-full object-cover transition-all duration-700 ${isDark ? "brightness-50 contrast-125" : "brightness-75 contrast-110"}`}
               loading="lazy"
             />
 
             {/* Gradient Overlay - Optimized for both themes */}
             <div
-              className="absolute inset-0 bg-gradient-to-b 
-                    from-black/70 via-black/60 to-black/80 
-                    dark:from-black/85 dark:via-black/75 dark:to-black/90"
+              className={`absolute inset-0 bg-gradient-to-b ${isDark ? "from-black/85 via-black/75 to-black/90" : "from-black/70 via-black/60 to-black/80"}`}
             />
 
             {/* Optional subtle light mode tint */}
-            <div
-              className="absolute inset-0 bg-gradient-to-t 
-                    from-white/10 to-transparent 
-                    dark:hidden"
-            />
+            {!isDark && (
+              <div className="absolute inset-0 bg-gradient-to-t from-white/10 to-transparent" />
+            )}
           </div>
 
           {/* Content */}
@@ -214,17 +187,19 @@ export default function CloudSolutions() {
 
             <motion.p
               variants={fadeInUp}
-              className={`text-2xl md:text-4xl font-bold text-accent mb-8 ${`font-bold ${isDark ? "text-[#9F714E]" : "text-[#9F714E]"}`}`}
+              className={`text-2xl md:text-4xl font-bold mb-8 ${isDark ? "text-[#f9e8c8]" : "text-[#9F714E]"}`}
             >
               Scale Securely, Save Costs, Grow Limitlessly
             </motion.p>
 
             <motion.p
               variants={fadeInUp}
-              className={`text-lg md:text-xl mb-12 max-w-4xl mx-auto leading-relaxed ${`font-bold ${isDark ? "text-[#9F714E]" : "text-[#9F714E]"}`}`}
+              className={`text-lg md:text-xl mb-12 max-w-4xl mx-auto leading-relaxed ${isDark ? "text-gray-300" : "text-gray-300"}`}
             >
               At{" "}
-              <span className="text-accent font-semibold">
+              <span
+                className={`font-semibold ${isDark ? "text-[#f9e8c8]" : "text-[#f9e8c8]"}`}
+              >
                 AI Knots IT Solution
               </span>
               , we deliver fast, secure, and scalable cloud infrastructure
@@ -233,7 +208,7 @@ export default function CloudSolutions() {
 
             <motion.ul
               variants={fadeInUp}
-              className="flex flex-wrap justify-center gap-6 mb-12 text-lg text-gray-200 dark:text-gray-300"
+              className={`flex flex-wrap justify-center gap-6 mb-12 text-lg ${isDark ? "text-gray-300" : "text-gray-300"}`}
             >
               {[
                 "Advanced data protection",
@@ -242,8 +217,7 @@ export default function CloudSolutions() {
                 "Full compliance support",
               ].map((item) => (
                 <li key={item} className="flex items-center gap-2">
-                  <CheckCircle2 className="w-6 h-6 text-[#8B6B4A] dark:text-[#8B6B4A]" />{" "}
-                  {item}
+                  <CheckCircle2 className="w-6 h-6 text-[#8B6B4A]" /> {item}
                 </li>
               ))}
             </motion.ul>
@@ -254,9 +228,7 @@ export default function CloudSolutions() {
             >
               <button
                 onClick={() => navigate("/contact")}
-                className="px-12 py-6 border-2 border-[#8B6B4A] text-white font-bold rounded-full text-xl md:text-2xl 
-                   hover:bg-[#8B6B4A] hover:border-[#8B6B4A] transition-all duration-300
-                   dark:hover:bg-[#8B6B4A]/50 dark:hover:border-[#8B6B4A] dark:text-gray-300"
+                className={`px-12 py-6 border-2 border-[#e9e4df] font-bold rounded-full text-xl md:text-2xl transition-all duration-300 ${isDark ? "text-white hover:bg-[#8B6B4A]/50 hover:border-[#8B6B4A]" : "text-white hover:bg-[#8B6B4A] hover:border-[#8B6B4A]"}`}
               >
                 Free Consultation
               </button>
@@ -265,7 +237,9 @@ export default function CloudSolutions() {
         </section>
 
         {/* Why Cloud */}
-        <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-black/50">
+        <section
+          className={`py-24 px-4 sm:px-6 lg:px-8 ${isDark ? "bg-black/50" : "bg-gray-50"}`}
+        >
           <div className="max-w-7xl mx-auto">
             <motion.div
               initial="hidden"
@@ -276,16 +250,14 @@ export default function CloudSolutions() {
             >
               <motion.h2
                 variants={fadeInUp}
-                className="text-4xl md:text-6xl font-black mb-6"
+                className={`text-4xl md:text-6xl font-black mb-6 ${isDark ? "text-white" : "text-gray-900"}`}
               >
                 Why Your Business Needs Reliable
-                <span className={`text-4xl md:text-6xl font-black ${`font-bold ${isDark ? "text-[#9F714E]" : "text-[#9F714E]"}`}`}>
-                  Cloud Solutions
-                </span>{" "}
+                <span className="text-[#8B6B4A]">Cloud Solutions</span>{" "}
               </motion.h2>
               <motion.p
                 variants={fadeInUp}
-                className="text-xl text-gray-600 dark:text-gray-300 max-w-4xl mx-auto"
+                className={`text-xl max-w-4xl mx-auto ${isDark ? "text-gray-300" : "text-gray-600"}`}
               >
                 Move beyond outdated hardware — embrace secure, scalable,
                 cost-efficient cloud that grows with you.
@@ -323,13 +295,19 @@ export default function CloudSolutions() {
                 <motion.div
                   key={idx}
                   variants={fadeInUp}
-                  className="bg-white dark:bg-gray-900/70 border border-gray-200 dark:border-red-900/40 rounded-2xl p-10 hover:border-[#8B6B4A] dark:hover:border-[#8B6B4A] hover:shadow-2xl transition-all group"
+                  className={`border rounded-2xl p-10 hover:shadow-2xl transition-all group ${isDark ? "bg-gray-900/70 border-red-900/40 hover:border-[#8B6B4A]" : "bg-white border-gray-200 hover:border-[#8B6B4A]"}`}
                 >
-                  <benefit.icon className="w-16 h-16 text-[#EFE5C8] dark:text-[#8B6B4A] mb-6 mx-auto group-hover:scale-110 transition-transform" />
-                  <h3 className="text-2xl font-bold mb-4 text-center">
+                  <benefit.icon
+                    className={`w-16 h-16 mb-6 mx-auto group-hover:scale-110 transition-transform ${isDark ? "text-[#f9e8c8]" : "text-[#8B6B4A]"}`}
+                  />
+                  <h3
+                    className={`text-2xl font-bold mb-4 text-center ${isDark ? "text-white" : "text-gray-900"}`}
+                  >
                     {benefit.title}
                   </h3>
-                  <p className="text-gray-600 dark:text-gray-300 text-center">
+                  <p
+                    className={`text-center ${isDark ? "text-gray-300" : "text-gray-600"}`}
+                  >
                     {benefit.desc}
                   </p>
                 </motion.div>
@@ -339,18 +317,18 @@ export default function CloudSolutions() {
         </section>
 
         {/* Cloud Types */}
-        <section className="py-24 px-4 sm:px-6 lg:px-8 bg-white dark:bg-transparent">
+        <section
+          className={`py-24 px-4 sm:px-6 lg:px-8 ${isDark ? "bg-transparent" : "bg-white"}`}
+        >
           <div className="max-w-7xl mx-auto">
             <motion.h2
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-4xl md:text-6xl font-black text-center mb-16"
+              className={`text-4xl md:text-6xl font-black text-center mb-16 ${isDark ? "text-white" : "text-gray-900"}`}
             >
               Cloud Solutions{" "}
-              <span className={`font-bold ${isDark ? "text-[#9F714E]" : "text-[#9F714E]"}`}>
-                Tailored for You
-              </span>
+              <span className="text-[#8B6B4A]">Tailored for You</span>
             </motion.h2>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -361,11 +339,19 @@ export default function CloudSolutions() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: idx * 0.1 }}
-                  className="bg-white dark:bg-gradient-to-br dark:from-gray-900 dark:to-black border border-gray-200 dark:border-red-900/40 rounded-2xl p-10 hover:border-red-600 dark:hover:border-red-600 hover:shadow-2xl transition-all group text-center"
+                  className={`rounded-2xl p-10 hover:shadow-2xl transition-all group text-center ${isDark ? "bg-gradient-to-br from-gray-900 to-black border border-red-900/40 hover:border-red-600" : "bg-white border border-gray-200 hover:border-red-600"}`}
                 >
-                  <type.icon className="w-16 h-16 text-[#EFE5C8] dark:text-red-500 mb-6 mx-auto group-hover:scale-110 transition-transform" />
-                  <h3 className="text-3xl font-black mb-4">{type.title}</h3>
-                  <p className="text-lg text-gray-600 dark:text-gray-300 mb-8">
+                  <type.icon
+                    className={`w-16 h-16 mb-6 mx-auto group-hover:scale-110 transition-transform ${isDark ? "text-red-500" : "text-[#8B6B4A]"}`}
+                  />
+                  <h3
+                    className={`text-3xl font-black mb-4 ${isDark ? "text-white" : "text-gray-900"}`}
+                  >
+                    {type.title}
+                  </h3>
+                  <p
+                    className={`text-lg mb-8 ${isDark ? "text-gray-300" : "text-gray-600"}`}
+                  >
                     {type.desc}
                   </p>
                 </motion.div>
@@ -375,18 +361,18 @@ export default function CloudSolutions() {
         </section>
 
         {/* Capabilities */}
-        <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gradient-to-b dark:from-black dark:to-gray-950">
+        <section
+          className={`py-24 px-4 sm:px-6 lg:px-8 ${isDark ? "bg-gradient-to-b from-black to-gray-950" : "bg-gray-50"}`}
+        >
           <div className="max-w-7xl mx-auto">
             <motion.h2
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-4xl md:text-6xl font-black text-center mb-12"
+              className={`text-4xl md:text-6xl font-black text-center mb-12 ${isDark ? "text-white" : "text-gray-900"}`}
             >
               Enterprise-Grade{" "}
-              <span className={`font-bold ${isDark ? "text-[#9F714E]" : "text-[#9F714E]"}`}>
-                Cloud Capabilities
-              </span>
+              <span className="text-[#8B6B4A]">Cloud Capabilities</span>
             </motion.h2>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
@@ -397,11 +383,21 @@ export default function CloudSolutions() {
                   initial="hidden"
                   whileInView="visible"
                   viewport={{ once: true }}
-                  className="bg-white dark:bg-gray-900/70 border border-gray-200 dark:border-red-900/40 rounded-2xl p-8 hover:border-[#8B6B4A] dark:hover:border-[#8B6B4A] hover:shadow-2xl transition-all group flex flex-col items-center text-center"
+                  className={`rounded-2xl p-8 hover:shadow-2xl transition-all group flex flex-col items-center text-center ${isDark ? "bg-gray-900/70 border border-red-900/40 hover:border-[#8B6B4A]" : "bg-white border border-gray-200 hover:border-[#8B6B4A]"}`}
                 >
-                  <cap.icon className="w-12 h-12 text-[#EFE5C8] dark:text-[#8B6B4A] mb-6 group-hover:scale-110 transition-transform" />
-                  <h3 className="text-xl font-bold mb-3">{cap.title}</h3>
-                  <p className="text-gray-600 dark:text-gray-300">{cap.desc}</p>
+                  <cap.icon
+                    className={`w-12 h-12 mb-6 group-hover:scale-110 transition-transform ${isDark ? "text-[#f9e8c8]" : "text-[#8B6B4A]"}`}
+                  />
+                  <h3
+                    className={`text-xl font-bold mb-3 ${isDark ? "text-white" : "text-gray-900"}`}
+                  >
+                    {cap.title}
+                  </h3>
+                  <p
+                    className={`${isDark ? "text-gray-300" : "text-gray-600"}`}
+                  >
+                    {cap.desc}
+                  </p>
                 </motion.div>
               ))}
             </div>
@@ -417,14 +413,18 @@ export default function CloudSolutions() {
                 variants={fadeInUp}
                 src={images.k8s}
                 alt="Kubernetes dashboard"
-                className="rounded-2xl shadow-2xl border border-gray-200 dark:border-red-900/30 w-full"
+                className={`rounded-2xl shadow-2xl border w-full ${isDark ? "border-red-900/30" : "border-gray-200"}`}
                 loading="lazy"
               />
               <motion.div variants={fadeInUp}>
-                <h3 className="text-3xl font-black mb-6">
+                <h3
+                  className={`text-3xl font-black mb-6 ${isDark ? "text-white" : "text-gray-900"}`}
+                >
                   Kubernetes-Powered Scaling
                 </h3>
-                <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+                <p
+                  className={`text-lg leading-relaxed ${isDark ? "text-gray-300" : "text-gray-600"}`}
+                >
                   Orchestrate containers effortlessly, auto-scale workloads, and
                   deploy faster with our managed Kubernetes services — perfect
                   for modern, cloud-native applications.
@@ -435,24 +435,23 @@ export default function CloudSolutions() {
         </section>
 
         {/* Final CTA */}
-        <section className="py-24 px-4 sm:px-6 lg:px-8 bg-white dark:bg-black/70">
+        <section
+          className={`py-24 px-4 sm:px-6 lg:px-8 ${isDark ? "bg-black/70" : "bg-white"}`}
+        >
           <div className="max-w-5xl mx-auto text-center">
             <motion.h2
               variants={fadeInUp}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              className="text-4xl md:text-6xl font-black mb-8"
+              className={`text-4xl md:text-6xl font-black mb-8 ${isDark ? "text-white" : "text-gray-900"}`}
             >
               Ready to Transform Your Business with{" "}
-              <span className={`font-bold ${isDark ? "text-[#9F714E]" : "text-[#9F714E]"}`}>
-                Smart Cloud
-              </span>
-              ?
+              <span className="text-[#8B6B4A]">Smart Cloud</span>?
             </motion.h2>
             <motion.p
               variants={fadeInUp}
-              className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-12"
+              className={`text-xl md:text-2xl mb-12 ${isDark ? "text-gray-300" : "text-gray-600"}`}
             >
               Secure migration, optimized costs, unbreakable security — let's
               build your future-ready cloud infrastructure today.
@@ -460,17 +459,18 @@ export default function CloudSolutions() {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.98 }}
-              className="px-14 py-7 bg-[#8B6B4A] text-white rounded-full text-2xl md:text-3xl font-black shadow-2xl shadow-red-900/60 hover:shadow-red-800 transition-all"
+              onClick={() => navigate("/contact")}
+              className={`px-14 py-7 rounded-full text-2xl md:text-3xl font-black shadow-2xl transition-all ${isDark ? "bg-[#8B6B4A] text-white shadow-red-900/60 hover:shadow-red-700/80" : "bg-[#3d220e] text-white shadow-red-800/60 hover:shadow-red-600/80"}`}
             >
-              <button onClick={() => navigate("/contact")}>
-                Start Your Cloud Journey →
-              </button>
+              Start Your Cloud Journey →
             </motion.button>
           </div>
         </section>
 
         {/* FAQ Section */}
-        <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-black/50">
+        <section
+          className={`py-24 px-4 sm:px-6 lg:px-8 ${isDark ? "bg-black/50" : "bg-gray-50"}`}
+        >
           <div className="max-w-4xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -478,13 +478,15 @@ export default function CloudSolutions() {
               viewport={{ once: true }}
               className="text-center mb-16"
             >
-              <h2 className="text-4xl md:text-6xl font-black mb-6">
+              <h2
+                className={`text-4xl md:text-6xl font-black mb-6 ${isDark ? "text-white" : "text-gray-900"}`}
+              >
                 Frequently Asked{" "}
-                <span className={`font-bold ${isDark ? "text-[#9F714E]" : "text-[#9F714E]"}`}>
-                  Questions
-                </span>
+                <span className="text-[#8B6B4A]">Questions</span>
               </h2>
-              <p className="text-xl text-gray-600 dark:text-gray-300">
+              <p
+                className={`text-xl ${isDark ? "text-gray-300" : "text-gray-600"}`}
+              >
                 Everything you need to know about our cloud solutions
               </p>
             </motion.div>
@@ -530,13 +532,15 @@ export default function CloudSolutions() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: idx * 0.05 }}
-                  className="bg-white dark:bg-gray-900/70 border border-gray-200 dark:border-red-900/40 rounded-2xl overflow-hidden hover:border-[#8B6B4A] dark:hover:border-[#8B6B4A] transition-all"
+                  className={`rounded-2xl overflow-hidden transition-all ${isDark ? "bg-gray-900/70 border border-red-900/40 hover:border-[#8B6B4A]" : "bg-white border border-gray-200 hover:border-[#8B6B4A]"}`}
                 >
                   <button
                     onClick={() => setOpenFAQ(openFAQ === idx ? null : idx)}
-                    className="w-full px-8 py-6 text-left flex items-center justify-between gap-4 hover:bg-red-50 dark:hover:bg-red-950/20 transition-colors"
+                    className={`w-full px-8 py-6 text-left flex items-center justify-between gap-4 transition-colors ${isDark ? "hover:bg-red-950/20" : "hover:bg-red-50"}`}
                   >
-                    <h3 className="text-lg md:text-xl font-bold text-gray-900 dark:text-white flex-1">
+                    <h3
+                      className={`text-lg md:text-xl font-bold flex-1 ${isDark ? "text-white" : "text-gray-900"}`}
+                    >
                       {faq.q}
                     </h3>
                     <motion.div
@@ -544,7 +548,9 @@ export default function CloudSolutions() {
                       transition={{ duration: 0.3 }}
                       className="flex-shrink-0"
                     >
-                      <ChevronDown className="w-6 h-6 text-[#EFE5C8] dark:text-red-500" />
+                      <ChevronDown
+                        className={`w-6 h-6 ${isDark ? "text-red-500" : "text-[#8B6B4A]"}`}
+                      />
                     </motion.div>
                   </button>
 
@@ -555,9 +561,11 @@ export default function CloudSolutions() {
                       opacity: openFAQ === idx ? 1 : 0,
                     }}
                     transition={{ duration: 0.3, ease: "easeInOut" }}
-                    className="overflow-hidden border-t border-gray-200 dark:border-red-900/40"
+                    className={`overflow-hidden border-t ${isDark ? "border-red-900/40" : "border-gray-200"}`}
                   >
-                    <p className="px-8 py-6 text-lg text-gray-700 dark:text-gray-300">
+                    <p
+                      className={`px-8 py-6 text-lg ${isDark ? "text-gray-300" : "text-gray-700"}`}
+                    >
                       {faq.a}
                     </p>
                   </motion.div>

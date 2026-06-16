@@ -310,7 +310,7 @@ function PaidAdvertising() {
                     className={`w-16 h-16 mb-8 mx-auto transition-transform group-hover:scale-110 ${accentClass}`}
                   />
                   <h3
-                    className={`text-3xl font-black mb-5 text-center ${isDark ? "text-[#8B6B4A]" : "text-[#EFE5C8]"}`}
+                    className={`text-3xl font-black mb-5 text-center ${isDark ? "text-[#9F714E]" : "text-[#9F714E]"}`}
                   >
                     {item.title}
                   </h3>
@@ -373,7 +373,7 @@ function PaidAdvertising() {
                     className={`w-14 h-14 mb-6 mx-auto block transition-transform group-hover:scale-110 ${accentClass}`}
                   />
                   <h3
-                    className={`text-3xl font-black mb-5 text-center ${isDark ? "text-[#8B6B4A]" : "text-[#8B6B4A]"}`}
+                    className={`text-3xl font-black mb-5 text-center ${isDark ? "text-[#9F714E]" : "text-[#9F714E]"}`}
                   >
                     {service.title}
                   </h3>
@@ -429,7 +429,7 @@ function PaidAdvertising() {
                     className={`w-10 h-10 mr-4 flex-shrink-0 ${accentClass}`}
                   />
                   <p
-                    className={`text-2xl font-bold ${isDark ? "text-[#8B6B4A]" : "text-[#8B6B4A]"}`}
+                    className={`text-2xl font-bold ${isDark ? "text-[#9F714E]" : "text-[#9F714E]"}`}
                   >
                     {point}
                   </p>
