@@ -851,7 +851,7 @@ export default function ERPDevelopment() {
               viewport={{ once: true }}
               className={`text-4xl md:text-5xl font-black text-center mb-12 ${isDark ? "text-white" : "text-[#3d220e]"}`}
             >
-              Industries We Can <span className="text-[#8B6B4A]">Serve</span>
+              Industries We <span className="text-[#8B6B4A]">Serve</span>
             </motion.h2>
 
             <div className="flex flex-wrap justify-center gap-4">
