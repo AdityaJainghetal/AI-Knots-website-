@@ -1020,7 +1020,7 @@ const Blog = () => {
                   onClick={() => dispatch(setActiveCategory(cat))}
                   className={`px-5 py-2.5 rounded-full text-sm font-medium transition-all border ${
                     activeCategory === cat
-                      ? "btn-accent"
+                      ? "bg-[#8B6B4A] text-white shadow-lg shadow-red-600/40"
                       : isDark
                         ? "bg-gray-900 border-gray-700 text-gray-300 hover:bg-gray-800 hover:border-red-600/50"
                         : "bg-gray-100 border-gray-300 text-gray-700 hover:bg-gray-200 hover:border-red-600"
@@ -1039,7 +1039,7 @@ const Blog = () => {
               className={`text-center py-24 text-2xl ${isDark ? "text-gray-400" : "text-gray-600"}`}
             >
               No posts found in{" "}
-              <span className="text-accent">"{activeCategory}"</span>
+              <span className="text-red-500">"{activeCategory}"</span>
             </div>
           ) : (
             <>
@@ -1086,7 +1086,7 @@ const Blog = () => {
                         </span>
 
                         <h2
-                          className={`text-xl font-bold mb-2 line-clamp-2 group-hover:text-accent transition-colors ${isDark ? "text-white" : "text-gray-900"}`}
+                          className={`text-xl font-bold mb-2 line-clamp-2 group-hover:text-red-500 transition-colors ${isDark ? "text-white" : "text-gray-900"}`}
                         >
                           {post.name || "Untitled"}
                         </h2>
@@ -1116,13 +1116,13 @@ const Blog = () => {
                         {/* Stats & Read More */}
                         <div className="mt-auto pt-4 flex justify-between items-center">
                           <div
-                            className={`flex items-center gap-5 text-sm ${isDark ? "text-[#8B6B4A]" : "text-[#8B6B4A]"}`}
+                            className={`flex items-center gap-5 text-sm ${isDark ? "text-gray-400" : "text-gray-500"}`}
                           >
                             <div className="flex items-center gap-1">
                               <Eye className="w-5 h-5" /> {post.views || 0}
                             </div>
                             <div
-                              className={`flex items-center gap-1 cursor-pointer transition-colors ${hasLiked ? "text-accent" : "hover:text-accent"}`}
+                              className={`flex items-center gap-1 cursor-pointer transition-colors ${hasLiked ? "text-red-500" : "hover:text-red-500"}`}
                               onClick={() => handleAction("like", post)}
                             >
                               <Heart
@@ -1131,7 +1131,7 @@ const Blog = () => {
                               {post.likes || 0}
                             </div>
                             <div
-                              className="flex items-center gap-1 cursor-pointer hover:text-accent transition-colors"
+                              className="flex items-center gap-1 cursor-pointer hover:text-red-500 transition-colors"
                               onClick={() => handleAction("comment", post)}
                             >
                               <MessageCircle className="w-5 h-5" />{" "}
@@ -1145,8 +1145,8 @@ const Blog = () => {
                             className={`inline-flex items-center gap-2 px-5 py-2.5 text-sm font-medium rounded-lg transition-all duration-300 hover:translate-x-1
                             ${
                               isDark
-                                ? "bg-red-900/30 border border-red-700/50 text-[#8B6B4A] hover:bg-red-800/50 hover:border-[#8B6B4A]"
-                                : "bg-red-100 border border-red-200 text-[#8B6B4A] hover:bg-red-200"
+                                ? "bg-red-900/30 border border-red-700/50 text-red-300 hover:bg-red-800/50 hover:border-red-600"
+                                : "bg-red-100 border border-red-200 text-red-700 hover:bg-red-200"
                             }
                             ${isViewLoading ? "opacity-70 cursor-wait" : ""}`}
                           >
@@ -1192,7 +1192,7 @@ const Blog = () => {
                               ? "text-gray-500"
                               : "text-gray-400"
                             : page === currentPage
-                              ? "btn-accent"
+                              ? "bg-red-600 text-white shadow-lg"
                               : isDark
                                 ? "bg-gray-800 hover:bg-gray-700 border border-gray-700"
                                 : "bg-gray-100 hover:bg-gray-200 border border-gray-300"

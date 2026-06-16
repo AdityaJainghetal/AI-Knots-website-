@@ -734,7 +734,6 @@
 //   );
 // }
 
-
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import {
@@ -775,7 +774,7 @@ function Counter({ value, duration = 2.5 }) {
 
 export default function RecentWork() {
   const [isDark, setIsDark] = useState(() =>
-    document.documentElement.classList.contains("dark")
+    document.documentElement.classList.contains("dark"),
   );
   const [currentHeroSlide, setCurrentHeroSlide] = useState(0);
   const [activeFilter, setActiveFilter] = useState("All");
@@ -787,9 +786,27 @@ export default function RecentWork() {
   const navigate = useNavigate();
 
   const HERO_SLIDES = [
-    { image: background, title: "Global IT Services", subtitle: "End-to-end digital transformation, product engineering, and cloud delivery for growing brands", cta: "Discover ATLA" },
-    { image: background2, title: "Marketing & Growth", subtitle: "Performance marketing, SEO, and brand campaigns designed to convert and scale", cta: "Grow with ATLA" },
-    { image: background3, title: "Creative Product Design", subtitle: "UX-driven web and mobile experiences that engage users and accelerate adoption", cta: "See Solution" },
+    {
+      image: background,
+      title: "Global IT Services",
+      subtitle:
+        "End-to-end digital transformation, product engineering, and cloud delivery for growing brands",
+      cta: "Discover ATLA",
+    },
+    {
+      image: background2,
+      title: "Marketing & Growth",
+      subtitle:
+        "Performance marketing, SEO, and brand campaigns designed to convert and scale",
+      cta: "Grow with ATLA",
+    },
+    {
+      image: background3,
+      title: "Creative Product Design",
+      subtitle:
+        "UX-driven web and mobile experiences that engage users and accelerate adoption",
+      cta: "See Solution",
+    },
   ];
 
   // Dark mode observer
@@ -797,7 +814,10 @@ export default function RecentWork() {
     const observer = new MutationObserver(() => {
       setIsDark(document.documentElement.classList.contains("dark"));
     });
-    observer.observe(document.documentElement, { attributes: true, attributeFilter: ["class"] });
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["class"],
+    });
     return () => observer.disconnect();
   }, []);
 
@@ -821,16 +841,20 @@ export default function RecentWork() {
 
         const result = await res.json();
 
-        const formattedData = result.data?.map((item) => ({
-          id: item._id,
-          title: item.title,
-          categories: item.category ? [item.category.name] : ["General"],
-          image: item.images?.[0] || "https://via.placeholder.com/600x400",
-          link: item.link || "#",
-        })) || [];
+        const formattedData =
+          result.data?.map((item) => ({
+            id: item._id,
+            title: item.title,
+            categories: item.category ? [item.category.name] : ["General"],
+            image: item.images?.[0] || "https://via.placeholder.com/600x400",
+            link: item.link || "#",
+          })) || [];
 
         setPortfolioItems(formattedData);
-        const cats = ["All", ...new Set(formattedData.flatMap((item) => item.categories))];
+        const cats = [
+          "All",
+          ...new Set(formattedData.flatMap((item) => item.categories)),
+        ];
         setAllCategories(cats);
       } catch (err) {
         console.error(err);
@@ -845,7 +869,9 @@ export default function RecentWork() {
 
   const filteredItems = useMemo(() => {
     if (activeFilter === "All") return portfolioItems;
-    return portfolioItems.filter((item) => item.categories.includes(activeFilter));
+    return portfolioItems.filter((item) =>
+      item.categories.includes(activeFilter),
+    );
   }, [activeFilter, portfolioItems]);
 
   const stats = [
@@ -857,7 +883,9 @@ export default function RecentWork() {
 
   if (loading) {
     return (
-      <div className={`min-h-screen flex items-center justify-center ${isDark ? "bg-black" : "bg-gray-50"}`}>
+      <div
+        className={`min-h-screen flex items-center justify-center ${isDark ? "bg-black" : "bg-gray-50"}`}
+      >
         <p className="text-2xl font-medium">Loading Recent Work...</p>
       </div>
     );
@@ -865,7 +893,9 @@ export default function RecentWork() {
 
   if (error) {
     return (
-      <div className={`min-h-screen flex items-center justify-center ${isDark ? "bg-black text-red-400" : "bg-gray-50 text-red-600"}`}>
+      <div
+        className={`min-h-screen flex items-center justify-center ${isDark ? "bg-black text-red-400" : "bg-gray-50 text-red-600"}`}
+      >
         <p>{error}</p>
       </div>
     );
@@ -875,11 +905,18 @@ export default function RecentWork() {
     <>
       <Helmet>
         <title>Our Recent Work | Atla Intelligent Knots</title>
-        <meta name="description" content="Explore our recent website, software, branding & digital marketing projects for businesses." />
+        <meta
+          name="description"
+          content="Explore our recent website, software, branding & digital marketing projects for businesses."
+        />
       </Helmet>
 
-      <div className={`min-h-screen relative overflow-x-hidden transition-colors duration-500 ${isDark ? "bg-black text-white" : "bg-gray-50 text-gray-900"}`}>
-        <div className={`absolute inset-0 z-0 ${isDark ? "bg-gradient-to-b from-black via-gray-950 to-black" : "bg-gradient-to-b from-white via-gray-50 to-red-50/30"}`} />
+      <div
+        className={`min-h-screen relative overflow-x-hidden transition-colors duration-500 ${isDark ? "bg-black text-white" : "bg-gray-50 text-gray-900"}`}
+      >
+        <div
+          className={`absolute inset-0 z-0 ${isDark ? "bg-gradient-to-b from-black via-gray-950 to-black" : "bg-gradient-to-b from-white via-gray-50 to-red-50/30"}`}
+        />
 
         <section className="relative pt-0">
           {/* Hero Slider */}
@@ -889,7 +926,11 @@ export default function RecentWork() {
                 key={index}
                 className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${index === currentHeroSlide ? "opacity-100" : "opacity-0"}`}
               >
-                <img src={slide.image} alt={slide.title} className="w-full h-full object-cover brightness-[0.85]" />
+                <img
+                  src={slide.image}
+                  alt={slide.title}
+                  className="w-full h-full object-cover brightness-[0.85]"
+                />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/35 to-transparent" />
 
                 <div className="absolute inset-0 flex items-center justify-center px-5 sm:px-10">
@@ -897,7 +938,9 @@ export default function RecentWork() {
                     <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight mb-4 md:mb-6 drop-shadow-2xl">
                       Power Your Brand Growth with
                       <br />
-                      <span className="text-[#e7e4e1]">AI KNOTS {slide.title}</span>
+                      <span className="text-[#e7e4e1]">
+                        AI KNOTS {slide.title}
+                      </span>
                     </h2>
                     <p className="text-lg sm:text-xl md:text-2xl text-white/95 font-medium mb-8 md:mb-12 max-w-4xl mx-auto drop-shadow-lg">
                       {slide.subtitle}
@@ -925,7 +968,10 @@ export default function RecentWork() {
           </div>
 
           {/* Stats Section */}
-          <div id="stats-section" className="max-w-6xl mx-auto px-6 -mt-20 sm:-mt-24 relative z-10">
+          <div
+            id="stats-section"
+            className="max-w-6xl mx-auto px-6 -mt-20 sm:-mt-24 relative z-10"
+          >
             <div className="bg-white/95 backdrop-blur-lg border border-red-500/30 rounded-2xl shadow-2xl grid grid-cols-2 md:grid-cols-4 gap-6 p-8 md:p-10">
               {stats.map((stat, i) => (
                 <div key={i} className="text-center">
@@ -948,8 +994,11 @@ export default function RecentWork() {
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black mb-5 tracking-tight leading-tight">
               OUR <span className="text-[#8B6B4A]">RECENT WORK</span>
             </h1>
-            <p className={`text-lg sm:text-xl md:text-2xl max-w-4xl mx-auto leading-relaxed ${isDark ? "text-gray-300" : "text-gray-600"}`}>
-              Crafting high-impact digital experiences that drive growth across industries.
+            <p
+              className={`text-lg sm:text-xl md:text-2xl max-w-4xl mx-auto leading-relaxed ${isDark ? "text-gray-300" : "text-gray-600"}`}
+            >
+              Crafting high-impact digital experiences that drive growth across
+              industries.
             </p>
           </div>
 
@@ -963,8 +1012,8 @@ export default function RecentWork() {
                   activeFilter === cat
                     ? "bg-[#3D220E] border-red-500 text-white shadow-lg shadow-red-900/50"
                     : isDark
-                    ? "bg-white/5 border-gray-700 text-gray-200 hover:bg-white/10 hover:border-gray-500"
-                    : "bg-white border-gray-300 text-gray-700 hover:bg-red-50 hover:border-red-400"
+                      ? "bg-white/5 border-gray-700 text-gray-200 hover:bg-white/10 hover:border-gray-500"
+                      : "bg-white border-gray-300 text-gray-700 hover:bg-red-50 hover:border-red-400"
                 }`}
               >
                 {cat}
@@ -975,7 +1024,9 @@ export default function RecentWork() {
           {/* Portfolio Grid */}
           <div className="columns-1 sm:columns-2 lg:columns-3 gap-5 pb-8">
             {filteredItems.length === 0 ? (
-              <div className={`col-span-full text-center py-20 text-xl ${isDark ? "text-gray-300" : "text-gray-600"}`}>
+              <div
+                className={`col-span-full text-center py-20 text-xl ${isDark ? "text-gray-300" : "text-gray-600"}`}
+              >
                 No projects found.
               </div>
             ) : (
@@ -987,7 +1038,9 @@ export default function RecentWork() {
                   rel="noopener noreferrer"
                   className="group block break-inside-avoid cursor-pointer pb-6"
                 >
-                  <div className={`relative overflow-hidden rounded-2xl border transition-all duration-300 hover:-translate-y-2 ${isDark ? "bg-gray-900/60 border-gray-800/70" : "bg-white border-gray-200"}`}>
+                  <div
+                    className={`relative overflow-hidden rounded-2xl border transition-all duration-300 hover:-translate-y-2 ${isDark ? "bg-gray-900/60 border-gray-800/70" : "bg-white border-gray-200"}`}
+                  >
                     <div className="relative w-full aspect-[4/3] overflow-hidden">
                       <div
                         className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
@@ -1015,10 +1068,15 @@ export default function RecentWork() {
 
           {/* CTA */}
           <div className="text-center mt-16">
-            <h2 className={`text-4xl md:text-5xl font-black mb-6 ${isDark ? "text-white" : "text-gray-900"}`}>
-              Ready to Start <span className="text-[#8B6B4A]">Your Project?</span>
+            <h2
+              className={`text-4xl md:text-5xl font-black mb-6 ${isDark ? "text-white" : "text-gray-900"}`}
+            >
+              Ready to Start{" "}
+              <span className="text-[#8B6B4A]">Your Project?</span>
             </h2>
-            <p className={`text-lg md:text-xl mb-8 max-w-xl mx-auto ${isDark ? "text-gray-300" : "text-gray-600"}`}>
+            <p
+              className={`text-lg md:text-xl mb-8 max-w-xl mx-auto ${isDark ? "text-gray-300" : "text-gray-600"}`}
+            >
               Let's create something powerful together.
             </p>
             <button

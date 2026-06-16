@@ -275,17 +275,7 @@ const TechNews = () => {
         </div>
 
         {/* Scroll to Top Button */}
-        <button
-          onClick={scrollToTop}
-          className={`fixed bottom-6 right-6 z-50 p-4 rounded-full transition-all duration-300 hover:scale-110 active:scale-95 btn-primary ${
-            showScrollTop
-              ? "opacity-100 translate-y-0"
-              : "opacity-0 translate-y-16 pointer-events-none"
-          }`}
-          aria-label="Scroll to top"
-        >
-          <ArrowUp className="w-6 h-6" />
-        </button>
+       
       </div>
     </>
   );

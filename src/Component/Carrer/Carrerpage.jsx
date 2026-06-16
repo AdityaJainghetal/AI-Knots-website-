@@ -169,7 +169,7 @@ function CareerPage() {
       setSubmitting(false);
     }
   };
- 
+
   // ====================== THEME CLASSES ======================
   const cardClass = isDark
     ? "bg-gray-900/70 border border-gray-800 hover:border-[#8B6B4A]/60 p-8 rounded-xl transition-all duration-300 hover:shadow-2xl hover:shadow-[#8B6B4A]/20"

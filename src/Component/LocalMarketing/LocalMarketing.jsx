@@ -839,10 +839,10 @@ export default function LocalMarketing() {
                 onClick={() => setCurrentSlide(i)}
                 className={`w-4 h-4 rounded-full transition-all ${
                   i === currentSlide
-                    ? "bg-red-600 scale-150 shadow-lg shadow-red-600/50"
+                    ? "bg-[#9F714E] scale-150 shadow-lg shadow-red-600/50"
                     : isDark
-                      ? "bg-gray-600 hover:bg-red-400"
-                      : "bg-gray-400 hover:bg-red-500"
+                      ? "bg-gray-600 hover:bg-[#9F714E]"
+                      : "bg-gray-400 hover:bg-[#9F714E]"
                 }`}
               />
             ))}
