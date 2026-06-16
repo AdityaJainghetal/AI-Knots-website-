@@ -897,7 +897,7 @@ export default function RecentWork() {
                     <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight mb-4 md:mb-6 drop-shadow-2xl">
                       Power Your Brand Growth with
                       <br />
-                      <span className="text-[#8B6B4A]">AI KNOTS {slide.title}</span>
+                      <span className="text-[#e7e4e1]">AI KNOTS {slide.title}</span>
                     </h2>
                     <p className="text-lg sm:text-xl md:text-2xl text-white/95 font-medium mb-8 md:mb-12 max-w-4xl mx-auto drop-shadow-lg">
                       {slide.subtitle}
