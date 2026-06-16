@@ -301,7 +301,7 @@ export default function UiUxDesign() {
       className="text-5xl md:text-7xl font-black mb-6 tracking-tight leading-tight text-white"
     >
       Best UI/UX Design Company{" "}
-      <span className="text-transparent bg-clip-text bg-[#8d6140] dark:bg-[#826047]">
+      <span className={`text-white bg-clip-text ${isDark ? "text-[#9F714E]" : "text-[#9F714E]"}`}>
         AI Knots IT Solution
       </span>
     </motion.h1>
@@ -340,7 +340,7 @@ export default function UiUxDesign() {
         onClick={() => navigate("/contact")}
         className="px-12 py-6 bg-[#3d220e] text-white 
                    hover:bg-[#5a351a] rounded-full text-xl md:text-2xl font-bold 
-                   shadow-xl shadow-red-900/60 hover:shadow-black/70
+                   shadow-xl shadow-black/60 hover:shadow-black/70
                    hover:scale-105 transition-all duration-300 
                    flex items-center gap-3 group"
       >
@@ -412,7 +412,7 @@ export default function UiUxDesign() {
             viewport={{ once: true }}
             className={`text-4xl md:text-6xl font-black text-center mb-16 ${headingClass}`}
           >
-            Our <span className={accentClass}>UI/UX Design Services</span>
+            Our <span className={`font-bold ${isDark ? "text-[#9F714E]" : "text-[#9F714E]"}`}>UI/UX Design Services</span>
           </motion.h2>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -451,7 +451,7 @@ export default function UiUxDesign() {
             viewport={{ once: true }}
             className={`text-4xl md:text-5xl font-black mb-12 ${headingClass}`}
           >
-            Our Expertise in <span className={accentClass}>UI/UX Design</span>
+            Our Expertise in <span className={`font-bold ${isDark ? "text-[#9F714E]" : "text-[#9F714E]"}`}>UI/UX Design</span>
           </motion.h2>
 
           <motion.p
@@ -499,7 +499,7 @@ export default function UiUxDesign() {
             className={`text-4xl md:text-6xl font-black text-center mb-16 ${headingClass}`}
           >
             What Makes AI Knots a{" "}
-            <span className={accentClass}>Trusted UI/UX Partner</span>?
+            <span className={`font-bold ${isDark ? "text-[#9F714E]" : "text-[#9F714E]"}`}>Trusted UI/UX Partner</span>?
           </motion.h2>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -537,7 +537,7 @@ export default function UiUxDesign() {
             viewport={{ once: true }}
             className={`text-4xl md:text-6xl font-black text-center mb-16 ${headingClass}`}
           >
-            Why <span className={accentClass}>UI/UX Design</span> Matters in
+            Why <span className={`font-bold ${isDark ? "text-[#9F714E]" : "text-[#9F714E]"}`}>UI/UX Design</span> Matters in
             2026
           </motion.h2>
 
@@ -574,7 +574,7 @@ export default function UiUxDesign() {
             viewport={{ once: true }}
             className={`text-4xl md:text-5xl font-black mb-12 ${headingClass}`}
           >
-            Industries We <span className={accentClass}>Serve</span>
+            Industries We <span className={`font-bold ${isDark ? "text-[#9F714E]" : "text-[#9F714E]"}`}>Serve</span>
           </motion.h2>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -610,7 +610,7 @@ export default function UiUxDesign() {
             viewport={{ once: true }}
             className={`text-4xl md:text-6xl font-black mb-8 ${headingClass}`}
           >
-            Let’s Build Something <span className={accentClass}>Amazing</span>{" "}
+            Let’s Build Something <span className={`font-bold ${isDark ? "text-[#9F714E]" : "text-[#9F714E]"}`}>Amazing</span>{" "}
             Together
           </motion.h2>
 
@@ -628,7 +628,7 @@ export default function UiUxDesign() {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.98 }}
-            className="px-14 py-7 bg-[#3d220e] text-white rounded-full text-2xl md:text-3xl font-black shadow-2xl shadow-red-900/60 hover:shadow-red-700/80 transition-all flex items-center gap-4 mx-auto"
+            className="px-14 py-7 bg-[#3d220e] text-white rounded-full text-2xl md:text-3xl font-black shadow-2xl shadow-[#3d220e] hover:shadow-red-700/80 transition-all flex items-center gap-4 mx-auto"
           >
             <button onClick={() => navigate("/contact")} className="flex items-center gap-4">
             Contact Us Today <ArrowRight className="w-8 h-8" />
@@ -648,7 +648,7 @@ export default function UiUxDesign() {
             viewport={{ once: true }}
             className={`text-4xl md:text-6xl font-black text-center mb-16 ${headingClass}`}
           >
-            Frequently Asked <span className={accentClass}>Questions</span>
+            Frequently Asked <span className={`font-bold ${isDark ? "text-[#9F714E]" : "text-[#9F714E]"}`}>Questions</span>
           </motion.h2>
 
           <div className="space-y-4">
@@ -675,7 +675,7 @@ export default function UiUxDesign() {
                     {faq.q}
                   </span>
                   <span
-                    className={`text-red-500 text-2xl transition-transform ${openFaq === idx ? "rotate-180" : ""}`}
+                    className={`text-[#9F714E] text-2xl transition-transform ${openFaq === idx ? "rotate-180" : ""}`}
                   >
                     ▼
                   </span>

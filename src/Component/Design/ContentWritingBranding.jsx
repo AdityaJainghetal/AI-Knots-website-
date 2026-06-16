@@ -144,7 +144,7 @@ export default function ContentWritingBranding() {
     : "bg-white border border-gray-200 shadow-lg hover:shadow-2xl rounded-2xl p-10 transition-all group text-center";
 
   const headingClass = isDark ? "text-white" : "text-[#8B6B4A]";
-  const bodyClass = isDark ? "text-gray-300" : "text-[#8B6B4A]";
+  const bodyClass = isDark ? "text-gray-300" : "text-gray-700";
   const accentClass = "text-[#8B6B4A] dark:text-[#f9e8c8]";
   const sectionBg = isDark ? "bg-gray-950" : "bg-[#f9efe1]";
   const sectionBg2 = isDark ? "bg-gray-900" : "bg-[#f9efe1]";
@@ -169,7 +169,7 @@ export default function ContentWritingBranding() {
       >
         {/* Hero */}
         <section
-          className={`relative min-h-[90vh] flex items-center justify-center px-4 sm:px-6 lg:px-8 py-20 ${isDark ? "bg-gradient-to-br from-gray-900 via-black to-gray-950" : "bg-gradient-to-br from-[#e2d7a4] via-[#f9efe1] to-[#b8a790]"}`}
+          className={`relative min-h-[90vh] flex items-center justify-center px-4 sm:px-6 lg:px-8 py-20 ${isDark ? "bg-gradient-to-br from-gray-900 via-black to-gray-950" : "bg-gradient-to-br from-gray-900 via-black to-gray-950"}`}
         >
           <div className="absolute inset-0">
             <img
@@ -201,21 +201,21 @@ export default function ContentWritingBranding() {
 
             <motion.p
               variants={fadeInUp}
-              className="text-3xl md:text-5xl font-bold text-[#8B6B4A]  mb-8"
+              className={`text-3xl md:text-5xl font-bold text-[#8B6B4A]  mb-8 ${`font-bold ${isDark ? "text-[#9F714E]" : "text-[#9F714E]"}`}`}
             >
               Turn Your Ideas Into Words That Sell
             </motion.p>
 
             <motion.p
               variants={fadeInUp}
-              className={`text-xl md:text-2xl mb-10 max-w-5xl mx-auto leading-relaxed ${bodyClass}`}
+              className={`text-xl md:text-2xl mb-10 max-w-5xl mx-auto leading-relaxed ${`font-bold ${isDark ? "text-[#9F714E]" : "text-[#9F714E]"}`}`}
             >
               Your brand deserves content that connects, engages, and converts.
             </motion.p>
 
             <motion.p
               variants={fadeInUp}
-              className={`text-lg md:text-xl mb-12 max-w-4xl mx-auto leading-relaxed ${bodyClass}`}
+              className={`text-lg md:text-xl mb-12 max-w-4xl mx-auto leading-relaxed ${`font-bold ${isDark ? "text-[#9F714E]" : "text-[#9F714E]"}`}`}
             >
               At AI Knots IT Solution, we create simple, clear, and impactful
               SEO-optimized content for websites, blogs, ads, emails, and more —

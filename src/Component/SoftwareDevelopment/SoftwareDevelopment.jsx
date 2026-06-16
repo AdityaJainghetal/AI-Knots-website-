@@ -138,18 +138,13 @@ export default function SoftwareDevelopment() {
             <img
               src={images.hero}
               alt="Modern software development team collaborating"
-              className="w-full h-full object-cover 
-                 brightness-75 contrast-110 
-                 dark:brightness-50 dark:contrast-125
-                 transition-all duration-700"
+              className={`w-full h-full object-cover transition-all duration-700 ${isDark ? "brightness-80 contrast-110" : "brightness-80 contrast-110"}`}
               loading="lazy"
             />
 
             {/* Gradient Overlay - Optimized for both themes */}
             <div
-              className="absolute inset-0 bg-gradient-to-t 
-                    from-black/80 via-black/70 to-black/60 
-                    dark:from-black/90 dark:via-black/85 dark:to-black/80"
+              className={`absolute inset-0 bg-gradient-to-t ${isDark ? "from-black/90 via-black/85 to-black/80" : "from-black/80 via-black/70 to-black/60"}`}
             />
           </div>
 
@@ -169,7 +164,7 @@ export default function SoftwareDevelopment() {
 
             <motion.p
               variants={fadeInUp}
-              className="text-2xl md:text-3xl font-bold mb-6 text-[#9F714E] dark:text-red-400"
+              className={`text-2xl md:text-3xl font-bold mb-6 ${isDark ? "text-[#ede1d8]" : "text-[#9F714E]"}`}
             >
               Expand your business globally by outsourcing your technology
               requirements to a trusted partner.
@@ -177,7 +172,7 @@ export default function SoftwareDevelopment() {
 
             <motion.p
               variants={fadeInUp}
-              className="text-lg md:text-xl mb-12 max-w-5xl mx-auto leading-relaxed text-gray-200 dark:text-gray-300"
+              className={`text-lg md:text-xl mb-12 max-w-5xl mx-auto leading-relaxed ${isDark ? "text-gray-300" : "text-gray-200"}`}
             >
               We provide high-quality software development services to
               businesses by building secure, scalable, and high-performance
@@ -202,10 +197,7 @@ export default function SoftwareDevelopment() {
               {/* Secondary Button */}
               <button
                 onClick={() => navigate("/portfolio")}
-                className="px-12 py-6 border-2 border-[#3d220e] text-white 
-                   hover:bg-[#3d220e] hover:border-[#3d220e] 
-                   dark:hover:bg-[#5a3a1c] rounded-full 
-                   text-xl md:text-2xl font-bold transition-all duration-300"
+                className={`px-12 py-6 border-2 border-[#3d220e] text-white rounded-full text-xl md:text-2xl font-bold transition-all duration-300 ${isDark ? "hover:bg-[#5a3a1c] hover:border-[#3d220e]" : "hover:bg-[#3d220e] hover:border-[#3d220e]"}`}
               >
                 View Portfolio →
               </button>
@@ -435,7 +427,7 @@ export default function SoftwareDevelopment() {
               viewport={{ once: true }}
               className="text-4xl md:text-5xl font-black text-center mb-12"
             >
-              Technology <span className="text-[#9F714E]">Stack</span>
+              Technology <span className="text-[#9F714E] : text-white">Stack</span>
             </motion.h2>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -448,7 +440,7 @@ export default function SoftwareDevelopment() {
                   className={`border rounded-2xl p-8 ${isDark ? "bg-gray-900/70 border-red-900/40" : "bg-white border-gray-200 shadow-md"}`}
                 >
                   <h3
-                    className={`text-2xl font-bold mb-6 capitalize ${isDark ? "text-[#3D220E]" : "text-[#9F714E]"}`}
+                    className={`text-2xl font-bold mb-6 capitalize ${isDark ? "text-[#ede1d8]" : "text-[#9F714E]"}`}
                   >
                     {category}
                   </h3>
@@ -456,7 +448,7 @@ export default function SoftwareDevelopment() {
                     {techs.map((tech, i) => (
                       <span
                         key={i}
-                        className={`px-4 py-2 rounded-full text-sm ${isDark ? "bg-black/50 border border-red-900/30" : "bg-gray-100 border border-gray-300"}`}
+                        className={`px-4 py-2 rounded-full text-sm ${isDark ? "bg-black/50 border text-[#ede1d8] border-red-900/30" : "bg-gray-100 text-[#9F714E] border border-gray-300"}`}
                       >
                         {tech}
                       </span>
@@ -487,7 +479,7 @@ export default function SoftwareDevelopment() {
                 }`}
               >
                 <h2
-                  className={`text-3xl md:text-4xl font-black mb-8 ${isDark ? "text-[#3D220E]" : "text-[#9F714E]"}`}
+                  className={`text-3xl md:text-4xl font-black mb-8 ${isDark ? "text-[#9F714E]" : "text-[#9F714E]"}`}
                 >
                   Why Software Outsourcing?
                 </h2>
@@ -526,7 +518,7 @@ export default function SoftwareDevelopment() {
                 }`}
               >
                 <h2
-                  className={`text-3xl md:text-4xl font-black mb-8 ${isDark ? "text-[#3D220E]" : "text-[#9F714E]"}`}
+                  className={`text-3xl md:text-4xl font-black mb-8 ${isDark ? "text-[#9F714E]" : "text-[#9F714E]"}`}
                 >
                   Why Choose India for Software Development?
                 </h2>
@@ -565,7 +557,7 @@ export default function SoftwareDevelopment() {
                 }`}
               >
                 <h2
-                  className={`text-3xl md:text-4xl font-black mb-8 ${isDark ? "text-[#3D220E]" : "text-[#9F714E]"}`}
+                  className={`text-3xl md:text-4xl font-black mb-8 ${isDark ? "text-[#9F714E]" : "text-[#9F714E]"}`}
                 >
                   Why Choose AI Knots?
                 </h2>
@@ -659,7 +651,7 @@ export default function SoftwareDevelopment() {
 
               <motion.h2
                 variants={fadeInUp}
-                className="text-4xl md:text-6xl font-black mb-10 text-[#462206]"
+                className={`text-4xl md:text-6xl font-black mb-10 ${isDark ? "text-[#9F714E]" : "text-[#9F714E] text-[#462206]"}`}
               >
                 Hire a Dedicated Software Development Team
               </motion.h2>
