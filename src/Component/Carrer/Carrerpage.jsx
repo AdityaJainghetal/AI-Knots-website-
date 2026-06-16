@@ -169,55 +169,15 @@ function CareerPage() {
       setSubmitting(false);
     }
   };
-  // const handleSubmit = async (e) => {
-  //   e.preventDefault();
-  //   if (!selectedJob) return;
-
-  //   if (!resumeFile) {
-  //     setSubmitMessage({ type: 'error', text: 'Please upload your resume!' });
-  //     return;
-  //   }
-
-  //   setSubmitting(true);
-  //   setSubmitMessage({ type: '', text: '' });
-
-  //   try {
-  //     const formDataToSend = new FormData();
-  //     formDataToSend.append('name', formData.name);
-  //     formDataToSend.append('email', formData.email);
-  //     formDataToSend.append('phone', formData.phone);
-  //     formDataToSend.append('resume', resumeFile);
-
-  //     const res = await fetch(`https://api.aiknotsit.com/jobapplication/apply/${selectedJob._id}`, {
-  //       method: 'POST',
-  //       body: formDataToSend,
-  //     });
-
-  //     const data = await res.json();
-
-  //     if (res.ok) {
-  //       setSubmitMessage({ type: 'success', text: '🎉 Application submitted successfully!' });
-  //       setTimeout(() => {
-  //         closeModal();
-  //       }, 2000);
-  //     } else {
-  //       setSubmitMessage({ type: 'error', text: data.message || 'Failed to submit application' });
-  //     }
-  //   } catch (err) {
-  //     setSubmitMessage({ type: 'error', text: 'Something went wrong. Please try again.' });
-  //   } finally {
-  //     setSubmitting(false);
-  //   }
-  // };
-
+ 
   // ====================== THEME CLASSES ======================
   const cardClass = isDark
-    ? "bg-gray-900/70 border border-gray-800 hover:border-red-600/60 p-8 rounded-xl transition-all duration-300 hover:shadow-2xl hover:shadow-red-900/20"
+    ? "bg-gray-900/70 border border-gray-800 hover:border-[#8B6B4A]/60 p-8 rounded-xl transition-all duration-300 hover:shadow-2xl hover:shadow-[#8B6B4A]/20"
     : "bg-white border border-gray-200 shadow-lg hover:shadow-2xl p-8 rounded-xl transition-all duration-300";
 
   const headingClass = isDark ? "text-white" : "text-gray-900";
   const bodyClass = isDark ? "text-gray-300" : "text-gray-700";
-  const accentClass = "text-[#EFE5C8]";
+  const accentClass = "text-[#8B6B4A]";
 
   return (
     <>
@@ -245,8 +205,8 @@ function CareerPage() {
             className={`absolute inset-0 transition-all duration-700
           ${
             isDark
-              ? "bg-gradient-to-br from-red-950/30 via-black to-black"
-              : "bg-gradient-to-br from-red-100 via-white to-white"
+              ? "bg-gradient-to-br from-[#8B6B4A]/30 via-black to-black"
+              : "bg-gradient-to-br from-[#8B6B4A]/10 via-white to-white"
           }`}
           />
 
@@ -277,7 +237,7 @@ function CareerPage() {
             >
               <a
                 href="#open-positions"
-                className="inline-block bg-red-600 hover:bg-red-700 active:bg-red-800 text-white font-semibold text-lg px-10 py-5 rounded-lg transition-all duration-300 shadow-lg shadow-red-900/40"
+                className="inline-block bg-[#8B6B4A] hover:bg-[#6B4B3A] text-white font-semibold text-lg px-10 py-5 rounded-lg transition-all duration-300 shadow-lg shadow-[#8B6B4A]/40"
               >
                 See Open Positions →
               </a>
@@ -413,7 +373,7 @@ function CareerPage() {
 
                   <button
                     onClick={() => openApplyModal(job)}
-                    className="bg-red-600 hover:bg-red-700 active:bg-red-800 text-white px-8 py-4 rounded-lg font-medium transition-all whitespace-nowrap self-start md:self-center"
+                    className="bg-[#8B6B4A] hover:bg-[#6B4B3A] text-white px-8 py-4 rounded-lg font-medium transition-all whitespace-nowrap self-start md:self-center"
                   >
                     Apply Now
                   </button>
@@ -439,7 +399,7 @@ function CareerPage() {
             </p>
             <a
               href="#open-positions"
-              className="inline-block bg-red-600 hover:bg-red-700 active:bg-red-800 text-white px-12 py-6 text-xl font-semibold rounded-xl shadow-xl transition-all duration-300"
+              className="inline-block bg-[#8B6B4A] hover:bg-[#6B4B3A] active:bg-[#4B2B1A] text-white px-12 py-6 text-xl font-semibold rounded-xl shadow-xl transition-all duration-300"
             >
               Explore Open Roles →
             </a>
@@ -593,7 +553,7 @@ function CareerPage() {
                   <button
                     type="submit"
                     disabled={submitting}
-                    className="w-full bg-red-600 hover:bg-red-700 disabled:bg-gray-600 py-4 rounded-xl text-white font-semibold text-lg transition-all active:scale-[0.985]"
+                    className="w-full bg-[#8B6B4A] hover:bg-[#6B4B3A] disabled:bg-gray-600 py-4 rounded-xl text-white font-semibold text-lg transition-all active:scale-[0.985]"
                   >
                     {submitting
                       ? "Submitting Application..."
@@ -608,7 +568,7 @@ function CareerPage() {
         {/* ====================== SCROLL TO TOP BUTTON ====================== */}
         <button
           onClick={scrollToTop}
-          className={`fixed bottom-6 right-6 z-50 p-4 rounded-full bg-red-600 hover:bg-red-700 text-white shadow-lg shadow-red-900/50 transition-all duration-300 hover:scale-110 active:scale-95
+          className={`fixed bottom-6 right-6 z-50 p-4 rounded-full bg-[#8B6B4A] hover:bg-[#6B4B3A] text-white shadow-lg shadow-[#8B6B4A]/50 transition-all duration-300 hover:scale-110 active:scale-95
           ${showScrollTop ? "opacity-100 translate-y-0" : "opacity-0 translate-y-16 pointer-events-none"}`}
           aria-label="Scroll back to top"
         >

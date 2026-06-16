@@ -228,8 +228,8 @@ const BlogDetail = () => {
             to="/blog"
             className={`inline-flex items-center px-8 py-4 rounded-xl font-medium text-lg transition-all ${
               isDark
-                ? "bg-red-900/60 hover:bg-red-800 border border-red-700 text-red-200"
-                : "bg-red-100 hover:bg-red-200 border border-red-600 text-red-700"
+                ? "bg-red-900/60 hover:bg-red-800 border border-[#8B6B4A] text-[#8B6B4A] hover:border-[#8B6B4A]"
+                : "bg-red-100 hover:bg-red-200 border border-[#8B6B4A] text-[#8B6B4A] hover:text-[#8B6B4A]"
             }`}
           >
             ← Back to all articles

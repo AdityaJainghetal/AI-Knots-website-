@@ -744,7 +744,7 @@ export default function About() {
                 </p>
                 <button
                   onClick={() => setIsModalOpen(true)}
-                  className="px-8 py-4 rounded-full font-semibold transition w-fit text-white bg-red-600 hover:bg-red-700"
+                  className="px-8 py-4 rounded-full font-semibold transition w-fit text-white bg-[#9F714E] shadow-lg shadow-[#9F714E]/50 hover:bg-[#9F714E]/90"
                 >
                   Get in touch
                 </button>

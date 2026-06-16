@@ -1116,7 +1116,7 @@ const Blog = () => {
                         {/* Stats & Read More */}
                         <div className="mt-auto pt-4 flex justify-between items-center">
                           <div
-                            className={`flex items-center gap-5 text-sm ${isDark ? "text-gray-400" : "text-gray-500"}`}
+                            className={`flex items-center gap-5 text-sm ${isDark ? "text-[#8B6B4A]" : "text-[#8B6B4A]"}`}
                           >
                             <div className="flex items-center gap-1">
                               <Eye className="w-5 h-5" /> {post.views || 0}
@@ -1145,8 +1145,8 @@ const Blog = () => {
                             className={`inline-flex items-center gap-2 px-5 py-2.5 text-sm font-medium rounded-lg transition-all duration-300 hover:translate-x-1
                             ${
                               isDark
-                                ? "bg-red-900/30 border border-red-700/50 text-red-300 hover:bg-red-800/50 hover:border-red-600"
-                                : "bg-red-100 border border-red-200 text-[#EFE5C8] hover:bg-red-200"
+                                ? "bg-red-900/30 border border-red-700/50 text-[#8B6B4A] hover:bg-red-800/50 hover:border-[#8B6B4A]"
+                                : "bg-red-100 border border-red-200 text-[#8B6B4A] hover:bg-red-200"
                             }
                             ${isViewLoading ? "opacity-70 cursor-wait" : ""}`}
                           >
