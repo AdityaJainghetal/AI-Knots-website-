@@ -1539,7 +1539,7 @@ const Home = () => {
       {/* TESTIMONIALS */}
       <section className={`py-20 ${isDark ? "bg-gray-900" : "bg-gray-50"}`}>
         <div className="max-w-7xl mx-auto px-6">
-          <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className={`text-4xl md:text-5xl font-bold text-center mb-12 ${isDark ? "text-white" : "text-gray-900"}`}>What Our Clients Say?</motion.h2>
+          <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className={`text-4xl md:text-5xl font-bold text-center mb-12 ${isDark ? "text-white" : "text-[#573010]"}`}>What Our Clients Say?</motion.h2>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {testimonials.map((t, idx) => (
               <motion.div key={idx} initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} whileHover={{ y: -5 }}
@@ -1548,7 +1548,7 @@ const Home = () => {
                   {[...Array(t.rating)].map((_, i) => <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />)}
                 </div>
                 <p className={`${isDark ? "text-gray-300" : "text-gray-700"}`}>{t.content}</p>
-                <p className={`mt-6 font-semibold ${isDark ? "text-white" : "text-gray-900"}`}>{t.author}</p>
+                <p className={`mt-6 font-semibold ${isDark ? "text-white" : "text-[#573010]"}`}>{t.author}</p>
               </motion.div>
             ))}
           </div>
@@ -1558,11 +1558,11 @@ const Home = () => {
       {/* FAQ */}
       <section className={`py-20 ${isDark ? "bg-gray-950" : "bg-gray-50"}`}>
         <div className="max-w-4xl mx-auto px-6">
-          <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className={`text-4xl md:text-5xl font-bold text-center mb-12 ${isDark ? "text-white" : "text-gray-900"}`}>Frequently Asked Questions</motion.h2>
+          <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className={`text-4xl md:text-5xl font-bold text-center mb-12 ${isDark ? "text-white" : "text-[#573010]"}`}>Frequently Asked Questions</motion.h2>
           <div className="space-y-4">
             {faqs.map((faq, idx) => (
               <details key={idx} className={`rounded-xl p-6 ${isDark ? "bg-gray-900" : "bg-white"} border ${isDark ? "border-gray-800" : "border-gray-100"}`}>
-                <summary className={`font-semibold text-lg cursor-pointer flex justify-between ${isDark ? "text-white" : "text-gray-900"}`}>
+                <summary className={`font-semibold text-lg cursor-pointer flex justify-between ${isDark ? "text-white" : "text-[#573010]"}`}>
                   {faq.q}
                   <ChevronDown className="w-5 h-5 transition-transform" />
                 </summary>
