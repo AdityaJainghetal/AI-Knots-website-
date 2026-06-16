@@ -168,7 +168,7 @@ const Footer = () => {
               {services.map((group) => (
                 <div key={group.category}>
                   <h5
-                    className={`font-medium text-xs uppercase tracking-widest mb-3 ${isDark ? "text-accent" : "text-muted"}`}
+                    className={`font-medium text-xs uppercase tracking-widest mb-3 ${isDark ? "text-accent" : "text-accent"}`}
                   >
                     {group.category}
                   </h5>

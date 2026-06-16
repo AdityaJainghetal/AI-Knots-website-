@@ -89,7 +89,7 @@ const Chatbot = () => {
       {/* Scroll to Top Button */}
       <button
         onClick={scrollToTop}
-        className={`fixed bottom-8 right-8 z-[90] p-4 rounded-full bg-red-600 hover:bg-red-700 text-white shadow-lg shadow-red-900/40 transition-all duration-300 ${
+        className={`fixed bottom-8 right-8 z-[90] p-4 rounded-full bg-[#8B6B4A]  text-white shadow-lg shadow-red-900/40 transition-all duration-300 ${
           showScrollTop
             ? "opacity-100 translate-y-0"
             : "opacity-0 translate-y-16 pointer-events-none"
@@ -115,7 +115,7 @@ const Chatbot = () => {
       {/* Floating Chat Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="fixed bottom-8 right-24 z-[100] p-4 rounded-full bg-red-600 hover:bg-red-700 text-white shadow-xl shadow-red-900/50 transition-all duration-300 flex items-center justify-center"
+        className="fixed bottom-8 right-24 z-[100] p-4 rounded-full bg-[#8B6B4A] hover:bg-[#6B4B3A] text-white shadow-xl shadow-red-900/50 transition-all duration-300 flex items-center justify-center"
         aria-label="Open Chatbot"
       >
         <MessageCircle className="w-6 h-6" />
@@ -129,10 +129,10 @@ const Chatbot = () => {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 100, scale: 0.95 }}
             transition={{ duration: 0.3 }}
-            className={`fixed bottom-24 right-8 z-[110] w-full max-w-[380px] border rounded-3xl shadow-2xl overflow-hidden ${isDark ? "bg-gray-950 border-red-900/50" : "bg-white border-gray-200"}`}
+            className={`fixed bottom-24 right-8 z-[110] w-full max-w-[380px] border rounded-3xl shadow-2xl overflow-hidden ${isDark ? "bg-gray-950 border-[#8B6B4A]/50" : "bg-white border-gray-200"}`}
           >
             {/* Header */}
-            <div className="bg-red-600 p-4 flex items-center justify-between">
+            <div className="bg-[#8B6B4A] p-4 flex items-center justify-between">
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 bg-white/20 rounded-2xl flex items-center justify-center">
                   <MessageCircle className="w-6 h-6" />
