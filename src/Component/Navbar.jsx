@@ -792,7 +792,12 @@ export default function Navbar() {
           {/* DESKTOP MENU */}
           <div className="hidden md:flex items-center gap-1">
             {navItems.map((item) => (
-              <div key={item.name} className="relative group">
+              <div
+                key={item.name}
+                className="relative"
+                onMouseEnter={() => setOpenDropdown(item.name)}
+                onMouseLeave={() => setOpenDropdown(null)}
+              >
                 <NavLink
                   to={item.path}
                   className={`
@@ -804,7 +809,7 @@ export default function Navbar() {
                   {item.hasDropdown && (
                     <ChevronDown
                       size={16}
-                      className={`transition-transform duration-200 group-hover:rotate-180 ${isDark ? "" : "text-primary"}`}
+                      className={`transition-transform duration-200 ${openDropdown === item.name ? "rotate-180" : ""} ${isDark ? "" : "text-primary"}`}
                     />
                   )}
                 </NavLink>
@@ -814,13 +819,18 @@ export default function Navbar() {
                   <div
                     className={`
                       absolute left-0 top-full pt-2 w-56 border rounded-lg shadow-xl 
-                      opacity-0 scale-95 pointer-events-none group-hover:opacity-100 
-                      group-hover:scale-100 group-hover:pointer-events-auto transition-all
+                      transition-all
+                      ${openDropdown === item.name ? "opacity-100 scale-100 pointer-events-auto" : "opacity-0 scale-95 pointer-events-none"}
                       ${isDark ? "bg-black/95 border-gray-700" : "bg-white border-gray-200 shadow-lg"}
                     `}
                   >
                     {item.dropdownItems.map((sub) => (
-                      <div key={sub.name} className="relative group/sub">
+                      <div
+                        key={sub.name}
+                        className="relative"
+                        onMouseEnter={() => setOpenSubDropdown(sub.name)}
+                        onMouseLeave={() => setOpenSubDropdown(null)}
+                      >
                         <NavLink
                           to={sub.path}
                           className={`
@@ -832,7 +842,7 @@ export default function Navbar() {
                           {sub.hasDropdown && (
                             <ChevronDown
                               size={14}
-                              className={`transition-transform duration-200 rotate-[-90deg] group-hover/sub:rotate-[-270deg] ${isDark ? "" : "text-primary"}`}
+                              className={`transition-transform duration-200 ${openSubDropdown === sub.name ? "rotate-90" : "-rotate-90"} ${isDark ? "" : "text-primary"}`}
                             />
                           )}
                         </NavLink>
@@ -842,9 +852,8 @@ export default function Navbar() {
                           <div
                             className={`
                               absolute left-full top-0 ml-1 w-52 border rounded-lg shadow-xl
-                              opacity-0 scale-95 pointer-events-none 
-                              group-hover/sub:opacity-100 group-hover/sub:scale-100 
-                              group-hover/sub:pointer-events-auto transition-all
+                              transition-all
+                              ${openSubDropdown === sub.name ? "opacity-100 scale-100 pointer-events-auto" : "opacity-0 scale-95 pointer-events-none"}
                               ${isDark ? "bg-black/95 border-gray-700" : "bg-white border-gray-200"}
                             `}
                           >
