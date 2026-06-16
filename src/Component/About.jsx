@@ -557,8 +557,8 @@ export default function About() {
                 variants={fadeInUp}
                 className={`group p-8 rounded-3xl border backdrop-blur-sm transition-all duration-300 hover:scale-[1.02] ${
                   isDark
-                    ? "bg-gray-900/80 border-red-900/30 hover:border-red-700"
-                    : "bg-white/90 border-red-200 hover:border-red-600"
+                    ? "bg-gray-900/80 border-red-900/30 hover:border-[#9F714E]"
+                    : "bg-white/90 border-red-200 hover:border-[#9F714E]"
                 }`}
               >
                 <div className="flex flex-col items-center text-center mb-8">
@@ -583,8 +583,8 @@ export default function About() {
                 variants={fadeInUp}
                 className={`group p-8 rounded-3xl border backdrop-blur-sm transition-all duration-300 hover:scale-[1.02] ${
                   isDark
-                    ? "bg-gray-900/80 border-red-900/30 hover:border-red-700"
-                    : "bg-white/90 border-red-200 hover:border-red-600"
+                    ? "bg-gray-900/80 border-red-900/30 hover:border-[#9F714E]"
+                    : "bg-white/90 border-red-200 hover:border-[#9F714E]"
                 }`}
               >
                 <div className="flex flex-col items-center text-center mb-8">
