@@ -262,12 +262,12 @@ const FAQAccordion = ({ isDark }) => {
             className={`w-full px-6 md:px-8 py-6 text-left flex items-center justify-between transition-colors duration-300 ${isDark ? "hover:bg-red-950/40" : "hover:bg-red-50"}`}
           >
             <span
-              className={`text-xl md:text-2xl font-semibold transition-colors ${isDark ? "text-white group-hover:text-red-300" : "text-gray-900 group-hover:text-[#EFE5C8]"}`}
+              className={`text-xl md:text-2xl font-semibold transition-colors ${isDark ? "text-white group-hover:text-[#3D220E]" : "text-gray-900 group-hover:text-[#3D220E]"}`}
             >
               {faq.question}
             </span>
             <ChevronDown
-              className={`w-7 h-7 md:w-8 md:h-8 flex-shrink-0 text-red-500 transition-transform duration-300 ${openIndex === index ? "rotate-180 scale-110" : "scale-100"}`}
+              className={`w-7 h-7 md:w-8 md:h-8 flex-shrink-0 text-[#3D220E] transition-transform duration-300 ${openIndex === index ? "rotate-180 scale-110" : "scale-100"}`}
             />
           </button>
 
@@ -281,7 +281,7 @@ const FAQAccordion = ({ isDark }) => {
             className="overflow-hidden"
           >
             <div
-              className={`px-6 md:px-8 pb-6 pt-3 leading-relaxed text-base md:text-lg border-t ${isDark ? "text-gray-200 border-red-900/40" : "text-gray-700 border-gray-200"}`}
+              className={`px-6 md:px-8 pb-6 pt-3 leading-relaxed text-base md:text-lg border-t ${isDark ? "text-[#866645] border-red-900/40" : "text-gray-700 border-gray-200"}`}
             >
               {faq.answer}
             </div>
@@ -1308,8 +1308,8 @@ export default function About() {
           className="text-center py-16 mb-10"
         >
           <h3 className={`text-5xl md:text-6xl font-black mb-8 px-4 ${text}`}>
-            Ready to build something <span className="text-[#9F714E]">great</span>{" "}
-            together?
+            Ready to build something{" "}
+            <span className="text-[#9F714E]">great</span> together?
           </h3>
           <p className={`text-xl mb-10 max-w-2xl mx-auto px-4 ${subText}`}>
             Let's turn your vision into reality. Our team is ready to start
