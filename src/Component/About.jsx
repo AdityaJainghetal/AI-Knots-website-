@@ -744,7 +744,7 @@ export default function About() {
                 </p>
                 <button
                   onClick={() => setIsModalOpen(true)}
-                  className="px-8 py-4 rounded-full font-semibold transition w-fit text-white bg-[#9F714E] shadow-lg shadow-[#9F714E]/50 hover:bg-[#9F714E]/90"
+                  className="px-8 py-4 rounded-full font-semibold transition w-fit text-white bg-[#3D220E] shadow-lg shadow-[#9F714E]/50 hover:bg-[#3D220E]/90"
                 >
                   Get in touch
                 </button>
@@ -1137,7 +1137,7 @@ export default function About() {
                               key={i}
                               className={`flex items-start gap-3 ${bodyClass} hover:translate-x-2 transition-all duration-300`}
                             >
-                              <ItemIcon className="w-5 h-5 text-red-500 mt-0.5 flex-shrink-0" />
+                              <ItemIcon className="w-5 h-5 text-[#7a5234] mt-0.5 flex-shrink-0" />
                               <span>{item.text}</span>
                             </li>
                           );
@@ -1161,7 +1161,7 @@ export default function About() {
               >
                 Industry-Specific Solutions
               </h2>
-              <div className="w-24 h-1 bg-gradient-to-r from-red-600 to-red-800 mx-auto mb-6"></div>
+              <div className="w-24 h-1 bg-[#7a5234] mx-auto mb-6"></div>
               <p className={`text-lg max-w-2xl mx-auto ${bodyClass}`}>
                 Tailored digital solutions designed for diverse industry
                 verticals
@@ -1226,7 +1226,7 @@ export default function About() {
 
                       {/* Title */}
                       <h3
-                        className={`text-2xl font-bold mb-6 ${headingClass} group-hover:text-[#EFE5C8] transition-colors`}
+                        className={`text-2xl font-bold mb-6 ${headingClass} group-hover:text-[#8B6B4A] transition-colors`}
                       >
                         {domain.title}
                       </h3>
@@ -1317,7 +1317,7 @@ export default function About() {
           </p>
           <button
             onClick={() => setIsModalOpen(true)}
-            className="px-12 py-6 rounded-full text-2xl font-bold shadow-2xl transition text-white bg-[#9F714E] hover:shadow-red-900/70"
+            className="px-12 py-6 rounded-full text-2xl font-bold shadow-2xl transition text-white bg-[#3D220E] hover:shadow-red-900/70"
           >
             Let's Start Your Business →
           </button>
@@ -1336,7 +1336,7 @@ export default function About() {
               variants={fadeInUp}
               className={`text-4xl sm:text-5xl md:text-6xl font-extrabold text-center mb-6 md:mb-8 tracking-tight ${text}`}
             >
-              FREQUENTLY <span className="text-[#9F714E]">ASKED</span> QUESTIONS
+              FREQUENTLY <span className="text-[#3D220E]">ASKED</span> QUESTIONS
             </motion.h2>
             <motion.p
               variants={fadeInUp}
