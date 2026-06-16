@@ -488,18 +488,8 @@ function PaidAdvertising() {
           </motion.section>
         </main>
 
-        {/* Scroll to Top Button */}
-        <button
-          onClick={scrollToTop}
-          className={`fixed bottom-8 right-8 z-50 p-5 rounded-2xl bg-red-600 hover:bg-red-700 text-white shadow-2xl transition-all duration-300 hover:scale-110 active:scale-95 ${
-            showScrollTop
-              ? "opacity-100 translate-y-0"
-              : "opacity-0 translate-y-16 pointer-events-none"
-          }`}
-          aria-label="Scroll back to top"
-        >
-          ↑
-        </button>
+       
+        
       </div>
     </>
   );

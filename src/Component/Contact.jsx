@@ -181,7 +181,7 @@ const Contact = () => {
                   variants={itemVariants}
                   className={`text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight ${isDark ? "text-white" : "text-white"}`}
                 >
-                  <span className="bg-gradient-to-r from-red-500 via-red-400 to-rose-500 bg-clip-text text-transparent">
+                  <span className="bg-[#48321b] bg-clip-text">
                     Get in Touch
                   </span>
                 </motion.h1>

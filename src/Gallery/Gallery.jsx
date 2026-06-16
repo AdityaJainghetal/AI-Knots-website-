@@ -55,7 +55,7 @@ const Gallery = () => {
   // ====================== THEME CLASSES ======================
   const headingClass = isDark ? "text-white" : "text-gray-900";
   const bodyClass = isDark ? "text-gray-300" : "text-gray-700";
-  const accentClass = "text-[#EFE5C8]";
+  const accentClass = isDark ? "text-[#8B6B4A]" : "text-gray-700";
 
   if (loading) {
     return (
@@ -64,7 +64,7 @@ const Gallery = () => {
         ${isDark ? "bg-black text-white" : "bg-gray-50 text-gray-900"}`}
       >
         <div className="text-center">
-          <div className="w-16 h-16 border-4 border-red-600 border-t-transparent rounded-full animate-spin mx-auto mb-6"></div>
+          <div className="w-16 h-16 border-4 border-[#EFE5C8]  rounded-full animate-spin mx-auto mb-6"></div>
           <p className={`text-2xl ${bodyClass}`}>Loading gallery...</p>
         </div>
       </div>
@@ -106,7 +106,7 @@ const Gallery = () => {
               <div
                 key={index}
                 className={`group relative overflow-hidden rounded-2xl shadow-lg transition-all duration-300 hover:shadow-2xl
-                ${isDark ? "shadow-black/50 hover:shadow-red-900/30" : "shadow-gray-300 hover:shadow-red-200"}`}
+                ${isDark ? "shadow-black/50 hover:shadow-[#EFE5C8]/30" : "shadow-gray-300 hover:shadow-[#EFE5C8]/30"}`}
               >
                 <img
                   src={

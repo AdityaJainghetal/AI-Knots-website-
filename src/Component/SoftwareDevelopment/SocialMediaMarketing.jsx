@@ -180,7 +180,7 @@ export default function SocialMediaMarketing() {
     ? "bg-gray-900/70 backdrop-blur-sm border border-gray-800 hover:border-primary/60 hover:shadow-red-900/30"
     : "bg-white border border-gray-200 hover:border-primary hover:shadow-2xl";
 
-  const buttonClass = `px-12 py-6 rounded-full text-xl font-bold transition-all flex items-center gap-3 group shadow-xl ${
+  const buttonClass = `px-12 py-6 rounded-full text-xl font-bold flex items-center gap-3 group shadow-xl ${
     isDark ? "btn-accent" : "btn-accent"
   }`;
 
@@ -225,7 +225,7 @@ export default function SocialMediaMarketing() {
               className="text-5xl md:text-7xl font-black tracking-tighter leading-none mb-8 text-white"
             >
               Social Media Marketing Company in{" "}
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-accent via-accent to-white">
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-accent via-acc to-[#8B6B4A]">
                 Bhopal
               </span>
             </motion.h1>
@@ -242,7 +242,7 @@ export default function SocialMediaMarketing() {
               className={`text-lg md:text-xl max-w-5xl mx-auto leading-relaxed mb-12 ${isDark ? "text-gray-300" : "text-white/90"}`}
             >
               At{" "}
-              <span className="font-semibold text-red-400">
+              <span className="font-semibold text-[#8B6B4A]">
                 AI KNOTS IT SOLUTION
               </span>
               , we are one of the most trusted Social Media Marketing agencies
@@ -263,10 +263,10 @@ export default function SocialMediaMarketing() {
               </button>
 
               <button
-                className={`px-12 py-6 border-2 border-primary rounded-full text-xl font-bold transition-all ${
+                className={`px-12 py-6 border-2 border-[#8B6B4A] rounded-full text-xl font-bold transition-all ${
                   isDark
-                    ? "text-accent hover:bg-black/60 hover:border-primary"
-                    : "text-muted hover:bg-muted border-primary"
+                    ? "text-accent hover:bg-black/60 hover:border-[#8B6B4A]"
+                    : "text-muted hover:bg-muted border-[#8B6B4A] hover:border-[#8B6B4A] hover:text-white shadow-lg"
                 }`}
               >
                 Free Social Media Audit
@@ -423,9 +423,9 @@ export default function SocialMediaMarketing() {
 
             {/* Areas We Serve */}
             <motion.h3
-              className={`text-3xl font-bold text-center mb-10 ${headingClass}`}
+              className={`text-3xl font-bold text-center mb-10 ${isDark ? "text-[#9F714E]" : "text-[#9F714E]"}`}
             >
-              Areas We Serve in <span className={accentClass}>Bhopal</span>
+              Areas We Serve in <span className={`${isDark ? "text-[#9F714E]" : "text-[#9F714E]"}`}>Bhopal</span>
             </motion.h3>
 
             <div className="flex flex-wrap justify-center gap-4">
@@ -473,8 +473,8 @@ export default function SocialMediaMarketing() {
               whileTap={{ scale: 0.98 }}
               className={`px-16 py-7 rounded-full text-2xl font-bold transition-all ${
                 isDark
-                  ? "bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800"
-                  : "bg-red-600 hover:bg-red-700 text-white"
+                  ? "bg-gradient-to-r from-[#8B6B4A] to-[#8B6B4A] hover:from-[#8B6B4A] hover:to-[#8B6B4A]"
+                  : "bg-[#8B6B4A] hover:bg-[#8B6B4A] text-white"
               }`}
             >
               <button onClick={() => navigate("/contact")}>
@@ -522,7 +522,7 @@ export default function SocialMediaMarketing() {
                       {faq.q}
                     </span>
                     <span
-                      className={`text-2xl text-red-500 transition-transform ${openFaq === idx ? "rotate-180" : ""}`}
+                      className={`text-2xl text-[#8B6B4A] transition-transform ${openFaq === idx ? "rotate-180" : ""}`}
                     >
                       ▼
                     </span>
