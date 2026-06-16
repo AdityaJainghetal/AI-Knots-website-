@@ -1338,9 +1338,7 @@ const Home = () => {
               </motion.button>
             </div>
 
-            <motion.p className={`flex items-center gap-3 text-lg font-medium ${isDark ? "text-gray-300" : "text-[#3d220e]"}`}>
-              <span className="text-green-400 text-2xl">✔</span> Get 15 Days FREE Trial Now
-            </motion.p>
+            
           </motion.div>
 
           <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.6, delay: 0.2 }} className="relative flex justify-center">
