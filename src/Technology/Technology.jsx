@@ -369,16 +369,16 @@ const Technology = () => {
           <div className="container mx-auto px-6 lg:px-8 relative z-10 text-center">
             <div
               className={`inline-flex items-center gap-2 mb-6 px-6 py-2 rounded-full backdrop-blur-sm animate-fade-in
-            ${isDark ? "bg-red-600/20 border border-red-500/30" : "bg-red-100 border border-red-200"}`}
+            ${isDark ? "bg-[#8B6B4A]/20 border border-[#8B6B4A]/30" : "bg-[#8B6B4A]/10 border border-[#8B6B4A]/20"}`}
             >
-              <Sparkles className="w-4 h-4 text-red-400 animate-pulse" />
-              <span className="text-red-400 font-semibold text-sm tracking-wider">
+              <Sparkles className="w-4 h-4 text-[#8B6B4A] animate-pulse" />
+              <span className="text-[#8B6B4A] font-semibold text-sm tracking-wider">
                 TECHNOLOGY EXCELLENCE
               </span>
             </div>
             <h1
               className={`text-5xl md:text-6xl lg:text-7xl font-extrabold mb-8 tracking-tight animate-slide-up
-            ${isDark ? "bg-gradient-to-r from-white via-red-100 to-white bg-clip-text text-transparent" : "text-gray-900"}`}
+            ${isDark ? "bg-gradient-to-r from-white via-[#8B6B4A] to-white bg-clip-text text-transparent" : "text-gray-900"}`}
             >
               Cutting-Edge Technology Solutions
             </h1>
@@ -436,7 +436,7 @@ const Technology = () => {
               >
                 AI Technology & Insights
               </h2>
-              <div className="w-24 h-1 bg-gradient-to-r from-red-600 to-red-800 mx-auto mb-6"></div>
+              <div className="w-24 h-1 bg-gradient-to-r from-[#8B6B4A] to-[#8B6B4A] mx-auto mb-6"></div>
               <p className={`text-lg max-w-2xl mx-auto ${bodyClass}`}>
                 Stay updated with the latest technology trends and industry
                 insights
