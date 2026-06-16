@@ -270,9 +270,9 @@ export default function SoftwareDevelopment() {
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  className={`rounded-2xl p-10 text-center transition-all ${isDark ? "bg-gray-900/70 border border-red-900/40 hover:border-red-600/60" : "bg-white border border-gray-200 hover:border-red-500/60 shadow-md"}`}
+                  className={`rounded-2xl p-10 text-center transition-all ${isDark ? "bg-gray-900/70 border border-red-900/40 hover:border-[#3D220E]" : "bg-white border border-gray-200 hover:border-[#3D220E] shadow-md"}`}
                 >
-                  <div className="text-6xl md:text-7xl font-black text-[#9F714E] mb-4">
+                  <div className="text-6xl md:text-7xl font-black text-[#3D220E] mb-4">
                     {num}
                   </div>
                   <p className="text-xl font-medium">
@@ -299,7 +299,7 @@ export default function SoftwareDevelopment() {
               className="text-4xl md:text-6xl font-black text-center mb-12"
             >
               Our Software Development{" "}
-              <span className="text-[#9F714E]">Services</span>
+              <span className="text-[#3D220E]">Services</span>
             </motion.h2>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -312,7 +312,7 @@ export default function SoftwareDevelopment() {
                   transition={{ delay: idx * 0.1 }}
                   className={`backdrop-blur-sm rounded-2xl p-10 hover:shadow-2xl transition-all group ${isDark ? "bg-gray-900/70 border border-red-900/40 hover:border-red-600/60 hover:shadow-red-900/30" : "bg-white border border-gray-200 hover:border-red-500/60 hover:shadow-gray-200 shadow-md"}`}
                 >
-                  <service.icon className="w-16 h-16 text-red-500 mb-8 mx-auto group-hover:scale-110 transition-transform" />
+                  <service.icon className="w-16 h-16 text-[#3D220E] mb-8 mx-auto group-hover:scale-110 transition-transform" />
                   <h3
                     className={`text-2xl md:text-3xl font-bold mb-6 text-center ${isDark ? "text-white" : "text-[#462206]"}`}
                   >
@@ -341,7 +341,7 @@ export default function SoftwareDevelopment() {
               className="text-4xl md:text-5xl font-black text-center mb-12"
             >
               Software Development{" "}
-              <span className="text-red-500">Case Studies</span>
+              <span className="text-[#3D220E]">Case Studies</span>
             </motion.h2>
 
             <div className="grid md:grid-cols-3 gap-8">
@@ -368,7 +368,7 @@ export default function SoftwareDevelopment() {
                   className={`border rounded-2xl p-10 transition-all ${isDark ? "bg-gray-900/70 border-red-900/40 hover:border-red-600/60" : "bg-white border-gray-200 hover:border-red-500/60 shadow-md"}`}
                 >
                   <h3
-                    className={`text-2xl font-bold mb-6 ${isDark ? "text-red-400" : "text-[#714b2e]"}`}
+                    className={`text-2xl font-bold mb-6 ${isDark ? "text-[#3D220E]" : "text-[#3D220E]"}`}
                   >
                     {study.title}
                   </h3>
@@ -419,8 +419,8 @@ export default function SoftwareDevelopment() {
                     }}
                     className={`px-8 py-4 rounded-2xl text-base md:text-lg font-medium cursor-pointer transition-all duration-300 shadow-md ${
                       isDark
-                        ? "bg-zinc-900 border border-red-800/60 text-gray-200 hover:border-red-500 hover:bg-red-950/70 hover:shadow-red-900/30"
-                        : "bg-white border border-gray-200 text-gray-800 hover:border-red-500 hover:bg-red-50 hover:shadow-lg hover:shadow-red-100"
+                        ? "bg-zinc-900 border border-red-800/60 text-gray-200 hover:border-[#3D220E] hover:bg-red-950/70 hover:shadow-red-900/30"
+                        : "bg-white border border-gray-200 text-gray-800 hover:border-[#3D220E] hover:bg-red-50 hover:shadow-lg hover:shadow-red-100"
                     }`}
                   >
                     {ind}
@@ -448,7 +448,7 @@ export default function SoftwareDevelopment() {
                   className={`border rounded-2xl p-8 ${isDark ? "bg-gray-900/70 border-red-900/40" : "bg-white border-gray-200 shadow-md"}`}
                 >
                   <h3
-                    className={`text-2xl font-bold mb-6 capitalize ${isDark ? "text-red-400" : "text-[#9F714E]"}`}
+                    className={`text-2xl font-bold mb-6 capitalize ${isDark ? "text-[#3D220E]" : "text-[#9F714E]"}`}
                   >
                     {category}
                   </h3>
@@ -482,12 +482,12 @@ export default function SoftwareDevelopment() {
                 variants={staggerContainer}
                 className={`p-8 rounded-2xl border flex flex-col h-full transition-all duration-300 hover:shadow-xl ${
                   isDark
-                    ? "bg-zinc-900 border-red-900/50 hover:border-red-700"
-                    : "bg-white border-red-200 hover:border-red-500"
+                    ? "bg-zinc-900 border-red-900/50 hover:border-[#3D220E]"
+                    : "bg-white border-red-200 hover:border-[#3D220E] hover:shadow-gray-200"
                 }`}
               >
                 <h2
-                  className={`text-3xl md:text-4xl font-black mb-8 ${isDark ? "text-red-400" : "text-[#9F714E]"}`}
+                  className={`text-3xl md:text-4xl font-black mb-8 ${isDark ? "text-[#3D220E]" : "text-[#9F714E]"}`}
                 >
                   Why Software Outsourcing?
                 </h2>
@@ -506,7 +506,7 @@ export default function SoftwareDevelopment() {
                       variants={fadeInUp}
                       className="flex items-start gap-4"
                     >
-                      <ArrowRight className="w-6 h-6 text-red-500 flex-shrink-0 mt-1" />
+                      <ArrowRight className="w-6 h-6 text-[#3D220E] flex-shrink-0 mt-1" />
                       <span>{point}</span>
                     </motion.li>
                   ))}
@@ -521,12 +521,12 @@ export default function SoftwareDevelopment() {
                 variants={staggerContainer}
                 className={`p-8 rounded-2xl border flex flex-col h-full transition-all duration-300 hover:shadow-xl ${
                   isDark
-                    ? "bg-zinc-900 border-red-900/50 hover:border-red-700"
-                    : "bg-white border-red-200 hover:border-red-500"
+                    ? "bg-zinc-900 border-red-900/50 hover:border-[#3D220E]"
+                    : "bg-white border-red-200 hover:border-[#3D220E] hover:shadow-gray-200"
                 }`}
               >
                 <h2
-                  className={`text-3xl md:text-4xl font-black mb-8 ${isDark ? "text-red-400" : "text-[#9F714E]"}`}
+                  className={`text-3xl md:text-4xl font-black mb-8 ${isDark ? "text-[#3D220E]" : "text-[#9F714E]"}`}
                 >
                   Why Choose India for Software Development?
                 </h2>
@@ -545,7 +545,7 @@ export default function SoftwareDevelopment() {
                       variants={fadeInUp}
                       className="flex items-start gap-4"
                     >
-                      <ArrowRight className="w-6 h-6 text-red-500 flex-shrink-0 mt-1" />
+                      <ArrowRight className="w-6 h-6 text-[#3D220E] flex-shrink-0 mt-1" />
                       <span>{point}</span>
                     </motion.li>
                   ))}
@@ -560,12 +560,12 @@ export default function SoftwareDevelopment() {
                 variants={staggerContainer}
                 className={`p-8 rounded-2xl border flex flex-col h-full transition-all duration-300 hover:shadow-xl ${
                   isDark
-                    ? "bg-zinc-900 border-red-900/50 hover:border-red-700"
-                    : "bg-white border-red-200 hover:border-red-500"
+                    ? "bg-zinc-900 border-red-900/50 hover:border-[#3D220E]"
+                    : "bg-white border-red-200 hover:border-[#3D220E] hover:shadow-gray-200"
                 }`}
               >
                 <h2
-                  className={`text-3xl md:text-4xl font-black mb-8 ${isDark ? "text-red-400" : "text-[#9F714E]"}`}
+                  className={`text-3xl md:text-4xl font-black mb-8 ${isDark ? "text-[#3D220E]" : "text-[#9F714E]"}`}
                 >
                   Why Choose AI Knots?
                 </h2>
@@ -583,7 +583,7 @@ export default function SoftwareDevelopment() {
                       variants={fadeInUp}
                       className="flex items-start gap-4"
                     >
-                      <ArrowRight className="w-6 h-6 text-red-500 flex-shrink-0 mt-1" />
+                      <ArrowRight className="w-6 h-6 text-[#3D220E] flex-shrink-0 mt-1" />
                       <span>{point}</span>
                     </motion.li>
                   ))}
@@ -619,7 +619,7 @@ export default function SoftwareDevelopment() {
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.15 }}
-                  className={`border rounded-2xl p-10 text-center transition-all ${isDark ? "bg-gray-900/70 border-red-900/40 hover:border-red-600/60" : "bg-white border-gray-200 hover:border-red-500/60 shadow-md"}`}
+                  className={`border rounded-2xl p-10 text-center transition-all ${isDark ? "bg-gray-900/70 border-red-900/40 hover:border-[#3D220E]" : "bg-white border-gray-200 hover:border-[#3D220E] hover:shadow-gray-200"}`}
                 >
                   <div className="text-5xl font-black text-[#9F714E] mb-6">{`0${i + 1}`}</div>
                   <h3
@@ -751,30 +751,7 @@ export default function SoftwareDevelopment() {
           </div>
         </section>
 
-        <button
-          onClick={scrollToTop}
-          className={`fixed bottom-6 right-6 z-50 p-4 rounded-full bg-red-600 hover:bg-red-700 text-white shadow-lg shadow-red-900/50 transition-all duration-300 hover:scale-110 active:scale-95 ${
-            showScrollTop
-              ? "opacity-100 translate-y-0"
-              : "opacity-0 translate-y-16 pointer-events-none"
-          }`}
-          aria-label="Scroll back to top"
-        >
-          <svg
-            className="w-6 h-6"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M5 10l7-7m0 0l7 7m-7-7v18"
-            />
-          </svg>
-        </button>
+       
       </div>
     </>
   );
