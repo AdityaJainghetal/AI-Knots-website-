@@ -319,7 +319,7 @@ const LeaderCard = ({
       >
         {name}
       </h3>
-      <p className="font-semibold mb-2 text-red-500">{role}</p>
+      <p className="font-semibold mb-2 text-[#9F714E]">{role}</p>
       <p
         className={`text-sm mb-3 ${isDark ? "text-gray-400" : "text-gray-500"}`}
       >
@@ -630,7 +630,7 @@ export default function About() {
                       </h2>
                       <button
                         onClick={() => setIsModalOpen(false)}
-                        className="text-white hover:text-red-300 transition"
+                        className="text-white hover:text-[#9F714E] transition"
                       >
                         <X className="w-7 h-7" />
                       </button>
@@ -687,7 +687,7 @@ export default function About() {
                       <button
                         type="submit"
                         disabled={loading}
-                        className={`w-full py-4 rounded-lg font-bold text-lg text-white transition ${loading ? "bg-gray-700 cursor-not-allowed" : "bg-red-700 hover:bg-red-600 shadow-lg shadow-red-900/40"}`}
+                        className={`w-full py-4 rounded-lg font-bold text-lg text-white transition ${loading ? "bg-gray-700 cursor-not-allowed" : "bg-[#9F714E] shadow-lg shadow-[#9F714E] hover:bg-[#9F714E]/90"}`}
                       >
                         {loading ? "Sending..." : "Submit Inquiry"}
                       </button>
@@ -697,7 +697,7 @@ export default function About() {
                         </p>
                       )}
                       {error && (
-                        <p className="text-red-500 text-center">{error}</p>
+                        <p className="text-[#9F714E] text-center">{error}</p>
                       )}
                     </form>
                   </motion.div>
@@ -1051,7 +1051,7 @@ export default function About() {
               >
                 Our Core Services
               </h2>
-              <div className="w-24 h-1 bg-gradient-to-r from-red-600 to-red-800 mx-auto mb-6"></div>
+              <div className="w-24 h-1 bg-[#9F714E] text-white mx-auto mb-6"></div>
               <p className={`text-lg max-w-2xl mx-auto ${bodyClass}`}>
                 From ideation to 24/7 support — we deliver end-to-end
                 excellence.
@@ -1123,7 +1123,7 @@ export default function About() {
                     className={`group relative rounded-3xl p-8 border transition-all duration-500 hover:-translate-y-3 ${cardClass}`}
                   >
                     <div className="relative z-10">
-                      <div className="w-16 h-16 bg-gradient-to-br from-red-600 to-red-700 rounded-2xl flex items-center justify-center mb-6 transform group-hover:scale-110 transition-all duration-300">
+                      <div className="w-16 h-16 bg-[#9F714E] text-2xl  rounded-2xl flex items-center justify-center mb-6 transform group-hover:scale-110 transition-all duration-300">
                         <ServiceIcon className="w-8 h-8 text-white" />
                       </div>
                       <h3 className={`text-2xl font-bold mb-6 ${headingClass}`}>
@@ -1220,7 +1220,7 @@ export default function About() {
                   >
                     <div className="relative z-10">
                       {/* Icon Container */}
-                      <div className="w-16 h-16 bg-gradient-to-br from-red-600 to-red-700 rounded-2xl flex items-center justify-center mb-6 transform group-hover:scale-110 transition-all duration-300">
+                      <div className="w-16 h-16 bg-[#9F714E] rounded-2xl flex items-center justify-center mb-6 transform group-hover:scale-110 transition-all duration-300">
                         <DomainIcon className="w-8 h-8 text-white" />
                       </div>
 
@@ -1240,7 +1240,7 @@ export default function About() {
                               key={i}
                               className={`flex items-start gap-3 ${bodyClass} hover:translate-x-2 transition-all duration-300`}
                             >
-                              <ItemIcon className="w-5 h-5 text-red-500 mt-0.5 flex-shrink-0" />
+                              <ItemIcon className="w-5 h-5 text-[#9F714E] mt-0.5 flex-shrink-0" />
                               <span>{item.text}</span>
                             </li>
                           );
@@ -1272,12 +1272,12 @@ export default function About() {
                   scale: idx === activeTestimonial ? 1 : 0.9,
                 }}
                 transition={{ duration: 0.6 }}
-                className={`absolute inset-0 border rounded-3xl p-10 flex flex-col justify-between ${isDark ? "bg-gradient-to-br from-gray-900/90 to-black/90 border-red-900/30" : "bg-white border-gray-200 shadow-lg"}`}
+                className={`absolute inset-0 border rounded-3xl p-10 flex flex-col justify-between ${isDark ? "bg-gradient-to-br from-gray-900/90 to-black/90 border-[#9F714E]/30" : "bg-white border-gray-200 shadow-lg"}`}
                 style={{
                   pointerEvents: idx === activeTestimonial ? "auto" : "none",
                 }}
               >
-                <div className="flex gap-1 text-2xl text-red-500">
+                <div className="flex gap-1 text-2xl text-[#9F714E]">
                   {"★".repeat(t.rating)}
                 </div>
                 <p
@@ -1294,7 +1294,7 @@ export default function About() {
               <button
                 key={i}
                 onClick={() => setActiveTestimonial(i)}
-                className={`h-3 rounded-full transition-all ${i === activeTestimonial ? "w-10 bg-red-600" : "w-3 bg-gray-400"}`}
+                className={`h-3 rounded-full transition-all ${i === activeTestimonial ? "w-10 bg-[#9F714E]" : "w-3 bg-gray-400"}`}
               />
             ))}
           </div>
@@ -1317,7 +1317,7 @@ export default function About() {
           </p>
           <button
             onClick={() => setIsModalOpen(true)}
-            className="px-12 py-6 rounded-full text-2xl font-bold shadow-2xl transition text-white bg-gradient-to-r from-red-600 to-red-800 hover:shadow-red-900/70"
+            className="px-12 py-6 rounded-full text-2xl font-bold shadow-2xl transition text-white bg-[#9F714E] hover:shadow-red-900/70"
           >
             Let's Start Your Business →
           </button>

@@ -27,8 +27,7 @@ import aws from "../../assets/Images/aws.jpeg";
 import { useNavigate } from "react-router-dom";
 const images = {
   hero: aws,
-  neural:
-    AIML,
+  neural: AIML,
   analytics:
     "https://thumbs.dreamstime.com/b/futuristic-digital-interface-displaying-central-wave-graph-surrounding-data-visualizations-charts-feature-red-blue-391300624.jpg",
 };
@@ -37,7 +36,6 @@ const fadeInUp = {
   hidden: { opacity: 0, y: 40 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
 };
-
 
 const staggerContainer = {
   hidden: {},
@@ -164,35 +162,30 @@ export default function AIServices() {
   const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
 
   const t = {
-    bg: isDark
-      ? "bg-gradient-to-b from-gray-950 via-black to-gray-950 text-white"
-      : "bg-gradient-to-b from-gray-50 via-white to-gray-100 text-gray-900",
-    sectionBg: isDark ? "bg-black/40" : "bg-gray-100/80",
-    sectionBg2: isDark ? "bg-black/50" : "bg-gray-200/60",
-    sectionBg3: isDark
-      ? "bg-gradient-to-r from-gray-950 to-black"
-      : "bg-gradient-to-r from-gray-100 to-white",
-    sectionBg4: isDark
-      ? "bg-gradient-to-b from-black to-gray-950"
-      : "bg-gradient-to-b from-white to-gray-100",
-    sectionBg5: isDark ? "bg-black/70" : "bg-gray-100",
+    bg: isDark ? "bg-gray-950 text-white" : "bg-white text-[#3d220e]",
+    sectionBg: isDark ? "bg-gray-950" : "bg-gray-50",
+    sectionBg2: isDark ? "bg-gray-900" : "bg-gray-50",
+    sectionBg3: isDark ? "bg-gray-900/95" : "bg-gray-100",
+    sectionBg4: isDark ? "bg-gray-950" : "bg-white",
+    sectionBg5: isDark ? "bg-gray-900" : "bg-gray-100",
     card: isDark
-      ? "bg-gray-900/70 backdrop-blur-sm border border-red-900/40 hover:border-red-600/60 hover:shadow-red-900/30"
-      : "bg-white border border-red-200 hover:border-red-400 hover:shadow-red-100/60 shadow-sm",
+      ? "bg-gray-900 border border-gray-800 shadow-sm"
+      : "bg-white border border-gray-100 shadow-sm",
     cardGrad: isDark
-      ? "bg-gradient-to-br from-gray-900 to-black border border-red-900/40 hover:border-red-600/60 hover:shadow-red-900/30"
-      : "bg-gradient-to-br from-white to-gray-50 border border-red-200 hover:border-red-400 hover:shadow-red-100",
+      ? "bg-gradient-to-br from-slate-950 via-gray-900 to-black border border-gray-800 shadow-sm"
+      : "bg-gradient-to-br from-white to-gray-50 border border-gray-100 shadow-sm",
     faqCard: isDark
-      ? "border border-red-900/40 bg-gray-900/30"
-      : "border border-red-200 bg-white shadow-sm",
-    faqHover: isDark ? "hover:bg-gray-800/50" : "hover:bg-red-50/60",
-    text: isDark ? "text-gray-300" : "text-gray-600",
+      ? "border border-gray-800 bg-gray-900"
+      : "border border-gray-100 bg-white shadow-sm",
+    faqHover: isDark ? "hover:bg-gray-800" : "hover:bg-red-50",
+    text: isDark ? "text-gray-300" : "text-[#3d220e]",
+    heroText: isDark ? "text-gray-200" : "text-gray-200",
     featureCard: isDark
-      ? "bg-gray-900/60 border border-red-900/30"
-      : "bg-white border border-red-200 shadow-sm",
+      ? "bg-gray-900 border border-gray-800"
+      : "bg-white border border-gray-100 shadow-sm",
     useCase: isDark
-      ? "bg-gray-900/70 border border-red-900/40 hover:border-red-600/60"
-      : "bg-white border border-red-200 hover:border-red-400 shadow-sm",
+      ? "bg-gray-900 border border-gray-800"
+      : "bg-white border border-gray-100 shadow-sm",
   };
 
   return (
@@ -213,103 +206,104 @@ export default function AIServices() {
       >
         {/* Hero Section */}
         <section className="relative min-h-[90vh] flex items-center justify-center px-4 sm:px-6 lg:px-8 py-20 overflow-hidden">
-  {/* Background Image */}
-  <div className="absolute inset-0">
-    <img
-      src={images.hero}
-      alt="Futuristic AI Dashboard"
-      className="w-full h-full object-cover 
+          {/* Background Image */}
+          <div className="absolute inset-0">
+            <img
+              src={images.hero}
+              alt="Futuristic AI Dashboard"
+              className="w-full h-full object-cover 
                  brightness-75 contrast-110 
                  dark:brightness-45 dark:contrast-125
                  transition-all duration-700"
-      loading="lazy"
-    />
+              loading="lazy"
+            />
 
-    {/* Gradient Overlay - Optimized for both themes */}
-    <div className="absolute inset-0 bg-gradient-to-t 
+            {/* Gradient Overlay - Optimized for both themes */}
+            <div
+              className="absolute inset-0 bg-gradient-to-t 
                     from-black/75 via-black/65 to-black/80 
-                    dark:from-black/90 dark:via-black/85 dark:to-black/90" />
-  </div>
+                    dark:from-black/90 dark:via-black/85 dark:to-black/90"
+            />
+          </div>
 
-  {/* Content */}
-  <motion.div
-    initial="hidden"
-    animate="visible"
-    variants={staggerContainer}
-    className="relative z-10 max-w-7xl mx-auto text-center"
-  >
-    <motion.h1
-      variants={fadeInUp}
-      className="text-5xl md:text-7xl font-black mb-6 tracking-tight leading-tight text-white"
-    >
-      AI & Machine Learning Services in{" "}
-      <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-red-600">
-        Bhopal
-      </span>
-    </motion.h1>
+          {/* Content */}
+          <motion.div
+            initial="hidden"
+            animate="visible"
+            variants={staggerContainer}
+            className="relative z-10 max-w-7xl mx-auto text-center"
+          >
+            <motion.h1
+              variants={fadeInUp}
+              className="text-5xl md:text-7xl font-black mb-6 tracking-tight leading-tight text-white"
+            >
+              AI & Machine Learning Services in{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#9F714E] to-[#9F714E]/90">
+                Bhopal
+              </span>
+            </motion.h1>
 
-    <motion.p
-      variants={fadeInUp}
-      className="text-2xl md:text-4xl font-bold mb-8 text-red-500 dark:text-red-400"
-    >
-      Turn Data into Decisions — Automate, Predict, Win
-    </motion.p>
+            <motion.p
+              variants={fadeInUp}
+              className="text-2xl md:text-4xl font-bold mb-8 text-[#a17451] dark:text-[#9F714E]"
+            >
+              Turn Data into Decisions — Automate, Predict, Win
+            </motion.p>
 
-    <motion.p
-      variants={fadeInUp}
-      className="text-lg md:text-xl mb-12 max-w-4xl mx-auto leading-relaxed text-gray-200 dark:text-gray-300"
-    >
-      At{" "}
-      <span className="text-red-500 dark:text-red-400 font-semibold">
-        AI KNOTS IT SOLUTION
-      </span>
-      , we provide advanced AI & Machine Learning Services that help
-      businesses automate processes, analyze data, and make smarter
-      decisions. In today's fast-growing digital world, using AI is no
-      longer optional — it's essential for staying ahead of the
-      competition.
-    </motion.p>
+            <motion.p
+              variants={fadeInUp}
+              className={`text-lg md:text-xl mb-12 max-w-4xl mx-auto leading-relaxed ${t.heroText}`}
+            >
+              At{" "}
+              <span className="text-[#d9c5b5] dark:text-[#af8360] font-semibold">
+                AI KNOTS IT SOLUTION
+              </span>
+              , we provide advanced AI & Machine Learning Services that help
+              businesses automate processes, analyze data, and make smarter
+              decisions. In today's fast-growing digital world, using AI is no
+              longer optional — it's essential for staying ahead of the
+              competition.
+            </motion.p>
 
-    <motion.ul
-      variants={fadeInUp}
-      className="flex flex-wrap justify-center gap-6 mb-12 text-lg text-gray-200 dark:text-gray-300"
-    >
-      {[
-        "Understand customer behavior",
-        "Predict future trends",
-        "Automate repetitive tasks",
-        "Improve decision-making",
-        "Deliver personalized user experiences",
-      ].map((item) => (
-        <li key={item} className="flex items-center gap-2">
-          <CheckCircle2 className="w-6 h-6 text-red-500 dark:text-red-400" /> 
-          {item}
-        </li>
-      ))}
-    </motion.ul>
+            <motion.ul
+              variants={fadeInUp}
+              className={`flex flex-wrap justify-center gap-6 mb-12 text-lg ${t.heroText}`}
+            >
+              {[
+                "Understand customer behavior",
+                "Predict future trends",
+                "Automate repetitive tasks",
+                "Improve decision-making",
+                "Deliver personalized user experiences",
+              ].map((item) => (
+                <li key={item} className="flex items-center gap-2">
+                  <CheckCircle2 className="w-6 h-6 text-[#a27350] dark:text-[#9F714E]" />
+                  {item}
+                </li>
+              ))}
+            </motion.ul>
 
-    <motion.div
-      variants={fadeInUp}
-      className="flex flex-col sm:flex-row gap-6 justify-center"
-    >
-      {/* Primary Button */}
-      <button
-        onClick={() => navigate("/contact")}
-        className="px-12 py-6 bg-gradient-to-r from-red-600 to-red-700 
+            <motion.div
+              variants={fadeInUp}
+              className="flex flex-col sm:flex-row gap-6 justify-center"
+            >
+              {/* Primary Button */}
+              <button
+                onClick={() => navigate("/contact")}
+                className="px-12 py-6 bg-gradient-to-r from-[#9F714E] to-[#9F714E]/90
                    text-white rounded-full text-xl md:text-2xl font-bold 
-                   shadow-xl shadow-red-900/60 hover:shadow-red-700 
+                   shadow-xl shadow-[#9F714E]/60 hover:shadow-[#9F714E] 
                    hover:scale-105 active:scale-95 transition-all duration-300 
                    flex items-center gap-3 group"
-      >
-        Get Free AI Consultation
-        <ArrowRight className="w-7 h-7 group-hover:translate-x-2 transition-transform" />
-      </button>
+              >
+                Get Free AI Consultation
+                <ArrowRight className="w-7 h-7 group-hover:translate-x-2 transition-transform" />
+              </button>
 
-      {/* Secondary Button */}
-  
-    </motion.div>
-  </motion.div>
-</section>
+              {/* Secondary Button */}
+            </motion.div>
+          </motion.div>
+        </section>
         {/* What is AI & ML */}
         <section
           className={`py-20 px-4 sm:px-6 lg:px-8 ${t.sectionBg} transition-colors duration-300`}
@@ -319,10 +313,10 @@ export default function AIServices() {
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-4xl md:text-6xl font-black mb-10"
+              className={`text-4xl md:text-6xl font-black mb-10 ${isDark ? "text-white" : "text-[#3d220e]"}`}
             >
               What is{" "}
-              <span className="text-red-500">AI & Machine Learning</span> in
+              <span className="text-[#3d220e] dark:text-[#9F714E]">AI & Machine Learning</span> in
               Business?
             </motion.h2>
             <motion.p
@@ -344,15 +338,17 @@ export default function AIServices() {
         </section>
 
         {/* Our Services */}
-        <section className="py-24 px-4 sm:px-6 lg:px-8 transition-colors duration-300">
+        <section
+          className={`py-24 px-4 sm:px-6 lg:px-8 ${t.sectionBg} transition-colors duration-300`}
+        >
           <div className="max-w-7xl mx-auto">
             <motion.h2
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-4xl md:text-6xl font-black text-center mb-16"
+              className={`text-4xl md:text-6xl font-black text-center mb-16 ${isDark ? "text-white" : "text-[#3d220e]"}`}
             >
-              Our <span className="text-red-500">AI & ML Services</span>
+              Our <span className="text-[#3d220e] dark:text-[#9F714E]">AI & ML Services</span>
             </motion.h2>
             <motion.div
               variants={staggerContainer}
@@ -367,7 +363,7 @@ export default function AIServices() {
                   variants={fadeInUp}
                   className={`${t.card} rounded-2xl p-8 md:p-10 hover:shadow-2xl transition-all group flex flex-col items-center text-center min-h-[260px]`}
                 >
-                  <service.icon className="w-14 h-14 md:w-16 md:h-16 text-red-500 mb-6 group-hover:scale-110 transition-transform" />
+                  <service.icon className="w-14 h-14 md:w-16 md:h-16 text-[#3d220e] dark:text-[#9F714E] mb-6 group-hover:scale-110 transition-transform" />
                   <h3 className="text-xl md:text-2xl font-bold mb-4">
                     {service.title}
                   </h3>
@@ -375,7 +371,6 @@ export default function AIServices() {
                 </motion.div>
               ))}
             </motion.div>
-      
           </div>
         </section>
 
@@ -388,7 +383,7 @@ export default function AIServices() {
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-4xl md:text-5xl font-black text-center mb-12"
+              className={`text-4xl md:text-5xl font-black text-center mb-12 ${isDark ? "text-white" : "text-[#3d220e]"}`}
             >
               Key Features of Our AI & ML Solutions
             </motion.h2>
@@ -404,7 +399,7 @@ export default function AIServices() {
                   variants={fadeInUp}
                   className={`${t.featureCard} rounded-xl p-6 text-center text-lg font-medium flex items-center justify-center gap-3`}
                 >
-                  <CheckCircle2 className="w-6 h-6 text-red-500 flex-shrink-0" />
+                  <CheckCircle2 className="w-6 h-6 text-[#3d220e] dark:text-[#9F714E] flex-shrink-0" />
                   {feature}
                 </motion.li>
               ))}
@@ -425,10 +420,10 @@ export default function AIServices() {
             >
               <motion.h2
                 variants={fadeInUp}
-                className="text-4xl md:text-6xl font-black mb-8"
+                className={`text-4xl md:text-6xl font-black mb-8 ${isDark ? "text-white" : "text-[#3d220e]"}`}
               >
                 Why Choose{" "}
-                <span className="text-red-500">AI Knots IT Solutions</span>?
+                <span className="text-[#3d220e] dark:text-[#9F714E]">AI Knots IT Solutions</span>?
               </motion.h2>
               <motion.p
                 variants={fadeInUp}
@@ -439,7 +434,10 @@ export default function AIServices() {
                 result-oriented solutions. We don't just build technology, we
                 build solutions that solve real business problems.
               </motion.p>
-              <motion.ul variants={fadeInUp} className="space-y-4 text-lg">
+              <motion.ul
+                variants={fadeInUp}
+                className={`space-y-4 text-lg ${t.text}`}
+              >
                 {[
                   "Customized AI solutions for your business",
                   "Experienced development team",
@@ -448,7 +446,7 @@ export default function AIServices() {
                   "Focus on real business outcomes",
                 ].map((point) => (
                   <li key={point} className="flex items-center gap-3">
-                    <CheckCircle2 className="w-6 h-6 text-red-500 flex-shrink-0" />
+                    <CheckCircle2 className="w-6 h-6 text-[#3d220e] dark:text-[#9F714E] flex-shrink-0" />
                     {point}
                   </li>
                 ))}
@@ -467,13 +465,15 @@ export default function AIServices() {
         </section>
 
         {/* Industries */}
-        <section className="py-24 px-4 sm:px-6 lg:px-8 transition-colors duration-300">
+        <section
+          className={`py-24 px-4 sm:px-6 lg:px-8 ${t.sectionBg2} transition-colors duration-300`}
+        >
           <div className="max-w-7xl mx-auto">
             <motion.h2
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-4xl md:text-6xl font-black text-center mb-16"
+              className={`text-4xl md:text-6xl font-black text-center mb-16 ${isDark ? "text-white" : "text-[#3d220e]"}`}
             >
               Industries We Serve
             </motion.h2>
@@ -487,7 +487,7 @@ export default function AIServices() {
                   transition={{ delay: idx * 0.08 }}
                   className={`${t.cardGrad} rounded-2xl p-10 hover:shadow-2xl transition-all group text-center`}
                 >
-                  <ind.icon className="w-16 h-16 text-red-500 mb-6 mx-auto group-hover:scale-110 transition-transform" />
+                  <ind.icon className="w-16 h-16 text-[#3d220e] dark:text-[#9F714E] mb-6 mx-auto group-hover:scale-110 transition-transform" />
                   <h3 className="text-3xl font-black mb-4">{ind.title}</h3>
                   <p className={`text-lg ${t.text}`}>{ind.desc}</p>
                 </motion.div>
@@ -505,7 +505,7 @@ export default function AIServices() {
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-4xl md:text-5xl font-black text-center mb-12"
+              className={`text-4xl md:text-5xl font-black text-center mb-12 ${isDark ? "text-white" : "text-[#3d220e]"}`}
             >
               Use Cases of AI & Machine Learning
             </motion.h2>
@@ -521,7 +521,7 @@ export default function AIServices() {
                   variants={fadeInUp}
                   className={`${t.useCase} rounded-xl p-6 flex items-center gap-4 transition-all`}
                 >
-                  <useCase.icon className="w-10 h-10 text-red-500 flex-shrink-0" />
+                  <useCase.icon className="w-10 h-10 text-[#3d220e] dark:text-[#9F714E] flex-shrink-0" />
                   <span className="text-xl font-bold">{useCase.title}</span>
                 </motion.div>
               ))}
@@ -529,7 +529,7 @@ export default function AIServices() {
           </div>
         </section>
 
-          <section
+        <section
           className={`py-24 px-4 sm:px-6 lg:px-8 ${t.sectionBg5} transition-colors duration-300`}
         >
           <div className="max-w-5xl mx-auto text-center">
@@ -537,7 +537,7 @@ export default function AIServices() {
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-4xl md:text-6xl font-black mb-8"
+              className={`text-4xl md:text-6xl font-black mb-8 ${isDark ? "text-white" : "text-[#3d220e]"}`}
             >
               Get Started with AI Machine learning Today
             </motion.h2>
@@ -552,13 +552,13 @@ export default function AIServices() {
               Learning Services in Bhopal.
             </motion.p>
             <motion.button
+              type="button"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.98 }}
-              className="px-12 py-6 md:px-14 md:py-7 bg-gradient-to-r from-red-600 to-red-800 rounded-full text-xl md:text-3xl font-black shadow-2xl shadow-red-900/60 hover:shadow-red-700/80 transition-all text-white"
+              onClick={() => navigate("/contact")}
+              className="px-12 py-6 md:px-14 md:py-7 bg-gradient-to-r from-[#3d220e] to-[#3d220e]/90 rounded-full text-xl md:text-3xl font-black shadow-2xl shadow-[#3d220e]/60 hover:shadow-[#3d220e]/80 transition-all text-white"
             >
-              <button onClick={()=>navigate("/contact")}>
               Contact Us Now →
-              </button>
             </motion.button>
           </div>
         </section>
@@ -572,9 +572,9 @@ export default function AIServices() {
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-4xl md:text-6xl font-black text-center mb-16"
+              className={`text-4xl md:text-6xl font-black text-center mb-16 ${isDark ? "text-white" : "text-[#3d220e]"}`}
             >
-              Frequently Asked <span className="text-red-500">Questions</span>
+              Frequently Asked <span className="text-[#3d220e] dark:text-[#9F714E]">Questions</span>
             </motion.h2>
             <div className="space-y-4">
               {faqs.map((faq, idx) => (
@@ -595,7 +595,7 @@ export default function AIServices() {
                       {faq.q}
                     </span>
                     <span
-                      className={`text-red-500 text-xl transition-transform duration-300 ${openFaq === idx ? "rotate-180" : ""}`}
+                      className={`text-[#3d220e] dark:text-[#9F714E] text-xl transition-transform duration-300 ${openFaq === idx ? "rotate-180" : ""}`}
                     >
                       ▼
                     </span>
@@ -614,9 +614,6 @@ export default function AIServices() {
         </section>
 
         {/* Final CTA */}
-      
-
-       
       </div>
     </>
   );

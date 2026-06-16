@@ -954,7 +954,7 @@ export default function LocalMarketing() {
                     className={`w-16 h-16 mx-auto mb-6 transition-transform group-hover:scale-110 ${accentClass}`}
                   />
                   <h3
-                    className={`text-3xl font-bold mb-5 ${isDark ? "text-red-400" : "text-[#EFE5C8]"}`}
+                    className={`text-3xl font-bold mb-5 ${isDark ? "text-[#8B6B4A]" : "text-[#8B6B4A]"}`}
                   >
                     {item.title}
                   </h3>

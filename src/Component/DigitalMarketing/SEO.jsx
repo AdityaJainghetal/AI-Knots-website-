@@ -1706,13 +1706,13 @@ export default function SEO() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  const accentClass = "text-red-500";
+  const accentClass = "text-[#8B6B4A]";
   const headingClass = isDark ? "text-white" : "text-gray-900";
   const bodyClass = isDark ? "text-gray-300" : "text-gray-700";
 
   const cardClass = isDark
-    ? "bg-gray-900/70 backdrop-blur-sm border border-gray-800 hover:border-red-500/60 hover:shadow-red-900/30"
-    : "bg-white border border-gray-200 hover:border-red-300 hover:shadow-2xl";
+    ? "bg-gray-900/70 backdrop-blur-sm border border-gray-800 hover:border-[#8B6B4A]/60 hover:shadow-[#8B6B4A]/30"
+    : "bg-white border border-gray-200 hover:border-[#8B6B4A]/60 hover:shadow-2xl";
 
   const faqs = [
     {
@@ -1781,7 +1781,7 @@ export default function SEO() {
               className="text-5xl md:text-7xl font-black mb-6 tracking-tight leading-tight text-white"
             >
               Best SEO Company in India That Drives Traffic & Generates{" "}
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-red-400 via-red-500 to-white">
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#8B6B4A] via-[#8B6B4A] to-white">
                 Real Leads
               </span>
             </motion.h1>
@@ -1801,14 +1801,14 @@ export default function SEO() {
             >
               <button
                 onClick={() => navigate("/contact")}
-                className="group px-10 py-5 bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 rounded-full text-xl font-bold shadow-xl shadow-red-900/50 transition-all flex items-center gap-3 text-white"
+                className="group px-10 py-5 bg-gradient-to-r from-[#8B6B4A] to-[#8B6B4A] hover:from-[#8B6B4A] hover:to-[#8B6B4A] rounded-full text-xl font-bold shadow-xl shadow-[#8B6B4A]/50 transition-all flex items-center gap-3 text-white"
               >
                 Let's Talk Growth
                 <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
               </button>
               <button
                 onClick={() => navigate("/contact")}
-                className="px-10 py-5 border-2 border-red-400 rounded-full text-xl font-semibold transition-all text-red-400 hover:bg-red-950/50"
+                className="px-10 py-5 border-2 border-[#8B6B4A] rounded-full text-xl font-semibold transition-all text-[#8B6B4A] hover:bg-[#8B6B4A]/10"
               >
                 Free SEO Audit →
               </button>
@@ -2123,7 +2123,7 @@ export default function SEO() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.98 }}
                 onClick={() => navigate("/contact")}
-                className="px-12 py-6 bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 rounded-full text-2xl font-bold shadow-2xl transition-all w-fit text-white"
+                className="px-12 py-6 bg-[#8B6B4A]  rounded-full text-2xl font-bold shadow-2xl transition-all w-fit text-white"
               >
                 Get Your Free Consultation →
               </motion.button>

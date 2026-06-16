@@ -124,14 +124,14 @@ function PaidAdvertising() {
 
   // Dynamic Theme Classes (Same as your other pages)
   const accentClass = "text-accent";
-  const headingClass = isDark ? "text-white" : "text-gray-900";
-  const bodyClass = isDark ? "text-gray-300" : "text-gray-700";
+  const headingClass = isDark ? "text-white" : "text-gray-700";
+  const bodyClass = isDark ? "text-[#8B6B4A]" : "text-gray-700";
 
   const cardClass = isDark
-    ? "bg-gray-900/80 backdrop-blur-xl border border-gray-700/80 hover:border-red-500/70 hover:shadow-2xl hover:shadow-red-500/20 transition-all duration-500"
-    : "bg-white border border-gray-100 hover:border-red-200 hover:shadow-2xl hover:shadow-red-100/80 transition-all duration-500";
+    ? "bg-gray-900/80 backdrop-blur-xl border border-gray-700/80 hover:border-[#8B6B4A] hover:shadow-2xl hover:shadow-[#8B6B4A]/20 transition-all duration-500"
+    : "bg-white border border-gray-100 hover:border-[#8B6B4A] hover:shadow-2xl hover:shadow-[#8B6B4A]/80 transition-all duration-500";
 
-  const premiumButton = `px-12 py-7 rounded-2xl text-xl font-bold transition-all flex items-center gap-3 group shadow-xl btn-accent`;
+  const premiumButton = ` px-12 py-7 rounded-2xl text-xl font-bold transition-all flex items-center gap-3 group shadow-xl btn-accent hover:shadow-2xl hover:shadow-[#8B6B4A]/50`;
 
   return (
     <>
@@ -182,14 +182,14 @@ function PaidAdvertising() {
                 >
                   <motion.h1
                     variants={fadeInUp}
-                    className="text-6xl sm:text-7xl md:text-8xl font-black mb-6 tracking-tight bg-gradient-to-r from-red-400 via-red-500 to-white bg-clip-text text-transparent"
+                    className="text-6xl sm:text-7xl md:text-8xl font-black mb-6 tracking-tight bg-[#f7f4f1] to-white bg-clip-text text-transparent"
                   >
                     AI Knots
                   </motion.h1>
 
                   <motion.p
                     variants={fadeInUp}
-                    className="text-3xl sm:text-5xl md:text-6xl font-bold mb-8 text-red-400"
+                    className="text-3xl sm:text-5xl md:text-6xl font-bold mb-8 text-[#8B6B4A]"
                   >
                     Paid Advertising Agency
                     <br className="sm:hidden" /> in Bhopal
@@ -224,11 +224,11 @@ function PaidAdvertising() {
                     </a>
 
                     <button
-                      className={`px-12 py-7 border-2 border-red-500/70 rounded-2xl text-2xl font-bold transition-all
+                      className={`px-12 py-7 border-2 border-[#8B6B4A] rounded-2xl text-2xl font-bold transition-all
                 ${
                   isDark
-                    ? "text-red-400 hover:bg-red-950/60 hover:border-red-500"
-                    : "text-[#EFE5C8] hover:bg-red-50"
+                    ? "text-[#8B6B4A] hover:bg-[#8B6B4A]/10 hover:border-[#8B6B4A]"
+                    : "text-[#8B6B4A] hover:bg-[#8B6B4A]/10 hover:border-[#8B6B4A]"
                 }`}
                       onClick={() => navigate("/contact")}
                     >
@@ -247,10 +247,10 @@ function PaidAdvertising() {
                 onClick={() => setCurrentSlide(i)}
                 className={`w-3.5 h-3.5 rounded-full transition-all duration-700 ${
                   i === currentSlide
-                    ? "bg-red-600 scale-150 shadow-lg shadow-red-600/50"
+                    ? "bg-[#8B6B4A] scale-150 shadow-lg shadow-[#8B6B4A]/50"
                     : isDark
-                      ? "bg-gray-600 hover:bg-red-400"
-                      : "bg-gray-400 hover:bg-red-500"
+                      ? "bg-gray-600 hover:bg-[#8B6B4A]"
+                      : "bg-gray-400 hover:bg-[#8B6B4A]"
                 }`}
               />
             ))}
@@ -310,7 +310,7 @@ function PaidAdvertising() {
                     className={`w-16 h-16 mb-8 mx-auto transition-transform group-hover:scale-110 ${accentClass}`}
                   />
                   <h3
-                    className={`text-3xl font-black mb-5 text-center ${isDark ? "text-red-400" : "text-[#EFE5C8]"}`}
+                    className={`text-3xl font-black mb-5 text-center ${isDark ? "text-[#8B6B4A]" : "text-[#EFE5C8]"}`}
                   >
                     {item.title}
                   </h3>
@@ -373,7 +373,7 @@ function PaidAdvertising() {
                     className={`w-14 h-14 mb-6 mx-auto block transition-transform group-hover:scale-110 ${accentClass}`}
                   />
                   <h3
-                    className={`text-3xl font-black mb-5 text-center ${isDark ? "text-red-400" : "text-[#EFE5C8]"}`}
+                    className={`text-3xl font-black mb-5 text-center ${isDark ? "text-[#8B6B4A]" : "text-[#8B6B4A]"}`}
                   >
                     {service.title}
                   </h3>
@@ -429,7 +429,7 @@ function PaidAdvertising() {
                     className={`w-10 h-10 mr-4 flex-shrink-0 ${accentClass}`}
                   />
                   <p
-                    className={`text-2xl font-bold ${isDark ? "text-red-300" : "text-red-700"}`}
+                    className={`text-2xl font-bold ${isDark ? "text-[#8B6B4A]" : "text-[#8B6B4A]"}`}
                   >
                     {point}
                   </p>

@@ -144,19 +144,19 @@ export default function DigitalMarketing() {
   const handleChange = (e) =>
     setFormData({ ...formData, [e.target.name]: e.target.value });
 
-  const accentClass = "text-red-500";
+  const accentClass = "text-[#8B6B4A] dark:text-[#f9e8c8]";
   const headingClass = isDark ? "text-white" : "text-gray-900";
   const bodyClass = isDark ? "text-gray-300" : "text-gray-700";
 
   const cardClass = isDark
-    ? "bg-gray-900/70 backdrop-blur-sm border border-gray-800 hover:border-red-500/60 hover:shadow-red-900/30"
-    : "bg-white border border-gray-200 hover:border-red-300 hover:shadow-2xl";
+    ? "bg-gray-900/70 backdrop-blur-sm border border-gray-800 hover:border-[#8B6B4A]/60 hover:shadow-[#8B6B4A]/30"
+    : "bg-white border border-gray-200 hover:border-[#8B6B4A]/60 hover:shadow-2xl";
 
   const buttonClass = `px-8 md:px-12 py-4 md:py-6 rounded-full text-lg md:text-xl font-bold transition-all flex items-center gap-3 group shadow-xl
     ${
       isDark
-        ? "bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 shadow-red-900/60"
-        : "bg-red-600 hover:bg-red-700 text-white shadow-red-600/50"
+        ? "bg-gradient-to-r from-[#8B6B4A] to-[#8B6B4A] hover:from-[#8B6B4A] hover:to-[#8B6B4A] shadow-[#8B6B4A]/60"
+        : "bg-[#8B6B4A] hover:bg-[#8B6B4A] text-white shadow-[#8B6B4A]/50"
     }`;
 
   return (
@@ -200,7 +200,7 @@ export default function DigitalMarketing() {
               className="text-5xl md:text-7xl font-black tracking-tighter leading-none mb-8 text-white"
             >
               Driving Growth with{" "}
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-red-400 via-red-500 to-white">
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#8B6B4A] via-[#8B6B4A] to-white">
                 Proven Digital Marketing Strategies
               </span>
             </motion.h1>
@@ -217,7 +217,7 @@ export default function DigitalMarketing() {
               className={`text-lg md:text-xl max-w-5xl mx-auto leading-relaxed mb-12 ${isDark ? "text-gray-300" : "text-white/90"}`}
             >
               Partner with{" "}
-              <span className="font-semibold text-red-400">
+              <span className="font-semibold text-[#8B6B4A]">
                 AI KNOTS IT SOLUTION
               </span>
               , one of India’s trusted digital marketing companies. We help
@@ -238,11 +238,11 @@ export default function DigitalMarketing() {
                 <ArrowRight className="w-7 h-7 group-hover:translate-x-2 transition-transform" />
               </button>
               <button
-                className={`px-12 py-6 border-2 border-red-500/70 rounded-full text-xl font-bold transition-all
+                className={`px-12 py-6 border-2 border-[#8B6B4A]/70 rounded-full text-xl font-bold transition-all
                 ${
                   isDark
-                    ? "text-red-400 hover:bg-red-950/60 hover:border-red-500"
-                    : "text-[#EFE5C8] hover:bg-red-50 border-red-600"
+                    ? "text-[#8B6B4A] hover:bg-[#8B6B4A]/60 hover:border-[#8B6B4A]"
+                    : "text-[#EFE5C8] hover:bg-[#8B6B4A] border-[#8B6B4A]"
                 }`}
                 onClick={() => navigate("/contact")}
               >
@@ -267,7 +267,7 @@ export default function DigitalMarketing() {
                     <button
                       type="button"
                       onClick={() => setIsModalOpen(false)}
-                      className="text-xl font-bold text-[#EFE5C8] hover:text-red-500"
+                      className="text-xl font-bold text-[#EFE5C8] hover:text-[#8B6B4A] transition-colors"
                     >
                       ×
                     </button>
@@ -326,7 +326,7 @@ export default function DigitalMarketing() {
                       className={`w-full py-4 rounded-lg font-bold text-lg text-white transition ${
                         loading
                           ? "bg-gray-700 cursor-not-allowed"
-                          : "bg-red-700 hover:bg-red-600 shadow-lg shadow-red-900/40"
+                          : "bg-[#8B6B4A] hover:bg-[#8B6B4A] shadow-lg shadow-[#8B6B4A]/40"
                       }`}
                     >
                       {loading ? "Sending..." : "Submit Inquiry"}
@@ -620,8 +620,8 @@ export default function DigitalMarketing() {
                 whileTap={{ scale: 0.98 }}
                 className={`px-16 py-7 rounded-full text-2xl font-bold transition-all ${
                   isDark
-                    ? "bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 shadow-red-900/60"
-                    : "bg-red-600 hover:bg-red-700 text-white shadow-red-600/50"
+                    ? "bg-[#8B6B4A] shadow-[#8B6B4A]/60"
+                    : "bg-[#8B6B4A] hover:bg-[#8B6B4A] text-white shadow-[#8B6B4A]/50"
                 }`}
               >
                 <button

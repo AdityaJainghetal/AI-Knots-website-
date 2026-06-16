@@ -1,10 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { useTheme } from "../../context/ThemeContext";
 import { Helmet } from "react-helmet-async";
 import { useNavigate } from "react-router-dom";
 import contentimage from "../../assets/Images/contentimage2.jpg";
-import contentimage2 from "../../assets/Images/contentimage3.jpg";
 
 import {
   Pen,
@@ -144,9 +143,13 @@ export default function ContentWritingBranding() {
     ? "bg-gray-900/70 backdrop-blur-sm border border-gray-800 hover:border-red-600/60 rounded-2xl p-10 hover:shadow-2xl hover:shadow-red-900/30 transition-all group text-center"
     : "bg-white border border-gray-200 shadow-lg hover:shadow-2xl rounded-2xl p-10 transition-all group text-center";
 
-  const headingClass = isDark ? "text-white" : "text-gray-900";
-  const bodyClass = isDark ? "text-gray-300" : "text-gray-700";
-  const accentClass = "text-red-500";
+  const headingClass = isDark ? "text-white" : "text-[#8B6B4A]";
+  const bodyClass = isDark ? "text-gray-300" : "text-[#8B6B4A]";
+  const accentClass = "text-[#8B6B4A] dark:text-[#f9e8c8]";
+  const sectionBg = isDark ? "bg-gray-950" : "bg-[#f9efe1]";
+  const sectionBg2 = isDark ? "bg-gray-900" : "bg-[#f9efe1]";
+  const sectionBg3 = isDark ? "bg-gray-950" : "bg-white";
+  const faqBg = isDark ? "bg-gray-950" : "bg-gray-50";
 
   return (
     <>
@@ -162,11 +165,12 @@ export default function ContentWritingBranding() {
         />
       </Helmet>
       <div
-        className={`min-h-screen transition-colors duration-700 overflow-hidden
-      ${isDark ? "bg-gradient-to-b from-gray-950 via-black to-gray-950 text-white" : "bg-gray-50 text-gray-900"}`}
+        className={`min-h-screen transition-colors duration-700 overflow-hidden ${isDark ? "bg-gray-950 text-white" : "bg-white text-[#3d220e]"}`}
       >
         {/* Hero */}
-        <section className="relative min-h-[90vh] flex items-center justify-center px-4 sm:px-6 lg:px-8 py-20">
+        <section
+          className={`relative min-h-[90vh] flex items-center justify-center px-4 sm:px-6 lg:px-8 py-20 ${isDark ? "bg-gradient-to-br from-gray-900 via-black to-gray-950" : "bg-gradient-to-br from-[#e2d7a4] via-[#f9efe1] to-[#b8a790]"}`}
+        >
           <div className="absolute inset-0">
             <img
               src={images.hero}
@@ -175,12 +179,7 @@ export default function ContentWritingBranding() {
               loading="lazy"
             />
             <div
-              className={`absolute inset-0 transition-all duration-700
-            ${
-              isDark
-                ? "bg-gradient-to-t from-black via-black/80 to-transparent"
-                : "bg-gradient-to-t from-black/70 via-black/60 to-transparent"
-            }`}
+              className={`absolute inset-0 transition-all duration-700 ${isDark ? "bg-black/70" : "bg-black/50"}`}
             />
           </div>
 
@@ -195,28 +194,28 @@ export default function ContentWritingBranding() {
               className={`text-5xl md:text-7xl font-black mb-6 tracking-tight leading-tight text-white ${headingClass}`}
             >
               Content Writing & Branding Services in{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-600">
+              <span className="text-transparent bg-clip-text bg-[#8B6B4A] dark:bg-gradient-to-r dark:from-[#8B6B4A] dark:via-[#f9e8c8] dark:to-[#8B6B4A]">
                 Bhopal
               </span>
             </motion.h1>
 
             <motion.p
               variants={fadeInUp}
-              className="text-3xl md:text-5xl font-bold text-red-500 mb-8"
+              className="text-3xl md:text-5xl font-bold text-[#8B6B4A]  mb-8"
             >
               Turn Your Ideas Into Words That Sell
             </motion.p>
 
             <motion.p
               variants={fadeInUp}
-              className={`text-xl md:text-2xl mb-10 max-w-5xl mx-auto leading-relaxed text-white ${bodyClass}`}
+              className={`text-xl md:text-2xl mb-10 max-w-5xl mx-auto leading-relaxed ${bodyClass}`}
             >
               Your brand deserves content that connects, engages, and converts.
             </motion.p>
 
             <motion.p
               variants={fadeInUp}
-              className={`text-lg md:text-xl mb-12 max-w-4xl mx-auto leading-relaxed text-white ${bodyClass}`}
+              className={`text-lg md:text-xl mb-12 max-w-4xl mx-auto leading-relaxed ${bodyClass}`}
             >
               At AI Knots IT Solution, we create simple, clear, and impactful
               SEO-optimized content for websites, blogs, ads, emails, and more —
@@ -230,7 +229,7 @@ export default function ContentWritingBranding() {
               <button
                 onClick={() => navigate("/seo")}
                 aria-label="Book SEO content consultation"
-                className="px-12 py-6 bg-gradient-to-r from-red-600 to-red-800 rounded-full text-xl md:text-2xl font-bold shadow-2xl shadow-red-900/60 hover:shadow-red-700/80 hover:scale-105 transition-all flex items-center gap-3 group"
+                className="px-12 py-6 bg-[#8B6B4A] text-white rounded-full text-xl md:text-2xl font-bold shadow-2xl shadow-red-900/60 hover:shadow-red-700/80 hover:scale-105 transition-all flex items-center gap-3 group"
               >
                 Get SEO Content Consultation
                 <ArrowRight className="w-7 h-7 group-hover:translate-x-2 transition-transform" />
@@ -241,8 +240,8 @@ export default function ContentWritingBranding() {
                 className={`px-12 py-6 border-2 rounded-full text-xl md:text-2xl font-bold transition-all
               ${
                 isDark
-                  ? "border-red-600/70 text-red-400 hover:bg-red-950/50"
-                  : "border-red-600 text-[#EFE5C8] hover:bg-red-50"
+                  ? "border-[#8B6B4A] text-[#EFE5C8] hover:bg-[#8B6B4A]/50"
+                  : "border-[#8B6B4A] text-[#8B6B4A] hover:bg-[#8B6B4A]/10"
               }`}
               >
                 Contact Us
@@ -252,9 +251,7 @@ export default function ContentWritingBranding() {
         </section>
 
         {/* Services */}
-        <section
-          className={`py-24 px-4 sm:px-6 lg:px-8 ${isDark ? "bg-black/40" : "bg-gray-100"}`}
-        >
+        <section className={`py-24 px-4 sm:px-6 lg:px-8 ${sectionBg}`}>
           <div className="max-w-7xl mx-auto">
             <motion.h2
               initial={{ opacity: 0, y: 40 }}
@@ -290,9 +287,7 @@ export default function ContentWritingBranding() {
         </section>
 
         {/* Why Choose Us */}
-        <section
-          className={`py-24 px-4 sm:px-6 lg:px-8 ${isDark ? "bg-black/50" : "bg-gray-100"}`}
-        >
+        <section className={`py-24 px-4 sm:px-6 lg:px-8 ${sectionBg2}`}>
           <div className="max-w-7xl mx-auto">
             <motion.h2
               initial={{ opacity: 0, y: 40 }}
@@ -329,9 +324,7 @@ export default function ContentWritingBranding() {
         </section>
 
         {/* Content That Engages */}
-        <section
-          className={`py-20 px-4 sm:px-6 lg:px-8 ${isDark ? "bg-black" : "bg-white"}`}
-        >
+        <section className={`py-20 px-4 sm:px-6 lg:px-8 ${sectionBg3}`}>
           <div className="max-w-7xl mx-auto text-center">
             <motion.h2
               initial={{ opacity: 0, y: 40 }}
@@ -370,9 +363,7 @@ export default function ContentWritingBranding() {
         {/* Local Bhopal Visual */}
 
         {/* Industries */}
-        <section
-          className={`py-24 px-4 sm:px-6 lg:px-8 ${isDark ? "bg-black" : "bg-white"}`}
-        >
+        <section className={`py-24 px-4 sm:px-6 lg:px-8 ${sectionBg3}`}>
           <div className="max-w-7xl mx-auto text-center">
             <motion.h2
               initial={{ opacity: 0, y: 40 }}
@@ -433,19 +424,16 @@ export default function ContentWritingBranding() {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.98 }}
-              className="px-14 py-7 bg-gradient-to-r from-red-600 to-red-800 rounded-full text-2xl md:text-3xl font-black shadow-2xl shadow-red-900/60 hover:shadow-red-700/80 transition-all flex items-center gap-4 mx-auto"
+              onClick={() => navigate("/contact")}
+              className="px-14 py-7 bg-[#8B6B4A] text-white rounded-full text-2xl md:text-3xl font-black shadow-2xl shadow-red-900/60 hover:shadow-red-700/80 transition-all flex items-center gap-4 mx-auto"
             >
-              <button onClick={() => navigate("/contact")}>
-                Contact Us Today
-              </button>
+              Contact Us Today
             </motion.button>
           </div>
         </section>
 
         {/* FAQ */}
-        <section
-          className={`py-24 px-4 sm:px-6 lg:px-8 ${isDark ? "bg-gradient-to-b from-black to-gray-950" : "bg-gray-50"}`}
-        >
+        <section className={`py-24 px-4 sm:px-6 lg:px-8 ${faqBg}`}>
           <div className="max-w-4xl mx-auto">
             <motion.h2
               initial={{ opacity: 0, y: 40 }}
@@ -480,7 +468,7 @@ export default function ContentWritingBranding() {
                       {faq.q}
                     </span>
                     <span
-                      className={`text-red-500 text-2xl transition-transform ${openFaq === idx ? "rotate-180" : ""}`}
+                      className={`text-[#8B6B4A] text-2xl transition-transform ${openFaq === idx ? "rotate-180" : ""}`}
                     >
                       ▼
                     </span>

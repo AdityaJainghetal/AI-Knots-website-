@@ -162,10 +162,10 @@ const navigate = useNavigate();
               hidden: { opacity: 0, y: 40 },
               visible: { opacity: 1, y: 0 },
             }}
-            className="text-5xl md:text-7xl font-black tracking-tighter leading-none mb-8 text-[#6e4c32]"
+            className="text-5xl md:text-7xl font-black tracking-tighter leading-none mb-8 text-[#e1d9d2] "
           >
             Professional Graphic Design Services in{" "}
-            <span className="bg-clip-text text-transparent bg-[#9F714E]">
+            <span className="bg-clip-text text-transparent bg-[#e1d9d2]">
               Bhopal
             </span>
           </motion.h1>
