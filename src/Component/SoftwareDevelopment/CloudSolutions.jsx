@@ -214,14 +214,14 @@ export default function CloudSolutions() {
 
             <motion.p
               variants={fadeInUp}
-              className="text-2xl md:text-4xl font-bold text-accent mb-8"
+              className={`text-2xl md:text-4xl font-bold text-accent mb-8 ${`font-bold ${isDark ? "text-[#9F714E]" : "text-[#9F714E]"}`}`}
             >
               Scale Securely, Save Costs, Grow Limitlessly
             </motion.p>
 
             <motion.p
               variants={fadeInUp}
-              className="text-lg md:text-xl text-muted mb-12 max-w-4xl mx-auto leading-relaxed"
+              className={`text-lg md:text-xl mb-12 max-w-4xl mx-auto leading-relaxed ${`font-bold ${isDark ? "text-[#9F714E]" : "text-[#9F714E]"}`}`}
             >
               At{" "}
               <span className="text-accent font-semibold">
@@ -242,7 +242,7 @@ export default function CloudSolutions() {
                 "Full compliance support",
               ].map((item) => (
                 <li key={item} className="flex items-center gap-2">
-                  <CheckCircle2 className="w-6 h-6 text-red-500 dark:text-red-400" />{" "}
+                  <CheckCircle2 className="w-6 h-6 text-[#8B6B4A] dark:text-[#8B6B4A]" />{" "}
                   {item}
                 </li>
               ))}
@@ -254,9 +254,9 @@ export default function CloudSolutions() {
             >
               <button
                 onClick={() => navigate("/contact")}
-                className="px-12 py-6 border-2 border-red-500 text-white font-bold rounded-full text-xl md:text-2xl 
-                   hover:bg-red-600 hover:border-red-600 transition-all duration-300
-                   dark:hover:bg-red-700"
+                className="px-12 py-6 border-2 border-[#8B6B4A] text-white font-bold rounded-full text-xl md:text-2xl 
+                   hover:bg-[#8B6B4A] hover:border-[#8B6B4A] transition-all duration-300
+                   dark:hover:bg-[#8B6B4A]/50 dark:hover:border-[#8B6B4A] dark:text-gray-300"
               >
                 Free Consultation
               </button>
@@ -279,7 +279,7 @@ export default function CloudSolutions() {
                 className="text-4xl md:text-6xl font-black mb-6"
               >
                 Why Your Business Needs Reliable
-                <span className="text-[#EFE5C8] dark:text-red-500">
+                <span className={`text-4xl md:text-6xl font-black ${`font-bold ${isDark ? "text-[#9F714E]" : "text-[#9F714E]"}`}`}>
                   Cloud Solutions
                 </span>{" "}
               </motion.h2>
@@ -323,9 +323,9 @@ export default function CloudSolutions() {
                 <motion.div
                   key={idx}
                   variants={fadeInUp}
-                  className="bg-white dark:bg-gray-900/70 border border-gray-200 dark:border-red-900/40 rounded-2xl p-10 hover:border-red-600 dark:hover:border-red-600 hover:shadow-2xl transition-all group"
+                  className="bg-white dark:bg-gray-900/70 border border-gray-200 dark:border-red-900/40 rounded-2xl p-10 hover:border-[#8B6B4A] dark:hover:border-[#8B6B4A] hover:shadow-2xl transition-all group"
                 >
-                  <benefit.icon className="w-16 h-16 text-[#EFE5C8] dark:text-red-500 mb-6 mx-auto group-hover:scale-110 transition-transform" />
+                  <benefit.icon className="w-16 h-16 text-[#EFE5C8] dark:text-[#8B6B4A] mb-6 mx-auto group-hover:scale-110 transition-transform" />
                   <h3 className="text-2xl font-bold mb-4 text-center">
                     {benefit.title}
                   </h3>
@@ -348,7 +348,7 @@ export default function CloudSolutions() {
               className="text-4xl md:text-6xl font-black text-center mb-16"
             >
               Cloud Solutions{" "}
-              <span className="text-[#EFE5C8] dark:text-red-500">
+              <span className={`font-bold ${isDark ? "text-[#9F714E]" : "text-[#9F714E]"}`}>
                 Tailored for You
               </span>
             </motion.h2>
@@ -384,7 +384,7 @@ export default function CloudSolutions() {
               className="text-4xl md:text-6xl font-black text-center mb-12"
             >
               Enterprise-Grade{" "}
-              <span className="text-[#EFE5C8] dark:text-red-500">
+              <span className={`font-bold ${isDark ? "text-[#9F714E]" : "text-[#9F714E]"}`}>
                 Cloud Capabilities
               </span>
             </motion.h2>
@@ -397,9 +397,9 @@ export default function CloudSolutions() {
                   initial="hidden"
                   whileInView="visible"
                   viewport={{ once: true }}
-                  className="bg-white dark:bg-gray-900/70 border border-gray-200 dark:border-red-900/40 rounded-2xl p-8 hover:border-red-600 dark:hover:border-red-600 hover:shadow-2xl transition-all group flex flex-col items-center text-center"
+                  className="bg-white dark:bg-gray-900/70 border border-gray-200 dark:border-red-900/40 rounded-2xl p-8 hover:border-[#8B6B4A] dark:hover:border-[#8B6B4A] hover:shadow-2xl transition-all group flex flex-col items-center text-center"
                 >
-                  <cap.icon className="w-12 h-12 text-[#EFE5C8] dark:text-red-500 mb-6 group-hover:scale-110 transition-transform" />
+                  <cap.icon className="w-12 h-12 text-[#EFE5C8] dark:text-[#8B6B4A] mb-6 group-hover:scale-110 transition-transform" />
                   <h3 className="text-xl font-bold mb-3">{cap.title}</h3>
                   <p className="text-gray-600 dark:text-gray-300">{cap.desc}</p>
                 </motion.div>
@@ -445,7 +445,7 @@ export default function CloudSolutions() {
               className="text-4xl md:text-6xl font-black mb-8"
             >
               Ready to Transform Your Business with{" "}
-              <span className="text-[#EFE5C8] dark:text-red-500">
+              <span className={`font-bold ${isDark ? "text-[#9F714E]" : "text-[#9F714E]"}`}>
                 Smart Cloud
               </span>
               ?
@@ -460,7 +460,7 @@ export default function CloudSolutions() {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.98 }}
-              className="px-14 py-7 bg-gradient-to-r from-red-600 to-red-700 text-white rounded-full text-2xl md:text-3xl font-black shadow-2xl shadow-red-900/60 hover:shadow-red-800 transition-all"
+              className="px-14 py-7 bg-[#8B6B4A] text-white rounded-full text-2xl md:text-3xl font-black shadow-2xl shadow-red-900/60 hover:shadow-red-800 transition-all"
             >
               <button onClick={() => navigate("/contact")}>
                 Start Your Cloud Journey →
@@ -480,7 +480,7 @@ export default function CloudSolutions() {
             >
               <h2 className="text-4xl md:text-6xl font-black mb-6">
                 Frequently Asked{" "}
-                <span className="text-[#EFE5C8] dark:text-red-500">
+                <span className={`font-bold ${isDark ? "text-[#9F714E]" : "text-[#9F714E]"}`}>
                   Questions
                 </span>
               </h2>
@@ -530,7 +530,7 @@ export default function CloudSolutions() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: idx * 0.05 }}
-                  className="bg-white dark:bg-gray-900/70 border border-gray-200 dark:border-red-900/40 rounded-2xl overflow-hidden hover:border-red-600 dark:hover:border-red-600 transition-all"
+                  className="bg-white dark:bg-gray-900/70 border border-gray-200 dark:border-red-900/40 rounded-2xl overflow-hidden hover:border-[#8B6B4A] dark:hover:border-[#8B6B4A] transition-all"
                 >
                   <button
                     onClick={() => setOpenFAQ(openFAQ === idx ? null : idx)}
