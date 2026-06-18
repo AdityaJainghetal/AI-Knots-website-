@@ -91,10 +91,10 @@ const BlogDetail = () => {
 
   return (
     <div
-      className={`min-h-screen mt-10 ${isDark ? "bg-black text-white" : "bg-white text-gray-900"}`}
+      className={`min-h-screen  ${isDark ? "bg-black text-white" : "bg-white text-gray-900"}`}
     >
       {/* Hero Section */}
-      <div className="relative h-[500px] overflow-hidden">
+      <div className="relative h-auto mr-20 ml-20 overflow-hidden">
         {post.images?.[0] ? (
           <img
             src={post.images[0]}

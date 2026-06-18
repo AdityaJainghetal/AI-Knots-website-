@@ -152,7 +152,7 @@ const TechnologyDetail = () => {
       className={`min-h-screen ${isDark ? "bg-black text-white" : "bg-white text-gray-900"}`}
     >
       {/* Hero Section */}
-      <div className="relative h-[500px] overflow-hidden">
+      <div className="relative h-auto mr-20 ml-20 overflow-hidden">
         {post.image ? (
           <img
             src={post.image}
@@ -190,7 +190,7 @@ const TechnologyDetail = () => {
               <span>{post.author ? `By ${post.author}` : "Anonymous"}</span>
             </div>
 
-          
+
 
           <h1
             className={`text-4xl md:text-6xl pt-12  font-bold leading-tight tracking-tight${isDark ? "text-gray-400" : "text-gray-800"} mb-6`}
