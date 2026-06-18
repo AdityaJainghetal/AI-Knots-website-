@@ -189,6 +189,7 @@ const TechnologyDetail = () => {
               <span>•</span>
               <span>{post.author ? `By ${post.author}` : "Anonymous"}</span>
             </div>
+
           
 
           <h1
